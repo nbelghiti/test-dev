@@ -1,0 +1,45 @@
+<div
+	class="c-notification"
+	[ngClass]="{
+		'c-notification--success': notificationType.success === type,
+		'c-notification--error': notificationType.error === type
+	}"
+>
+	<ui-row contentAfter="true">
+		<div class="c-notification__title">
+			<div class="c-notification__icon">
+				<ui-icon
+					[name]="icon"
+					size="tiny"
+				>
+				</ui-icon>
+			</div>
+
+			<ui-heading
+				[level]="3"
+				[title]="title | translate"
+			>
+			</ui-heading>
+		</div>
+
+		<span
+			contentAfter
+			class="c-notification__time"
+			*ngIf="parsedTime"
+		>
+			{{ parsedTime }}
+		</span>
+	</ui-row>
+
+	<div class="c-notification__content">
+		<ng-content></ng-content>
+	</div>
+
+	<button
+		*ngIf="!isRead"
+		class="c-notification__mark"
+		(click)="markRead()"
+	>
+		Mark as read
+	</button>
+</div>

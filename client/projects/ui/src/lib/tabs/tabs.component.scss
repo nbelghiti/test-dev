@@ -1,0 +1,115 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Tabs
+// =============================================================================
+.c-tabs {
+	position: relative;
+	z-index: $z-index-cellar;
+
+	display: flex;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: $z-index-pit;
+
+		width: 100%;
+		height: $border-width-base;
+
+		background-color: $background-color-grey-76;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-tabs__tab {
+	padding-bottom: 0.8rem;
+
+	& + .c-tabs__tab {
+		margin-left: 4rem;
+	}
+
+	&:hover {
+
+		.c-tabs__button {
+			color: $text-color-base;
+		}
+
+		.c-tabs__count {
+			border-color: $border-color-black;
+		}
+	}
+}
+
+.c-tabs__button {
+	display: flex;
+	align-items: center;
+
+	font-size: $font-size-1x-small;
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	border: none;
+	outline: none;
+	color: $text-color-grey-56;
+
+	transition: color $animation-base;
+
+	&:focus {
+		color: $text-color-base;
+		background-color: rgba($background-color-grey-86, 0.6);
+		box-shadow: 0 0 0 0.4rem rgba($background-color-grey-86, 0.6);
+
+		.c-tabs__count {
+			border-color: $text-color-base;
+		}
+	}
+}
+
+.c-tabs__count {
+	margin-left: 0.5rem;
+	padding: 0 0.4rem;
+
+	text-align: center;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-2x-small;
+	line-height: $font-size-1x-small;
+	// this letter spacing will make sure the text is centered in the box
+	letter-spacing: $border-width-base;
+
+	border: $border-width-base solid $border-color-grey-56;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-tabs--with-spacing {
+	margin: 0 $search-spacing-base;
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-tabs__tab {
+
+	&.is-active {
+		border-bottom: 0.2rem solid $border-color-black;
+
+		.c-tabs__button {
+			color: $text-color-base;
+		}
+
+		.c-tabs__count {
+			border-color: $border-color-black;
+		}
+	}
+}

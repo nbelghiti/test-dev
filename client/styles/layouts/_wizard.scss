@@ -1,0 +1,167 @@
+// ============================================================================
+// :: Wizard layout
+// ============================================================================
+
+.l-wizard--cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: $z-index-atmosphere;
+}
+
+// ============================================================================
+// :: Step wizard layout
+// ============================================================================
+/**
+ * The step wizard layout is used for pages with a unique header and small
+ * footer. (the new project wizard for example) The steps are always placed
+ * over the left side content.
+ */
+
+// ============================================================================
+// :: Settings
+// ============================================================================
+$spacing-base: 4rem;
+
+// ============================================================================
+// :: Step wizard
+// ============================================================================
+.l-step-wizard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-grow: 1;
+	height: 100vh;
+}
+
+// ============================================================================
+// :: Elements
+// ============================================================================
+.l-step-wizard__header {
+	display: flex;
+	flex-direction: column;
+	padding: 1.2rem 0;
+
+	border-bottom: $border-width-base solid $border-color-grey-76;
+
+	background-color: $background-color-base;
+}
+
+.l-step-wizard__header-breadcrumb {
+	margin-top: 1.2rem;
+}
+
+.l-step-wizard__header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.l-step-wizard__scroll-container {
+	flex-grow: 1;
+	overflow-y: auto;
+	padding: $spacing-base 0;
+
+	background-color: $background-color-base;
+}
+
+.l-step-wizard__container {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+
+	min-height: 100%;
+}
+
+.l-step-wizard__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 3rem;
+}
+
+.l-step-wizard__content {
+	width: 100%;
+}
+
+.l-step-wizard__form {
+	height: 100%;
+}
+
+.l-step-wizard__steps {
+	position: sticky;
+	top: 0;
+	right: 0;
+
+	flex-shrink: 0;
+	height: 100%;
+	margin-left: 6rem;
+
+	pointer-events: none;
+}
+
+.l-step-wizard__footer {
+	display: flex;
+
+	border-top: $border-width-base solid $border-color-grey-76;
+
+	background-color: $background-color-base;
+}
+
+.l-step-wizard__footer-content {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 8rem;
+}
+
+.l-step-wizard__footer-action {
+	margin: 0 1rem;
+}
+
+.l-step-wizard__footer-action--align-left {
+	margin-right: auto;
+}
+
+.l-step-wizard__error {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+
+	font-size: $font-size-2x-small;
+
+	color: $ui-color-error-dark;
+
+	.c-icon {
+		margin-right: 0.6rem;
+	}
+}
+
+// ============================================================================
+// :: Modifiers
+// ============================================================================
+.l-step-wizard__content--with-background {
+	align-self: stretch;
+	padding: $spacing-base 8rem $spacing-base 6rem;
+
+	background-color: $background-color-base;
+}
+
+.l-step-wizard__content--standalone {
+	flex-grow: 1;
+	padding: 0;
+}
+
+.l-step-wizard__content--full-width {
+	max-width: none;
+}
+
+.l-step-wizard__header--with-breadcrumb {
+	padding-bottom: 0;
+}

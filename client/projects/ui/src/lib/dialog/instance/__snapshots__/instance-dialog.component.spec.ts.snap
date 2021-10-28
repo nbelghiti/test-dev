@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstanceDialogComponent Should render correctly 1`] = `
+<ui-instance-dialog
+  ButtonType={[Function Object]}
+  HeadingLevel={[Function Object]}
+  destroyed$={[Function Subject]}
+  dialogClassName={[Function Boolean]}
+  error="null"
+  formBuilder={[Function FormBuilder]}
+  hasDescription={[Function Boolean]}
+  instanceForm={[Function FormGroup]}
+  isPending="false"
+  translate={[Function TranslateService]}
+>
+  <div
+    class="c-dialog__content"
+  >
+    <ui-heading
+      classes="c-dialog__title"
+      ng-reflect-classes="c-dialog__title"
+      ng-reflect-level="2"
+    >
+      <div
+        class="c-heading c-dialog__title"
+        ng-reflect-klass="c-heading c-dialog__title"
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        
+        
+        <h2>
+          
+        </h2>
+        
+        <div
+          class="c-heading__meta"
+        >
+          
+          
+          
+          
+        </div>
+      </div>
+    </ui-heading>
+    
+    
+    <form
+      class="l-form__grid l-grid--with-spacing ng-untouched ng-pristine ng-invalid"
+      ng-reflect-form="[object Object]"
+      novalidate=""
+    >
+      <div
+        class="l-grid__col--12"
+      >
+        <ui-input
+          class="ng-untouched ng-pristine ng-invalid"
+          name="name"
+          ng-reflect-form="[object Object]"
+          ng-reflect-name="name"
+          ng-reflect-type="text"
+          type="text"
+        >
+          <div
+            class="c-input-field"
+            ng-reflect-klass="c-input-field"
+            ng-reflect-ng-class="[object Object]"
+          >
+            
+            <div
+              class="c-input-field__content"
+            >
+              <div
+                class="c-input-field__input"
+              >
+                <input
+                  class="c-input-field__field ng-untouched ng-pristine ng-invalid"
+                  id="name"
+                  name="name"
+                  ng-reflect-form="[object Object]"
+                  ng-reflect-required=""
+                  placeholder=""
+                  required=""
+                  type="text"
+                />
+                <label
+                  class="c-input-field__label"
+                  for="name"
+                >
+                    
+                </label>
+              </div>
+              
+            </div>
+          </div>
+        </ui-input>
+      </div>
+      
+      <div
+        class="l-grid__col--12"
+      >
+        <ui-textarea
+          class="ng-untouched ng-pristine ng-invalid"
+          name="description"
+          ng-reflect-error="false"
+          ng-reflect-form="[object Object]"
+          ng-reflect-name="description"
+          ng-reflect-rows="4"
+        >
+          <div
+            class="c-textarea"
+            ng-reflect-klass="c-textarea"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <textarea
+              class="c-textarea__field ng-untouched ng-pristine ng-invalid"
+              id="description"
+              ng-reflect-is-disabled="false"
+              ng-reflect-name="description"
+              ng-reflect-required=""
+              placeholder=""
+              required=""
+              rows="4"
+            >
+              	
+            </textarea>
+            <label
+              class="c-textarea__label"
+              for="description"
+            >
+                
+            </label>
+            
+          </div>
+        </ui-textarea>
+      </div>
+    </form>
+  </div><div
+    class="c-dialog__actions"
+  >
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-type="c-button--secondary"
+      >
+        
+        <button
+          class="c-button c-button--secondary"
+          ng-reflect-klass="c-button c-button--secondary "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+             GENERAL__CANCEL 
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-disabled="false"
+        ng-reflect-loading="false"
+      >
+        
+        <button
+          class="c-button"
+          ng-reflect-klass="c-button  "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+              
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+  </div>
+</ui-instance-dialog>
+`;

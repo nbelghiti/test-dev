@@ -1,0 +1,41 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$wrapper-size: 4.4rem;
+
+// =============================================================================
+// :: Search Indicator
+// =============================================================================
+.c-search-indicator {
+	position: relative;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: $wrapper-size;
+	height: $wrapper-size;
+
+	font-size: $font-size-base;
+
+	border-radius: 50%;
+	border: none;
+	background-color: $background-color-grey-96;
+
+	transition:
+		background-color $animation-base,
+		transform $animation-base;
+
+	cursor: pointer;
+
+	&:hover,
+	&:active {
+		background-color: $background-color-grey-86;
+
+		transform: scale(0.98) translateY(0.1rem);
+	}
+}

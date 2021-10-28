@@ -1,0 +1,49 @@
+<div
+	class="c-filter-select"
+>
+	<div
+		uiFlyout
+		class="c-filter-select__input"
+	>
+		<div
+			class="c-filter-select__trigger"
+			[ngClass]="{'c-filter-select--disabled': disabled}"
+		>
+			<input
+				uiFlyoutFocus
+				[id]="name"
+				[name]="name"
+				[type]="type"
+				class="c-filter-select__field"
+				[placeholder]="placeholder"
+				autocomplete="off"
+				[formControl]="filter"
+			/>
+
+			<label
+				class="c-filter-select__label"
+				[for]="name"
+			>
+				{{label}}
+			</label>
+
+			<div class="c-filter-select__arrow">
+				<ui-icon [name]="IconName.caretDown" [size]="IconSize.small"></ui-icon>
+			</div>
+		</div>
+
+		<ul
+			uiFlyoutContent
+			uiFlyoutToggle
+			class="c-filter-select__content c-flyout__content--{{ alignLeft ? 'left' : 'right' }}"
+		>
+			<li
+				*ngFor="let item of items; let i = index"
+				class="c-filter-select__content-item"
+			>
+				<ng-container *ngTemplateOutlet="item.itemTemplate"></ng-container>
+			</li>
+		</ul>
+	</div>
+</div>
+

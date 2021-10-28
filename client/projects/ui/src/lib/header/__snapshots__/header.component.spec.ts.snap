@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent Should render correctly 1`] = `
+<ui-header
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  editLink="null"
+>
+  <div
+    class="c-header"
+  >
+    <div
+      class="c-header__container"
+    >
+      <div
+        class="c-header__item"
+      >
+        <a
+          class="c-header__link"
+          href="/"
+        >
+          <img
+            alt=""
+            class="c-header__image"
+            src="/assets/logo/logo.svg"
+          />
+
+          <h2
+            class="c-header__title-container"
+          >
+            <span
+              class="c-header__title"
+            >
+              APP_NAME
+            </span>
+            <span
+              class="c-header__subtitle"
+            >
+              APP_SUBTITLE
+            </span>
+          </h2>
+        </a>
+
+      </div>
+      <div
+        class="c-header__item c-header__item--stretch"
+      >
+
+      </div>
+      <div
+        class="c-header__item c-header__item-actions"
+      >
+        <div
+          class="c-header__action"
+        />
+        <div
+          class="c-header__action"
+        />
+        <div
+          class="c-header__action"
+        />
+      </div>
+    </div>
+  </div>
+</ui-header>
+`;

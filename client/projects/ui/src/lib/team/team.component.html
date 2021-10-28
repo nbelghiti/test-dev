@@ -1,0 +1,37 @@
+<div
+	class="c-team"
+>
+	<p class="c-team__title">
+		{{ title }}
+	</p>
+
+	<ul
+		*ngIf="team?.length > 0; else emptyState"
+		class="c-team__members"
+	>
+		<li
+			*ngFor="let member of team"
+			class="c-team__member"
+		>
+			<ui-user-tag
+				[user]="{
+					name: member.name,
+					role: (member.label | translate) || member.type,
+					myself: member.myself
+				}"
+				[fluid]="true"
+			>
+			</ui-user-tag>
+		</li>
+	</ul>
+
+	<ng-template #emptyState>
+		<ui-empty-state
+			[icon]="IconName.users"
+			[smallIcon]="true"
+			[message]="'TEAM__PACKAGE__FALLBACK_TITLE' | translate"
+		>
+			{{'TEAM__PACKAGE__FALLBACK' | translate}}
+		</ui-empty-state>
+	</ng-template>
+</div>

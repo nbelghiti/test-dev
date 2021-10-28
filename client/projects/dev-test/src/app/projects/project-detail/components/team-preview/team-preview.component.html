@@ -1,0 +1,28 @@
+<ui-loader [loading]="loading" [simpleLoader]="true">
+	<ng-container *ngIf="team; else noTeam">
+		<ui-team
+			*ngIf="team?.members?.length; else noMembers"
+			[team]="team?.members"
+			[title]="label"
+		></ui-team>
+
+		<div class="u-margin-top-1x" *ngIf="link">
+			<ui-row contentAfter="true">
+				<ui-link contentAfter
+					[iconAfter]="IconName.chevronRight"
+					[label]="link.label"
+					[url]="link.to"
+				>
+				</ui-link>
+			</ui-row>
+		</div>
+	</ng-container>
+
+	<ng-template #noTeam>
+		<p>{{ "TEAM__FALLBACK" | translate }}</p>
+	</ng-template>
+
+	<ng-template #noMembers>
+		<p>{{ "TEAM__PACKAGE__FALLBACK" | translate }}</p>
+	</ng-template>
+</ui-loader>

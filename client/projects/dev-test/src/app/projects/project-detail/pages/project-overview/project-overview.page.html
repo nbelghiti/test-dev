@@ -1,0 +1,36 @@
+<ui-loader [loading]="projectsFacade.selectLoading() | async">
+	<div class="l-sheet">
+		<div class="l-sheet__content">
+			<div class="l-container">
+				<div class="l-content">
+					<p>Project detail page</p>
+				</div>
+			</div>
+		</div>
+
+		<ui-sidebar>
+			<ui-project-info
+				*ngIf="project$ | async as project"
+				[imageSrc]="project?.general?.projectViewImagePath"
+				created="{{ project?.createdAt | dateTime }}"
+				[phase]="project?.status"
+				[vault]="project?.general?.VaultNumber"
+				[client]="project?.client?.name"
+				[location]="project?.location?.name"
+				[ACCFormat]="project?.general?.ACCFormat"
+			>
+			</ui-project-info>
+
+			<ui-info-accordion
+				[icon]="IconName.users"
+				[title]="'TEAM_TITLE' | translate"
+			>
+				<adb-team-preview
+					[team]="team"
+					[loading]="teamLoading"
+					[label]="'TEAM_MANAGEMENT' | translate"
+				></adb-team-preview>
+			</ui-info-accordion>
+		</ui-sidebar>
+	</div>
+</ui-loader>

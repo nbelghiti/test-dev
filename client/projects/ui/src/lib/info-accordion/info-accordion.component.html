@@ -1,0 +1,50 @@
+<div
+	class="c-info-accordion"
+	[ngClass]="{
+		'is-open': isOpen,
+		'c-info-accordion--with-background': withBackground,
+		'c-info-accordion--no-spacing': !withSpacing
+	}"
+>
+	<button
+		type="button"
+		class="c-info-accordion__header"
+		(click)="toggleAccordion()"
+	>
+		<div class="c-info-accordion__header-content">
+			<span
+				*ngIf="icon"
+				class="c-info-accordion__icon"
+			>
+				<ui-icon [name]="icon" size="large"></ui-icon>
+			</span>
+
+			<ui-heading
+				level="3"
+				[title]="title"
+			>
+				<small *ngIf="description">
+					{{description}}
+				</small>
+			</ui-heading>
+
+			<span
+				*ngIf="count && count >= 0"
+				class="c-info-accordion__count"
+			>
+				{{count}}
+			</span>
+		</div>
+
+		<span class="c-info-accordion__arrow">
+			<ui-icon name="caret-down"></ui-icon>
+		</span>
+	</button>
+
+	<div
+		*ngIf="isOpen"
+		class="c-info-accordion__content"
+	>
+		<ng-content></ng-content>
+	</div>
+</div>

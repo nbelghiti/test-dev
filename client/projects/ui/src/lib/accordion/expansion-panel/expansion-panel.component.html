@@ -1,0 +1,29 @@
+<div
+	class="c-expansion-panel {{ level }}"
+	[ngClass]="{
+		'is-open': expanded,
+		'c-expansion-panel--with-spacing': withSpacing
+	}"
+>
+	<div class="c-expansion-panel__header" (click)="toggleExpansion(!expanded)">
+		<span class="c-expansion-panel__title">{{title}}</span>
+
+		<div class="c-expansion-panel__actions">
+			<div class="c-card__actions" #actions>
+				<ng-content select=[uiExpansionPanelAction]></ng-content>
+			</div>
+
+			<span class="c-expansion-panel__icon">
+				<ui-icon *ngIf="level === ExpansionPanelLevel.primary; else otherLevel" [name]="IconName.caretDown"></ui-icon>
+
+				<ng-template #otherLevel>
+					<ui-icon [name]="expanded ? IconName.minusSquare : IconName.plusSquare" [size]="IconSize.small"></ui-icon>
+				</ng-template>
+			</span>
+		</div>
+	</div>
+
+	<div *ngIf="expanded" class="c-expansion-panel__content">
+		<ng-content></ng-content>
+	</div>
+<div>

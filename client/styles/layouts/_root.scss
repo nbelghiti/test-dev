@@ -1,0 +1,44 @@
+// ============================================================================
+// :: Root
+// ============================================================================
+/**
+ * The main root layout component that defines how the entire layout behaves
+ * on different devices, the roots splits up the content in blocks and
+ * determines where everything is positioned.
+ */
+
+// ============================================================================
+// :: Root
+// ============================================================================
+.l-root {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	flex-grow: 1;
+	width: 100%;
+	max-width: 100%;
+	height: 100vh;
+}
+
+// ============================================================================
+// :: Elements
+// ============================================================================
+.l-root__header {
+	position: relative;
+	z-index: $z-index-atmosphere - 1;
+
+	background-color: $background-color-base;
+}
+
+.l-root__content {
+	height: 100%;
+	overflow: auto;
+
+	background-color: $background-color-grey-98;
+
+	/**
+	* Works only on safari and is meant to fix the body-overflow issue that has
+	* plagued safari and every developer for 3 years.
+	*/
+	-webkit-overflow-scrolling: touch;
+}

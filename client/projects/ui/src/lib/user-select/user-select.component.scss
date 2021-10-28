@@ -1,0 +1,103 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$avatar-size: 3.2rem;
+
+// =============================================================================
+// :: Root
+// =============================================================================
+:host {
+	flex-grow: 1;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-user-select__trigger {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: $font-size-1x-large;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+
+	border: $border-width-base dashed $border-color-grey-86;
+	background-color: $white;
+
+	cursor: pointer;
+}
+
+.c-user-select__trigger-avatar {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+
+	flex-shrink: 0;
+	width: $avatar-size;
+	height: $avatar-size;
+
+	border-radius: 50%;
+
+	background-color: $background-color-grey-96;
+
+	transform: translateY(-50%);
+
+	pointer-events: none;
+}
+
+.c-user-select__trigger-input {
+	flex-grow: 1;
+	padding: 1.2rem 1rem 1.2rem 5rem;
+
+	font-size: $font-size-2x-small;
+	font-weight: $font-weight-normal;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-46;
+
+	cursor: text;
+}
+
+.c-user-select__trigger-user {
+	flex-grow: 1;
+	padding: 1.2rem 1rem;
+
+	font-size: $font-size-2x-small;
+	font-weight: $font-weight-normal;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-46;
+
+	cursor: text;
+}
+
+.c-user-select__content-item {
+	padding: 0.6rem 2rem;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: $background-color-grey-96;
+	}
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-user-select {
+
+	&.is-open {
+
+		.c-user-select__trigger-arrow {
+			transform: rotate(180deg);
+		}
+	}
+}

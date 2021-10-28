@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectableCardComponent Should render correctly 1`] = `
+<ui-selectable-card
+  CardAlignType={[Function Object]}
+  actions={[Function ElementRef]}
+  align=""
+  border={[Function Boolean]}
+  cardThumbnail="null"
+  column="false"
+  destroyed$={[Function Subject]}
+  hasActions="false"
+  isChecked={[Function FormControl]}
+  loading="false"
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+  withImage="false"
+>
+  <label>
+    <input
+      class="c-card__checkbox ng-untouched ng-pristine ng-valid"
+      ng-reflect-form="[object Object]"
+      type="radio"
+    />
+    <div
+      class="c-card"
+      ng-reflect-klass="c-card"
+      ng-reflect-ng-class="[object Object]"
+    >
+
+      <div
+        class="c-card__container"
+      >
+        <div
+          class="c-card__thumbnail"
+        >
+          <ui-image>
+            <div
+              class="c-image"
+              style="background-image: url(assets/fallback/fallback.png);"
+            />
+          </ui-image>
+        </div>
+        <div
+          class="c-card__content"
+        >
+          <div />
+          <div
+            class="c-card__actions"
+          />
+        </div>
+      </div>
+    </div>
+  </label>
+</ui-selectable-card>
+`;

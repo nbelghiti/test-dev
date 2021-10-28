@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsComponent Should render correctly 1`] = `
+<ui-search-results
+  IconName={[Function Object]}
+  SearchResultType={[Function Object]}
+  active="false"
+  items={[Function QueryList]}
+  navigate={[Function Boolean]}
+  selectResult={[Function EventEmitter]}
+>
+  <ui-empty-state
+    ng-reflect-icon="search"
+    ng-reflect-message="We didn't find any undefined f"
+    ng-reflect-small-icon="true"
+  >
+    <div
+      class="c-empty-state"
+      ng-reflect-klass="c-empty-state"
+      ng-reflect-ng-class="[object Object]"
+    >
+      <span
+        class="c-empty-state__icon c-empty-state__icon--small"
+        ng-reflect-klass="c-empty-state__icon"
+        ng-reflect-ng-class="[object Object]"
+      >
+        <i
+          class="fas fa-search"
+        />
+      </span>
+      <p
+        class="c-empty-state__message"
+      >
+        We didn't find any undefined for your search
+      </p>
+      <div
+        class="c-empty-state__sub-message"
+        ng-reflect-ng-class="[object Object]"
+      >
+         Try changing your searchterm (in: project name, component name, inputfield...) 
+      </div>
+    </div>
+  </ui-empty-state>
+</ui-search-results>
+`;

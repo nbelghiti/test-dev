@@ -1,0 +1,80 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Breadcrumb item
+// =============================================================================
+.c-breadcrumb-item {
+	position: relative;
+
+	display: inline-flex;
+	flex-direction: column;
+	padding: 1.4rem 2rem;
+
+	text-decoration: none;
+
+	border-right: $border-width-base solid $border-color-grey-86;
+	color: $text-color-grey-46;
+
+	&:hover {
+		color: $text-color-base;
+
+		cursor: pointer;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-breadcrumb-item__item {
+	display: inline-flex;
+	align-items: center;
+
+	margin-top: 0.2rem;
+}
+
+.c-breadcrumb-item__label {
+	@include extend-text-overflow();
+
+	display: inline-block;
+	max-width: 20rem;
+
+	font-size: $font-size-2x-small;
+	line-height: $line-height-normalize;
+	text-align: left;
+	text-transform: uppercase;
+
+	white-space: nowrap;
+}
+
+.c-breadcrumb-item__value {
+	@include extend-text-overflow();
+
+	display: inline-block;
+	max-width: 20rem;
+
+	font-size: $font-size-1x-small;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+
+	white-space: nowrap;
+}
+
+.c-breadcrumb-item__arrow {
+	display: inline-block;
+	margin-left: 1rem;
+}
+
+.c-breadcrumb-item__icon {
+	display: inline-block;
+	margin-right: 0.4rem;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-breadcrumb-item--first {
+	background-color: $background-color-grey-96;
+}

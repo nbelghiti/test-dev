@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchIndicatorComponent Should render correctly 1`] = `
+<ui-search-indicator
+  clicked={[Function EventEmitter]}
+>
+  <button
+    class="c-search-indicator"
+  >
+    <ui-icon
+      class="c-icon"
+      name="search"
+      ng-reflect-name="search"
+    >
+      <i
+        class="c-icon__glyph   fas fa-search"
+      />
+    </ui-icon>
+  </button>
+</ui-search-indicator>
+`;

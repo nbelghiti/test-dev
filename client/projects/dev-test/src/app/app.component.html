@@ -1,0 +1,27 @@
+<div class="l-root">
+	<div class="l-root__header" *ngIf="headerInfo$ | async as headerInfo">
+		<ui-header
+			[backLink]="headerInfo.backLink"
+			[home]="headerInfo.home"
+			[breadcrumb]="headerInfo.breadcrumb"
+			[editLink]="headerInfo.editLink"
+		>
+			<ui-heading
+				level="1"
+				[title]="headerInfo.title"
+			>
+				<small>{{headerInfo.subtitle}}</small>
+			</ui-heading>
+
+			<ui-user-info
+				*ngIf="(user$ | async); let user"
+				[user]="user"
+				(logout)="onLogout()"
+			></ui-user-info>
+		</ui-header>
+	</div>
+
+	<main class="l-root__content">
+		<router-outlet></router-outlet>
+	</main>
+</div>

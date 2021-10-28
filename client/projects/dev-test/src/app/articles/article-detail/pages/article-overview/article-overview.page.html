@@ -1,0 +1,27 @@
+
+
+
+
+<ui-loader  [loading]="articlesFacade.selectLoading() | async">
+		<div class="l-content__item u-padding-bottom-4x">
+			<div class="l-section ">
+				<div class="l-grid__col">
+						<ui-row [contentAfter]="true">
+							<ui-heading
+								class="u-margin-left-3x u-margin-right-3x"
+								[level]="1"
+								[title]="myArticle?.title"
+							>
+							</ui-heading>
+						</ui-row>
+
+						<div class="u-margin-top-2x u-margin-left-3x u-margin-right-3x">
+							<ui-info-item [text]="myArticle?.intro || '-'"></ui-info-item>
+						</div>
+						<div class="u-margin-top-2x u-margin-left-3x u-margin-right-3x">
+							<ui-info-item [text]="myArticle?.summary || '-'"></ui-info-item>
+						</div>
+				</div>
+			</div>
+		</div>
+</ui-loader>

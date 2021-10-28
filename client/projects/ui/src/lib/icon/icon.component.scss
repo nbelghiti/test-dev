@@ -1,0 +1,55 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Icon
+// =============================================================================
+:host {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: inherit;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-icon__glyph {
+	line-height: inherit;
+
+	cursor: pointer;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-icon__glyph--large {
+	font-size: 2rem;
+}
+
+.c-icon__glyph--small {
+	font-size: 1.4rem;
+}
+
+.c-icon__glyph--tiny {
+	font-size: 1.2rem;
+}
+
+.c-icon__glyph--success {
+	color: $ui-color-success-dark;
+}
+
+.c-icon__glyph--error {
+	color: $ui-color-error-dark;
+}
+
+.c-icon__glyph--warning {
+	color: $ui-color-warning-dark;
+}
+
+.c-icon__glyph--info {
+	color: $ui-color-info-dark;
+}

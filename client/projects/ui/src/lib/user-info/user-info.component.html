@@ -1,0 +1,44 @@
+<div
+	uiFlyout
+	class="c-user-info"
+>
+	<button
+		uiFlyoutToggle
+		class="c-user-info__toggle"
+	>
+		<span
+			class="c-user-info__toggle-text"
+		>
+			{{initials}}
+		</span>
+
+		<div class="c-user-info__toggle-icon">
+			<ui-icon name="caret-down"></ui-icon>
+		</div>
+	</button>
+
+	<div
+		uiFlyoutContent
+		class="c-flyout__content c-flyout__content--right"
+	>
+		<div class="c-user-info__flyout-general">
+			<ui-heading
+				[level]="HeadingLevel.heading3"
+				[title]="user?.name"
+			>
+				{{user?.role}}
+			</ui-heading>
+		</div>
+
+		<div class="c-user-info__flyout-content">
+			<button
+				class="c-user-info__flyout-item"
+				(click)="logout.emit()"
+			>
+				<span>Logout</span>
+
+				<ui-icon name="sign-out-alt"></ui-icon>
+			</button>
+		</div>
+	</div>
+</div>

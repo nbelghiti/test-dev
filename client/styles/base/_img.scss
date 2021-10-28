@@ -1,0 +1,12 @@
+// =============================================================================
+// :: Img - (no classes)
+// =============================================================================
+img {
+	max-width: 100%;
+
+	/**
+	 * Slicing applied when there is no class applied. For example: rendered in
+	 * a WYSIWYG.
+	 */
+	// &:not([class]) {}
+}

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarComponent Should render correctly 1`] = `
+<ui-avatar
+  compact="false"
+  initials=""
+>
+  <span
+    class="c-avatar"
+    ng-reflect-klass="c-avatar"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <abbr
+      title="undefined"
+    >
+      
+    </abbr>
+  </span>
+</ui-avatar>
+`;

@@ -1,0 +1,134 @@
+<ui-loader [simpleLoader]="true">
+	<div class="c-dialog__content">
+		<ui-heading
+			[level]="HeadingLevel.heading2"
+			[title]="isEdit ? ('EDIT_FIELD_DIALOG__TITLE' | translate) : ('NEW_FIELD_DIALOG__TITLE' | translate)"
+			classes="c-dialog__title"
+		>
+		</ui-heading>
+
+		<form
+			*ngIf="fieldForm"
+			[formGroup]="fieldForm"
+			class="l-form__grid"
+		>
+			<div class="l-grid l-grid--with-spacing">
+				<div class="l-grid__col">
+					<ui-select
+						*ngIf="typeOptions.length > 0"
+						[label]="'FIELD_DIALOG__TYPE' | translate"
+						name="type"
+						[formControl]="fieldForm.get('type')"
+						[options]="typeOptions"
+						[error]="(fieldForm.get('type')?.dirty || fieldForm.get('type')?.touched) && fieldForm.get('type')?.errors?.required && ('FIELD_DIALOG__TYPE_ERROR' | translate)"
+					>
+					</ui-select>
+				</div>
+
+				<div class="l-grid__col">
+					<ui-input
+						[label]="'FIELD_DIALOG__DESCRIPTION' | translate"
+						name="description"
+						type="text"
+						[formControl]="fieldForm.get('description')"
+						[error]="getDescriptionErrors()"
+					>
+					</ui-input>
+				</div>
+
+				<div class="l-grid__col--6" *ngIf="fieldForm.get('type')?.value !== fieldTypes.datalist">
+					<ui-select
+						*ngIf="unitTypeOptions.length > 0"
+						[label]="'FIELD_DIALOG__UNIT-TYPE' | translate"
+						name="unitType"
+						[formControl]="fieldForm.get('unitType')"
+						[options]="unitTypeOptions"
+						[error]="(fieldForm.get('unitType')?.dirty || fieldForm.get('unitType')?.touched) && fieldForm.get('unitType')?.errors?.required && ('FIELD_DIALOG__UNIT_ERROR' | translate)"
+					>
+					</ui-select>
+				</div>
+				<div class="l-grid__col--6" *ngIf="fieldForm.get('type')?.value !== fieldTypes.datalist">
+					<ui-select
+						*ngIf="unitOptions.length > 0"
+						[label]="'FIELD_DIALOG__UNIT' | translate"
+						name="unit"
+						[formControl]="fieldForm.get('defaultUnit')"
+						[options]="unitOptions"
+						[error]="(fieldForm.get('defaultUnit')?.dirty || fieldForm.get('defaultUnit')?.touched) && fieldForm.get('defaultUnit')?.errors?.required && ('FIELD_DIALOG__UNIT_ERROR' | translate)"
+					>
+					</ui-select>
+				</div>
+
+				<div class="l-grid__col--6">
+					<ui-input
+						[label]="'FIELD_DIALOG__FIELD_CODE' | translate"
+						name="field-code"
+						type="text"
+						[formControl]="fieldForm.get('code')"
+						[error]="(fieldForm.get('code')?.dirty || fieldForm.get('code')?.touched) && (
+							(fieldForm.get('code')?.errors?.required && ('FIELD_DIALOG__FIELD_CODE_ERROR' | translate))
+							|| (fieldForm.get('code')?.errors?.pattern && ('FIELD_DIALOG__PATTERN_ERROR' | translate))
+						)"
+					>
+					</ui-input>
+				</div>
+
+				<div class="l-grid__col--6">
+					<ui-input
+						[label]="'FIELD_DIALOG__CAD_ID' | translate"
+						name="cad-id"
+						type="text"
+						[formControl]="fieldForm.get('CAD_ID')"
+						[error]="(fieldForm.get('CAD_ID')?.dirty || fieldForm.get('CAD_ID')?.touched) && (
+							(fieldForm.get('CAD_ID')?.errors?.required && ('FIELD_DIALOG__CAD_ID_ERROR' | translate))
+							|| (fieldForm.get('CAD_ID')?.errors?.pattern && ('FIELD_DIALOG__PATTERN_ERROR' | translate))
+						)"
+					>
+					</ui-input>
+				</div>
+			</div>
+		</form>
+
+		<div *ngIf="response?.errors" class="u-margin-top-3x">
+			<div class="u-margin-bottom-1x">
+				<ui-heading
+					[level]="HeadingLevel.heading3"
+					[title]="response?.message"
+				>
+				</ui-heading>
+			</div>
+
+			<ui-list>
+				<ng-container *ngFor="let error of response?.errors">
+					<ui-info-item
+						*uiListItem
+						[text]="error"
+						[icon]="IconName.exclamationCircle"
+					>
+					</ui-info-item>
+				</ng-container>
+			</ui-list>
+		</div>
+	</div>
+</ui-loader>
+
+<div class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button
+			(clicked)="onCancel()"
+			[type]="ButtonType.secondary"
+		>
+			{{ 'GENERAL__CANCEL' | translate }}
+		</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button
+			(clicked)="onSave()"
+			[disabled]="isPending"
+			[loading]="isPending"
+		>
+			{{ 'FIELD_DIALOG__SAVE' | translate }}
+		</ui-button>
+	</div>
+</div>

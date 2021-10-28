@@ -1,0 +1,106 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$padding-base: 0.6rem 2.5rem 0.6rem 2rem;
+
+// =============================================================================
+// :: Expansion panel
+// =============================================================================
+.c-expansion-panel {
+	border: $border-width-base solid $border-color-grey-86;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-expansion-panel__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: $padding-base;
+
+	background-color: $background-color-grey-86;
+
+	cursor: pointer;
+}
+
+.c-expansion-panel__title {
+	font-size: $font-size-base;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+
+	color: $text-color-base;
+}
+
+.c-expansion-panel__icon {
+	display: flex;
+	align-items: center;
+	max-height: 1.6rem;
+	margin-left: 1rem;
+
+	transition: $animation-base;
+}
+
+.c-expansion-panel__actions {
+	display: flex;
+	align-items: center;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-expansion-panel--secondary,
+.c-expansion-panel--tertiary {
+
+	.c-expansion-panel__icon {
+		color: $text-color-grey-46;
+	}
+}
+
+.c-expansion-panel--secondary {
+
+	.c-expansion-panel__header {
+		background-color: $background-color-grey-96;
+	}
+}
+
+.c-expansion-panel--tertiary {
+
+	.c-expansion-panel__header {
+		background-color: $background-color-base;
+	}
+}
+
+.c-expansion-panel--with-spacing {
+
+	.c-expansion-panel__content {
+		padding: $padding-base;
+	}
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-expansion-panel {
+
+	&.is-open {
+
+		box-shadow: 0 0 0 0.3rem rgba($box-shadow-color-base, 0.1);
+
+		&:not(.c-expansion-panel--secondary):not(.c-expansion-panel--tertiary) {
+
+			.c-expansion-panel__icon {
+				transform: rotate(180deg);
+			}
+		}
+
+		.c-expansion-panel__icon {
+			color: $text-color-base;
+		}
+	}
+}

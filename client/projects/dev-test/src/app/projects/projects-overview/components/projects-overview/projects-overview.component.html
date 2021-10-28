@@ -1,0 +1,47 @@
+
+<ui-loader
+	[loading]="loading"
+	[simpleLoader]="true"
+>
+	<div *ngIf="projects?.length; else noProjects" class="l-content__item u-padding-bottom-4x">
+		<div class="l-grid l-grid--with-spacing l-grid--stretch">
+			<div
+				*ngFor="let project of projects; let index = index"
+				class="l-grid__col l-grid__col--6@tablet l-grid__col--4@desktop l-grid__col--3@screen"
+			>
+				<ui-card
+					[imageSrc]="project?.general?.thumbnailImagePath"
+					withImage="true"
+					[link]="[
+						'/projects',
+						project?.id
+					]"
+				>
+					<ui-row [contentAfter]="true">
+						<ui-heading
+							[level]="3"
+							[title]="project?.name"
+						>
+						</ui-heading>
+
+						<ui-status-label
+							contentAfter
+							[type]="StatusType[project?.status]"
+						>
+						</ui-status-label>
+					</ui-row>
+
+					<div class="u-margin-top-1x">
+						<ui-info-item [text]="project?.client?.name || '-'" [icon]="IconName.user"></ui-info-item>
+					</div>
+				</ui-card>
+			</div>
+		</div>
+	</div>
+
+	<ng-template #noProjects>
+		<ui-empty-state icon="search" [message]="'MY_PROJECTS__OVERVIEW__FALLBACK_TITLE' | translate">
+			{{'MY_PROJECTS__OVERVIEW__FALLBACK' | translate}}
+		</ui-empty-state>
+	</ng-template>
+</ui-loader>

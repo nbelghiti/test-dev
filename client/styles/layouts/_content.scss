@@ -1,0 +1,38 @@
+// ============================================================================
+// :: Content
+// ============================================================================
+
+// ============================================================================
+// :: Root
+// ============================================================================
+.l-content {
+	display: block;
+
+	/**
+	* When multiple content blocks are placed next to eachs other they gain the
+	* some spacing so they don't hang onto each other by applying margin-top
+	*/
+	& + .l-content {
+		margin-top: 3rem;
+	}
+}
+
+// ============================================================================
+// :: Elements
+// ============================================================================
+/**
+ * When multiple content__item blocks are placed next to eacher other they gain
+ * the some spacing so they don't hang onto each other, but the last element in
+ * the l-content container has no margin-bottom
+ */
+.l-content__item {
+	margin-bottom: 1rem;
+
+	@include respond-at(get-breakpoint("desktop")) {
+		margin-bottom: 2rem;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

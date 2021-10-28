@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFieldComponent Should render correctly 1`] = `
+<ui-search-field
+  destroyed$={[Function Subject]}
+  input={[Function ElementRef]}
+  onChange={[Function Function]}
+  qSearch={[Function EventEmitter]}
+  searchForm={[Function FormGroup]}
+  tagged={[Function EventEmitter]}
+>
+  <form
+    class="c-search-field ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    
+    <input
+      class="c-search-field__input ng-untouched ng-pristine ng-valid"
+      formcontrolname="query"
+      ng-reflect-name="query"
+      placeholder="undefined"
+      type="text"
+    />
+    <div
+      class="c-search-field__focus"
+    />
+    <button
+      class="c-search-field__submit"
+      type="submit"
+    >
+      <ui-icon
+        class="c-icon"
+        name="search"
+        ng-reflect-name="search"
+      >
+        <i
+          class="c-icon__glyph   fas fa-search"
+        />
+      </ui-icon>
+    </button>
+  </form>
+</ui-search-field>
+`;

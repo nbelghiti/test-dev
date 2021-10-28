@@ -1,0 +1,78 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: AltButton
+// =============================================================================
+.c-alt-button {
+	position: relative;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-width: 8rem;
+	height: 100%;
+
+	padding: 1.5rem 3rem;
+
+	text-align: center;
+	text-decoration: none;
+
+	border: $border-width-base dashed $background-color-orange-78;
+	color: $primary-color;
+
+	transition: border-color $animation-base;
+
+	cursor: pointer;
+
+	&:hover {
+		border-color: $primary-color;
+	}
+
+	&:focus {
+		border-style: solid;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-alt-button__icon {
+	display: flex;
+
+	font-size: 1.5rem;
+	line-height: $line-height-base;
+
+	color: currentColor;
+
+	transition: color $animation-base;
+}
+
+.c-alt-button__text {
+	display: inline-block;
+	max-width: 30rem;
+	overflow: hidden;
+
+	font-family: $font-family-secondary;
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+	text-decoration: underline;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	color: currentColor;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-alt-button__icon--after {
+	margin-left: 1rem;
+}
+
+.c-alt-button__icon--before {
+	margin-right: 1rem;
+}

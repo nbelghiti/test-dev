@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamSelectComponent Should render correctly 1`] = `
+<ui-team-select
+  IconName={[Function Object]}
+  action={[Function Boolean]}
+  first="false"
+  members={[Function QueryList]}
+  newMember={[Function EventEmitter]}
+>
+  <div
+    class="c-team-select"
+  >
+    <ui-heading
+      ng-reflect-level="3"
+    >
+      <div
+        class="c-heading"
+        ng-reflect-klass="c-heading "
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        
+        
+        
+        <h3>
+          
+        </h3>
+        <div
+          class="c-heading__meta"
+        >
+          
+          
+          
+        </div>
+      </div>
+    </ui-heading>
+    <div>
+      
+      <ui-empty-state
+        ng-reflect-icon="users"
+        ng-reflect-small-icon="true"
+      >
+        <div
+          class="c-empty-state"
+          ng-reflect-klass="c-empty-state"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <span
+            class="c-empty-state__icon c-empty-state__icon--small"
+            ng-reflect-klass="c-empty-state__icon"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <i
+              class="fas fa-users"
+            />
+          </span>
+          <p
+            class="c-empty-state__message"
+          >
+            
+          </p>
+          <div
+            class="c-empty-state__sub-message"
+            ng-reflect-ng-class="[object Object]"
+          >
+             TEAM__PACKAGE__FALLBACK 
+          </div>
+        </div>
+      </ui-empty-state>
+      
+      <ui-link
+        iconbefore="plus"
+        label="New team member"
+        ng-reflect-icon-before="plus"
+        ng-reflect-label="New team member"
+      >
+        
+        <button
+          class="c-link "
+          type="button"
+        >
+          
+          <div
+            class="c-link__icon c-link__icon--before"
+          >
+            <ui-icon
+              class="c-icon"
+              ng-reflect-name="plus"
+            >
+              <i
+                class="c-icon__glyph   fas fa-plus"
+              />
+            </ui-icon>
+          </div>
+          <span
+            class="c-link__text"
+          >
+            New team member
+          </span>
+          
+        </button>
+        
+      </ui-link>
+    </div>
+    
+  </div>
+</ui-team-select>
+`;

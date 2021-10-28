@@ -1,0 +1,55 @@
+// =============================================================================
+// :: Dialog
+// =============================================================================
+.c-dialog {
+	display: flex;
+	flex-direction: column;
+	width: 48rem;
+
+	background-color: $background-color-base;
+	box-shadow: $box-shadow-expanded;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-dialog__content {
+	flex-grow: 1;
+	padding: 4rem 4rem 2rem;
+}
+
+.c-dialog__title {
+	margin-bottom: 2rem;
+
+	font-family: $font-family-secondary;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+}
+
+.c-dialog__actions {
+	display: flex;
+	justify-content: flex-end;
+	padding: 3rem 4rem;
+
+	border-top: $border-width-base solid $border-color-grey-96;
+}
+
+.c-dialog__action-item {
+	margin: 0 1rem;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.c-dialog__list {
+
+	.c-list {
+		max-height: 25rem;
+		overflow: scroll;
+	}
+}

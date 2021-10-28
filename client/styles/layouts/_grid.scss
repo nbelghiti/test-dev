@@ -1,0 +1,379 @@
+// =============================================================================
+// :: Grid
+// =============================================================================
+/**
+ * Contains flexbox based grid. The width of the grid can be divided into 12
+ * columns. The sum of the width of a full row of columns cannot exceed the
+ * 12 column limit in order for it to completely fill the space.
+ *
+ * Suffixicate mixins are not used within this file because it is a completely
+ * different system.
+ */
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$grid-columns: 12 !default;
+$grid-fallback-spacing: 10px !default;
+
+// =============================================================================
+// :: Grid
+// =============================================================================
+.l-grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+
+	// If the grid is placed on a <ul> the list-style-type is removed
+	list-style-type: none;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.l-grid__col {
+	box-sizing: border-box;
+
+	flex: 0 1 auto;
+	width: 100%;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+@for $i from 1 through $grid-columns {
+	$col: 100% * ($i / $grid-columns);
+
+	.l-grid__col--#{$i} {
+		width: $col;
+	}
+
+	.l-grid__col--offset-#{$i} {
+		margin-left: $col;
+	}
+}
+
+.l-grid--with-spacing {
+	width: calc(100% + #{$grid-fallback-spacing});
+	margin: calc(#{$grid-fallback-spacing * -0.5});
+
+	@each $breakpoint, $params in $breakpoints {
+		$width: map-get($params, width);
+		$spacing: map-get($params, spacing);
+
+		@include respond-at(px($width)) {
+			width: calc(100% + #{$spacing});
+			margin: calc(#{$spacing * -0.5});
+		}
+	}
+
+	> [class*="l-grid__col"] {
+		margin: #{$grid-fallback-spacing / 2};
+
+		@each $breakpoint, $params in $breakpoints {
+			$width: map-get($params, width);
+			$spacing: map-get($params, spacing);
+
+			@include respond-at(px($width)) {
+				margin: #{$spacing / 2};
+			}
+		}
+	}
+
+	@for $i from 1 through $grid-columns {
+		$col: 100% * ($i / $grid-columns);
+
+		> .l-grid__col--#{$i} {
+			width: calc(#{$col} - #{$grid-fallback-spacing});
+
+			@each $breakpoint, $params in $breakpoints {
+				$width: map-get($params, width);
+				$spacing: map-get($params, spacing);
+
+				@include respond-at(px($width)) {
+					width: calc(#{$col} - #{$spacing});
+				}
+			}
+		}
+
+		> .l-grid__col--offset-#{$i} {
+			margin-left: calc(#{$col} + #{$grid-fallback-spacing * 0.5});
+
+			@each $breakpoint, $params in $breakpoints {
+				$width: map-get($params, width);
+				$spacing: map-get($params, spacing);
+
+				@include respond-at(px($width)) {
+					margin-left: calc(#{$col} + #{$spacing * 0.5});
+				}
+			}
+		}
+	}
+}
+
+.l-grid--align-start {
+	justify-content: flex-start;
+}
+
+.l-grid--align-center {
+	justify-content: center;
+}
+
+.l-grid--align-end {
+	justify-content: flex-end;
+}
+
+.l-grid--align-top {
+	align-items: flex-start;
+}
+
+.l-grid--align-middle {
+	align-items: center;
+}
+
+.l-grid--align-bottom {
+	align-items: flex-end;
+}
+
+.l-grid--stretch {
+	align-items: stretch;
+}
+
+.l-grid--space-between {
+	justify-content: space-between;
+}
+
+.l-grid--space-around {
+	justify-content: space-around;
+}
+
+.l-grid__col--align-top {
+	align-self: flex-start;
+}
+
+.l-grid__col--align-middle {
+	align-self: center;
+}
+
+.l-grid__col--align-bottom {
+	align-self: flex-end;
+}
+
+.l-grid__col--stretch {
+	align-self: stretch;
+}
+
+.l-grid__col--first {
+	order: -1;
+}
+
+.l-grid__col--last {
+	order: 999;
+}
+
+.l-grid__col--auto {
+	width: auto;
+}
+
+.l-grid__col--grow {
+	flex-grow: 1;
+}
+
+.l-grid--reverse {
+	flex-direction: row-reverse;
+}
+
+// =============================================================================
+// :: Responsive suffixes
+// =============================================================================
+@each $breakpoint, $params in $breakpoints {
+	$width: map-get($params, width);
+	$suffixicate: map-get($params, grid-suffixicate);
+
+	@if ($suffixicate) {
+		@for $i from 1 through $grid-columns {
+			$col: 100% * ($i / $grid-columns);
+
+			.l-grid__col--#{$i}\@#{$breakpoint} {
+				@include respond-at(px($width)) {
+					width: $col;
+				}
+			}
+
+			.l-grid__col--offset-#{$i}\@#{$breakpoint} {
+				@include respond-at(px($width)) {
+					margin-left: $col;
+				}
+			}
+		}
+
+		.l-grid--align-start\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				justify-content: flex-start;
+			}
+		}
+
+		.l-grid--align-center\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				justify-content: center;
+			}
+		}
+
+		.l-grid--align-end\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				justify-content: flex-end;
+			}
+		}
+
+		.l-grid--align-top\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-items: flex-start;
+			}
+		}
+
+		.l-grid--align-middle\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-items: center;
+			}
+		}
+
+		.l-grid--align-bottom\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-items: flex-end;
+			}
+		}
+
+		.l-grid--stretch\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-items: stretch;
+			}
+		}
+
+		.l-grid--space-between\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				justify-content: space-between;
+			}
+		}
+
+		.l-grid--space-around\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				justify-content: space-around;
+			}
+		}
+
+		.l-grid__col--align-top\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-self: flex-start;
+			}
+		}
+
+		.l-grid__col--align-middle\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-self: center;
+			}
+		}
+
+		.l-grid__col--align-bottom\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-self: flex-end;
+			}
+		}
+
+		.l-grid__col--stretch\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				align-self: stretch;
+			}
+		}
+
+		.l-grid__col--first\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				order: -1;
+			}
+		}
+
+		.l-grid__col--last\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				order: 999;
+			}
+		}
+
+		.l-grid__col--auto\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				width: auto;
+			}
+		}
+
+		.l-grid__col--grow\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				flex-grow: 1;
+			}
+		}
+
+		.l-grid--reverse\@#{$breakpoint} {
+			@include respond-at(px($width)) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}
+
+.l-grid--with-spacing {
+	$count: 0;
+
+	@each $breakpoint, $params in $breakpoints {
+		$count: $count + 1;
+		$suffixicate: map-get($params, grid-suffixicate);
+		$width: map-get($params, width);
+
+		@if ($suffixicate) {
+			@for $i from 1 through $grid-columns {
+				$col: 100% * ($i / $grid-columns);
+
+				> .l-grid__col--#{$i}\@#{$breakpoint} {
+					$innerCount: 0;
+
+					@each $innerBreakpoint, $innerParams in $breakpoints {
+						$innerCount: $innerCount + 1;
+						$innerWidth: map-get($innerParams, width);
+						$innerSpacing: map-get($innerParams, spacing);
+
+						@if ($innerCount >= $count) {
+							@include respond-at(get-breakpoint($innerBreakpoint)) {
+								width: calc(#{$col} - #{$innerSpacing});
+							}
+						}
+					}
+				}
+
+				> .l-grid__col--offset-#{$i}\@#{$breakpoint} {
+					$innerCount: 0;
+
+					@each $innerBreakpoint, $innerParams in $breakpoints {
+						$innerCount: $innerCount + 1;
+						$innerWidth: map-get($innerParams, width);
+						$innerSpacing: map-get($innerParams, spacing);
+
+						@if ($innerCount >= $count) {
+							@include respond-at(get-breakpoint($innerBreakpoint)) {
+								margin-left:
+									calc(
+										#{$col} + #{$innerSpacing * 0.5}
+									);
+							}
+						}
+					}
+				}
+			}
+
+			> .l-grid__col--auto\@#{$breakpoint} {
+				@include respond-at(px($width)) {
+					width: auto;
+				}
+			}
+		}
+	}
+}

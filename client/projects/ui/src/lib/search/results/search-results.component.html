@@ -1,0 +1,24 @@
+<ul
+	*ngIf="results?.length; else emptyState"
+	class="c-search-results"
+>
+	<li *ngFor="let result of results" (click)="selectResult.emit(result)">
+		<ui-search-result
+			[breadcrumb]="result.path"
+			[content]="result.description"
+			[url]="result.link"
+			[navigate]="navigate"
+		>
+		</ui-search-result>
+	</li>
+</ul>
+
+<ng-template #emptyState>
+	<ui-empty-state
+		[icon]="IconName.search"
+		[message]="'We didn\u0027t find any ' + type + ' for your search'"
+		[smallIcon]="true"
+	>
+		Try changing your searchterm (in: project name, component name, inputfield...)
+	</ui-empty-state>
+</ng-template>

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkComponent Should render correctly 1`] = `
+<ui-link
+  clicked={[Function EventEmitter]}
+  hasClick="false"
+>
+  <a
+    class="c-link "
+    href="/"
+  >
+    
+    <span
+      class="c-link__text"
+    >
+      
+    </span>
+    
+  </a>
+</ui-link>
+`;

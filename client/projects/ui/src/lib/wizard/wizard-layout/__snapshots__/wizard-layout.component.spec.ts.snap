@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WizardLayoutComponent default state and behaviour Should render correctly 1`] = `
+<ng-component
+  activeIndex={[Function Number]}
+  steps={[Function Array]}
+>
+  <ui-wizard-layout>
+    <header
+      class="l-step-wizard__header"
+    >
+      <div
+        class="l-step-wizard__header-content l-container l-container--fluid"
+      >
+        
+        <h1
+          id="test-header"
+        >
+          Test header
+        </h1>
+      </div>
+      
+    </header>
+    <div
+      class="l-step-wizard__scroll-container"
+    >
+      <div
+        class="l-step-wizard__container"
+      >
+        <div
+          class="l-step-wizard__content"
+        >
+          
+          <p
+            id="test-body"
+          >
+            Test body
+          </p>
+        </div>
+        
+      </div>
+    </div>
+    <footer
+      class="l-step-wizard__footer"
+    >
+      <div
+        class="l-container l-container--fluid"
+      >
+        
+        <div
+          id="test-footer"
+        >
+          Test footer
+        </div>
+      </div>
+    </footer>
+  </ui-wizard-layout>
+</ng-component>
+`;

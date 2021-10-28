@@ -1,0 +1,36 @@
+<div
+	class="c-user-tag"
+	[class.c-user-tag--fluid]="fluid"
+	[title]="user?.name"
+>
+	<div class="c-user-tag__content">
+		<ui-user
+			[user]="user"
+		>
+		</ui-user>
+	</div>
+
+	<div
+		*ngIf="icon && !isClickedUsed"
+		class="c-user-tag__icon"
+	>
+		<ui-icon
+			[name]="icon"
+			[size]="IconSize.tiny"
+		>
+		</ui-icon>
+	</div>
+
+	<button
+		*ngIf="isClickedUsed"
+		type="button"
+		(click)="clicked.emit(user)"
+		class="c-user-tag__button"
+	>
+		<ui-icon
+			[name]="IconName.times"
+			[size]="IconSize.tiny"
+		>
+		</ui-icon>
+	</button>
+</div>

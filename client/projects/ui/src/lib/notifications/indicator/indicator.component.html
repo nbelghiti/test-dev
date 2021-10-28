@@ -1,0 +1,10 @@
+<button class="c-notification-indicator">
+	<ui-icon name="bell"></ui-icon>
+
+	<span
+		*ngIf="count >= 1"
+		class="c-notification-indicator__count"
+	>
+		{{count > 99 ? '99+' : count}}
+	</span>
+</button>

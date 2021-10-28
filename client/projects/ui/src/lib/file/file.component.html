@@ -1,0 +1,29 @@
+<div
+	class="c-file"
+>
+	<div class="c-file__left" [title]="label">
+		<div *ngIf="iconBefore" class="c-file__icon">
+			<ui-icon [name]="iconBefore"></ui-icon>
+		</div>
+
+		<span class="c-file__label">{{label}}</span>
+
+		<ng-content></ng-content>
+	</div>
+
+	<div *ngIf="url" class="c-file__right">
+		<span class="c-file__last-updates">
+			{{ 'FILE__LAST_GENERATED' | translate }}: {{lastGenerated}}
+		</span>
+
+		<div class="c-file__link">
+			<ui-button
+				[type]="ButtonType.tertiary"
+				[iconAfter]="IconName.externalLink"
+				[link]="url"
+			>
+				{{ 'FILE__VAULT_LINK_lABEL' | translate }}
+			</ui-button>
+		</div>
+	</div>
+</div>

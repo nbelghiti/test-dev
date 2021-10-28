@@ -1,0 +1,59 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: User
+// =============================================================================
+.c-user {
+	display: flex;
+	align-items: center;
+	width: 100%;
+
+	font-weight: $font-weight-bold;
+	font-size: $font-size-1x-large;
+	line-height: $line-height-base;
+
+	&:hover {
+		cursor: default;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-user__content {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	margin-left: 0.6rem;
+
+	font-size: $font-size-2x-small;
+	line-height: $line-height-base;
+	text-align: left;
+	white-space: nowrap;
+
+	color: $text-color-grey-46;
+}
+
+.c-user__name {
+	@include extend-text-overflow();
+
+	font-weight: $font-weight-bold;
+}
+
+.c-user__role {
+	@include extend-text-overflow();
+
+	font-weight: $font-weight-normal;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-user--with-background {
+	padding: 0.5rem 0.8rem;
+
+	background-color: $background-color-grey-96;
+}

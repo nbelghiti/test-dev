@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeadingComponent Should render correctly 1`] = `
+<ui-heading
+  HeadingLevel={[Function Object]}
+  IconName={[Function Object]}
+  classes=""
+  inline="false"
+  level={[Function String]}
+  loading="false"
+>
+  <div
+    class="c-heading"
+    ng-reflect-klass="c-heading "
+    ng-reflect-ng-class="[object Object]"
+  >
+    
+    
+    <h1>
+      
+    </h1>
+    
+    
+    <div
+      class="c-heading__meta"
+    >
+      
+      
+      
+    </div>
+  </div>
+</ui-heading>
+`;

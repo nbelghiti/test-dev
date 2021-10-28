@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListComponent Should render correctly 1`] = `
+<ui-list
+  ListType={[Function Object]}
+  listItems={[Function QueryList]}
+  type={[Function String]}
+  withBorder="false"
+  withSpacing={[Function Boolean]}
+>
+  <ul
+    class="c-list"
+  >
+    
+    
+    
+  </ul>
+</ui-list>
+`;

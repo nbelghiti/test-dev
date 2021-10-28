@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoComponent Should render correctly 1`] = `
+<ui-sidebar
+  IconName={[Function Object]}
+>
+  <aside
+    class="c-sidebar"
+  >
+    <div
+      class="c-sidebar__content"
+    />
+    <div
+      class="c-sidebar__actions"
+    />
+  </aside>
+</ui-sidebar>
+`;

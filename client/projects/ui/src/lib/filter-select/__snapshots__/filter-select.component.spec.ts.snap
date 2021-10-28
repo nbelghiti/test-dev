@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSelectComponent Should render correctly 1`] = `
+<ui-filter-select
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  alignLeft={[Function Boolean]}
+  disabled="false"
+  filter={[Function FormControl]}
+  handleSearch={[Function EventEmitter]}
+  items={[Function QueryList]}
+  placeholder={[Function String]}
+  type={[Function String]}
+>
+  <div
+    class="c-filter-select"
+  >
+    <div
+      class="c-filter-select__input"
+      uiflyout=""
+    >
+      <div
+        class="c-filter-select__trigger"
+        ng-reflect-klass="c-filter-select__trigger"
+        ng-reflect-ng-class="[object Object]"
+      >
+        <input
+          autocomplete="off"
+          class="c-filter-select__field ng-untouched ng-pristine ng-valid"
+          id="undefined"
+          name="undefined"
+          ng-reflect-form="[object Object]"
+          placeholder="null"
+          type="text"
+          uiflyoutfocus=""
+        />
+        <label
+          class="c-filter-select__label"
+          for="undefined"
+        >
+            
+        </label>
+        <div
+          class="c-filter-select__arrow"
+        >
+          <ui-icon
+            class="c-icon"
+            ng-reflect-name="caret-down"
+            ng-reflect-size="small"
+          >
+            <i
+              class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+            />
+          </ui-icon>
+        </div>
+      </div>
+      <ul
+        class="c-filter-select__content c-flyout__content--left"
+        uiflyoutcontent=""
+        uiflyouttoggle=""
+      >
+        
+      </ul>
+    </div>
+  </div>
+</ui-filter-select>
+`;

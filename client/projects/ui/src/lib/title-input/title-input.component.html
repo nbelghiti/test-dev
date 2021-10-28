@@ -1,0 +1,24 @@
+<div class="c-title-input__wrapper">
+	<input
+		type="text"
+		class="c-title-input {{level}}"
+		[class.c-title-input--error]="error"
+		[placeholder]="placeholder"
+		[ngModel]="value"
+		(ngModelChange)="writeValue($event)"
+		[disabled]="disabled"
+		autofocus="autofocus"
+	/>
+
+	<div *ngIf="error" class="c-title-input__error">
+		<ui-icon
+			name="exclamation-circle"
+			type="error"
+			size="small"
+		></ui-icon>
+
+		<span class="c-title-input__error-text">
+			{{error}}
+		</span>
+	</div>
+</div>

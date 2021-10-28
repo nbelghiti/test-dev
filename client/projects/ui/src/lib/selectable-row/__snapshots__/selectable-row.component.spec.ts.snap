@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectableRowComponent Should render correctly 1`] = `
+<ui-selectable-row
+  IconName={[Function Object]}
+  destroyed$={[Function Subject]}
+  isChecked={[Function FormControl]}
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+>
+  <label
+    class="c-selectable-row"
+  >
+    <input
+      class="c-selectable-row__checkbox ng-untouched ng-pristine ng-valid"
+      ng-reflect-form="[object Object]"
+      type="radio"
+    />
+    <div
+      class="c-selectable-row__container"
+    >
+      <div
+        class="c-selectable-row__content"
+      >
+        
+      </div>
+    </div>
+  </label>
+</ui-selectable-row>
+`;

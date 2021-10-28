@@ -1,0 +1,18 @@
+<div class="c-filter-toggle" [ngClass]="{
+	'c-filter-toggle--inline': inline,
+	'c-filter-toggle--borderless': borderless,
+	'c-filter-toggle--compact': compact,
+	'c-filter-toggle--transparent': background === 'transparent',
+	'c-filter-toggle--grey': background === 'grey',
+	'c-filter-toggle--large': large
+}">
+	<span *ngIf="label" class="c-filter-toggle__label">{{label}}</span>
+
+	<button class="c-filter-toggle__trigger" type="button">
+		<span class="c-filter-toggle__current-option">{{currentOption}}</span>
+
+		<div class="c-filter-toggle__icon">
+			<ui-icon name="caret-down" size="small"></ui-icon>
+		</div>
+	</button>
+</div>

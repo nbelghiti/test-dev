@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadDialogComponent Should render correctly 1`] = `
+<ui-upload-dialog
+  ButtonType={[Function Object]}
+  HeadingLevel={[Function Object]}
+  IconName={[Function Object]}
+  destroyed$={[Function Subject]}
+  dialogClassName={[Function Boolean]}
+  files={[Function Set]}
+  uploaded="false"
+>
+  <div
+    class="c-dialog__content"
+  >
+    <ui-heading
+      classes="c-dialog__title"
+      ng-reflect-classes="c-dialog__title"
+      ng-reflect-level="2"
+      ng-reflect-title="UPLOAD__SUBTITLE"
+    >
+      <div
+        class="c-heading c-dialog__title"
+        ng-reflect-klass="c-heading c-dialog__title"
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        
+        
+        <h2>
+          UPLOAD__SUBTITLE
+        </h2>
+        
+        <div
+          class="c-heading__meta"
+        >
+          
+          
+          
+        </div>
+      </div>
+    </ui-heading>
+    <ui-upload-dropzone
+      ng-reflect-files="[object Set]"
+      ng-reflect-uploaded="false"
+    >
+      
+      <div
+        class="c-upload-dropzone"
+      >
+        <ui-loader
+          ng-reflect-simple-loader="true"
+          ng-reflect-uploading-msg="true"
+        >
+          
+          <div
+            class="c-upload-dropzone__content"
+            for="file"
+          >
+            <input
+              class="c-upload-dropzone__input"
+              type="file"
+            />
+            <div
+              class="c-upload-dropzone__label"
+            >
+              <ui-icon
+                class="c-icon"
+                ng-reflect-name="plus"
+              >
+                <i
+                  class="c-icon__glyph   fas fa-plus"
+                />
+              </ui-icon>
+              <span
+                class="c-upload-dropzone__label-text"
+              >
+                 UPLOAD__INSTRUCTIONS 
+              </span>
+            </div>
+          </div>
+          
+          
+        </ui-loader>
+        <ul
+          class="c-upload-dropzone__list"
+        >
+          
+        </ul>
+      </div>
+      
+    </ui-upload-dropzone>
+    
+  </div><div
+    class="c-dialog__actions"
+  >
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-type="c-button--secondary"
+      >
+        
+        <button
+          class="c-button c-button--secondary"
+          ng-reflect-klass="c-button c-button--secondary "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+             GENERAL__CANCEL 
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-disabled="true"
+      >
+        
+        <button
+          class="c-button c-button--disabled"
+          disabled=""
+          ng-reflect-klass="c-button  "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+             UPLOAD__TITLE 
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+  </div>
+</ui-upload-dialog>
+`;

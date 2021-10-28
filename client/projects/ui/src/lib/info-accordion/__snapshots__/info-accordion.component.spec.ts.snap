@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoAccordionComponent Should render correctly 1`] = `
+<ui-info-accordion
+  initialOpen="false"
+  isOpen="false"
+  withSpacing={[Function Boolean]}
+>
+  <div
+    class="c-info-accordion"
+    ng-reflect-klass="c-info-accordion"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <button
+      class="c-info-accordion__header"
+      type="button"
+    >
+      <div
+        class="c-info-accordion__header-content"
+      >
+        
+        <ui-heading
+          level="3"
+          ng-reflect-level="3"
+        >
+          <div
+            class="c-heading"
+            ng-reflect-klass="c-heading "
+            ng-reflect-ng-class="[object Object]"
+          >
+            
+            
+            
+            
+            <h3>
+              
+            </h3>
+            <div
+              class="c-heading__meta"
+            >
+              
+              
+              
+              
+            </div>
+          </div>
+        </ui-heading>
+        
+      </div>
+      <span
+        class="c-info-accordion__arrow"
+      >
+        <ui-icon
+          class="c-icon"
+          name="caret-down"
+          ng-reflect-name="caret-down"
+        >
+          <i
+            class="c-icon__glyph   fas fa-caret-down"
+          />
+        </ui-icon>
+      </span>
+    </button>
+    
+  </div>
+</ui-info-accordion>
+`;

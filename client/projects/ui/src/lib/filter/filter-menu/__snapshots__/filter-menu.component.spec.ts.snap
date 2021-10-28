@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterMenuComponent Should render correctly 1`] = `
+<ui-filter-menu
+  label={[Function String]}
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+>
+  <ul
+    class="c-filter-menu"
+  >
+    
+  </ul>
+</ui-filter-menu>
+`;

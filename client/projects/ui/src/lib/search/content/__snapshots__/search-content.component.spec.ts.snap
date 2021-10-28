@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchContentComponent Should render correctly 1`] = `
+<ui-search-content>
+  <div
+    class="c-search-content"
+  />
+</ui-search-content>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadcrumbComponent Should render correctly 1`] = `
+<ui-breadcrumb
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  border="false"
+  editLink="null"
+  first="false"
+  items={[Function Array]}
+>
+  <nav
+    class="c-breadcrumb"
+  >
+    <div
+      class="c-breadcrumb__content"
+    >
+      <ul
+        class="c-breadcrumb__list"
+        ng-reflect-klass="c-breadcrumb__list"
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+      </ul>
+      
+    </div>
+  </nav>
+</ui-breadcrumb>
+`;

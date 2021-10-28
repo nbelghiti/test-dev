@@ -1,0 +1,69 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Info Link
+// =============================================================================
+.c-info-link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1.5rem 3rem;
+
+	text-decoration: none;
+	text-align: left;
+
+	border-bottom: $border-width-base solid $border-color-grey-76;
+
+	cursor: pointer;
+
+	&:hover {
+
+		.c-info-link__arrow {
+			transform: translateX(0.8rem);
+		}
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-info-link__content {
+	display: flex;
+	align-items: center;
+}
+
+.c-info-link__icon {
+	display: flex;
+	justify-content: center;
+	width: 2.4rem;
+	margin-right: 1.6rem;
+
+	line-height: $line-height-normalize;
+
+	transition: color $animation-base;
+}
+
+.c-info-link__arrow {
+	display: flex;
+
+	transition: transform $animation-base;
+}
+
+.c-info-link__title {
+	transition: color $animation-base;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-info-link--background-grey {
+	background-color: $background-color-grey-96;
+}
+
+.c-info-link--background-red {
+	background-color: $ui-color-error-light;
+}

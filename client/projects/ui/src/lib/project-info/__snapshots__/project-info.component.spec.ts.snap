@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectInfoComponent Should render correctly 1`] = `
+<ui-project-info
+  phase={[Function String]}
+>
+  <div
+    class="c-project-info"
+  >
+    
+    <div
+      class="c-project-info__content"
+    >
+      
+      <div
+        class="c-project-info__item"
+      >
+        <span
+          class="c-project-info__label"
+        >
+          PROJECT__CREATED_AT
+        </span>
+        <span
+          class="c-project-info__value"
+        >
+          
+        </span>
+      </div>
+      <div
+        class="c-project-info__item"
+      >
+        <span
+          class="c-project-info__label"
+        >
+          PROJECT__PHASE
+        </span>
+        <ui-status-label
+          class="c-project-info__value"
+          ng-reflect-type="in progress"
+        >
+          <span
+            class="c-status-label c-status-label--grey"
+            ng-reflect-klass="c-status-label"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <span
+              class="c-status-label__icon"
+            >
+              
+            </span>
+            <span
+              class="c-status-label__icon"
+            >
+              
+            </span>
+            <span
+              ng-reflect-ng-class="[object Object]"
+            >
+               in progress 
+            </span>
+          </span>
+        </ui-status-label>
+      </div>
+      <div
+        class="c-project-info__item"
+      >
+        <span
+          class="c-project-info__label"
+        >
+          PROJECT__VAULT #
+        </span>
+        <span
+          class="c-project-info__value c-project-info__value--uppercase"
+        >
+          -
+        </span>
+      </div>
+      <div
+        class="c-project-info__item"
+      >
+        <span
+          class="c-project-info__label"
+        >
+          PROJECT__CLIENT
+        </span>
+        <span
+          class="c-project-info__value"
+        >
+          -
+        </span>
+      </div>
+      <div
+        class="c-project-info__item"
+      >
+        <span
+          class="c-project-info__label"
+        >
+          PROJECT__LOCATION
+        </span>
+        <span
+          class="c-project-info__value"
+        >
+          -
+        </span>
+      </div>
+      <div
+        class="c-project-info__item"
+      >
+        <span
+          class="c-project-info__label"
+        >
+          PROJECT__FORMAT
+        </span>
+        <span
+          class="c-project-info__value"
+        >
+          -
+        </span>
+      </div>
+    </div>
+  </div>
+</ui-project-info>
+`;

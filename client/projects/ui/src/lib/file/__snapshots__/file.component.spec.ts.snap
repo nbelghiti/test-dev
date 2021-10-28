@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileComponent Should render correctly 1`] = `
+<ui-file
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  fullWidthClassName={[Function Boolean]}
+  lastGenerated={[Function String]}
+>
+  <div
+    class="c-file"
+  >
+    <div
+      class="c-file__left"
+      title="undefined"
+    >
+      
+      <span
+        class="c-file__label"
+      >
+        
+      </span>
+    </div>
+    
+  </div>
+</ui-file>
+`;

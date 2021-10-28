@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadComponent Should render correctly 1`] = `
+<ui-upload
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  dialogClosed={[Function EventEmitter]}
+  dialogOpened={[Function EventEmitter]}
+  dialogService={[Function DialogService]}
+  filesUploaded={[Function EventEmitter]}
+  multiple="false"
+  type=""
+>
+  <ui-button
+    class="c-upload"
+    ng-reflect-icon-before="upload"
+    ng-reflect-type=""
+  >
+    
+    <button
+      class="c-button"
+      ng-reflect-klass="c-button  "
+      ng-reflect-ng-class="[object Object]"
+      title=""
+    >
+      
+      
+      <div
+        class="c-button__icon c-button__icon--before"
+      >
+        <ui-icon
+          class="c-icon"
+          ng-reflect-name="upload"
+          ng-reflect-size="false"
+        >
+          <i
+            class="c-icon__glyph false  fas fa-upload"
+          />
+        </ui-icon>
+      </div>
+      <span
+        class="c-button__text"
+      >
+        <span
+          class="c-upload__text"
+        >
+          
+        </span>
+      </span>
+      <i
+        class="c-button__loader fas fa-spinner fa-spin"
+      />
+      
+      
+    </button>
+    
+    
+  </ui-button>
+</ui-upload>
+`;

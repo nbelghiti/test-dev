@@ -1,0 +1,39 @@
+<ui-loader
+	[loading]="loading"
+	[simpleLoader]="true"
+>
+	<div *ngIf="articles?.length; else noArticles" class="l-content__item u-padding-bottom-4x">
+		<div class="l-grid l-grid--with-spacing l-grid--stretch">
+			<div
+				*ngFor="let article of articles; let index = index"
+				class="l-grid__col l-grid__col--4@tablet l-grid__col--4@desktop l-grid__col--4@screen"
+			>
+				<ui-card
+					[imageSrc]="article?.banner"
+					withImage="true"
+					[link]="[
+						'/articles',
+						article?.id
+					]"
+				>
+					<ui-row [contentAfter]="true">
+						<ui-heading
+							[level]="3"
+							[title]="article?.title"
+						>
+						</ui-heading>
+					</ui-row>
+
+					<div class="u-margin-top-1x">
+						<ui-info-item [text]="article?.summary || '-'"></ui-info-item>
+					</div>
+				</ui-card>
+			</div>
+		</div>
+	</div>
+
+	<ng-template #noArticles>
+		<ui-empty-state icon="search" [message]="'MY_ARTICLES__OVERVIEW__FALLBACK_TITLE' | translate">
+		</ui-empty-state>
+	</ng-template>
+</ui-loader>

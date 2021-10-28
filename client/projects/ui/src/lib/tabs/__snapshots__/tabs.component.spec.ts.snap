@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabsComponent Should render correctly 1`] = `
+<ui-tabs
+  selectTab={[Function EventEmitter]}
+  tabs={[Function QueryList]}
+  withSpacing={[Function Boolean]}
+>
+  <ul
+    class="c-tabs c-tabs--with-spacing"
+  >
+    
+  </ul>
+</ui-tabs>
+`;

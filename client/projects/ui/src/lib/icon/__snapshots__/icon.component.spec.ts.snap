@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconComponent Should render correctly 1`] = `
+<ui-icon
+  className={[Function Boolean]}
+  size="null"
+  type="null"
+>
+  <i
+    class="c-icon__glyph   fas fa-"
+  />
+</ui-icon>
+`;

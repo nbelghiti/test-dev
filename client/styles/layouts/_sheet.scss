@@ -1,0 +1,45 @@
+// =============================================================================
+// :: Sheet layout
+// =============================================================================
+/**
+ * The sheet layout is used when tables content is displayed on the left
+ * which is scrollable when it becomes bigger than the viewport height.
+ * On the right we have a sidebar which shows general content.
+ */
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$sidebar-width: 34rem;
+
+// =============================================================================
+// :: Sheet
+// =============================================================================
+.l-sheet {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: $sidebar-width;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.l-sheet__content {
+	overflow-y: auto;
+	padding-top: 3rem;
+	padding-bottom: 8rem;
+}
+
+.l-sheet__actions {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: $z-index-ground;
+
+	width: 100%;
+}

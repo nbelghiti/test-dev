@@ -1,0 +1,52 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Search query
+// =============================================================================
+.c-search-query {
+	display: flex;
+	align-items: center;
+	width: 100%;
+
+	// consistent styling in search items (results and queries)
+	padding: $search-spacing-small $search-spacing-base;
+
+	text-decoration: none;
+
+	transition: background-color $animation-base;
+
+	&:hover {
+		background-color: $background-color-grey-96;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-search-query__icon {
+	margin-right: 1.5rem;
+}
+
+.c-search-query__tag {
+	margin-right: 1rem;
+	padding: 0.4rem 0.6rem;
+
+	text-transform: uppercase;
+	font-size: $font-size-2x-small;
+	line-height: $line-height-normalize;
+	font-weight: $font-weight-bold;
+
+	color: $ui-color-info-dark;
+
+	border: $border-width-base solid $ui-color-info;
+	background-color: $ui-color-info-light;
+}
+
+.c-search-query__text {
+	font-size: $font-size-1x-small;
+
+	color: $text-color-base;
+}

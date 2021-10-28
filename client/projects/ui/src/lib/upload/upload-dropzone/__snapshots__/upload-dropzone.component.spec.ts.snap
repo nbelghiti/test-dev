@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadDropzoneComponent Should render correctly 1`] = `
+<ui-upload-dropzone
+  IconName={[Function Object]}
+  file={[Function ElementRef]}
+  files={[Function Set]}
+  uploaded="false"
+  uploading="false"
+>
+  <div
+    class="c-upload-dropzone"
+  >
+    <ui-loader
+      ng-reflect-simple-loader="true"
+      ng-reflect-uploading-msg="true"
+    >
+      
+      <div
+        class="c-upload-dropzone__content"
+        for="file"
+      >
+        <input
+          class="c-upload-dropzone__input"
+          type="file"
+        />
+        <div
+          class="c-upload-dropzone__label"
+        >
+          <ui-icon
+            class="c-icon"
+            ng-reflect-name="plus"
+          >
+            <i
+              class="c-icon__glyph   fas fa-plus"
+            />
+          </ui-icon>
+          <span
+            class="c-upload-dropzone__label-text"
+          >
+             UPLOAD__INSTRUCTIONS 
+          </span>
+        </div>
+      </div>
+      
+      
+    </ui-loader>
+    <ul
+      class="c-upload-dropzone__list"
+    >
+      
+    </ul>
+  </div>
+</ui-upload-dropzone>
+`;

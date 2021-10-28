@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationIndicatorComponent Should render correctly 1`] = `
+<ui-notification-indicator>
+  <button
+    class="c-notification-indicator"
+  >
+    <ui-icon
+      class="c-icon"
+      name="bell"
+      ng-reflect-name="bell"
+    >
+      <i
+        class="c-icon__glyph   fas fa-bell"
+      />
+    </ui-icon>
+    
+  </button>
+</ui-notification-indicator>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoComponent Should render correctly 1`] = `
+<ui-filter-toggle
+  background=""
+  borderless="false"
+  compact="false"
+  currentOption={[Function String]}
+  inline="false"
+  large="false"
+>
+  <div
+    class="c-filter-toggle"
+    ng-reflect-klass="c-filter-toggle"
+    ng-reflect-ng-class="[object Object]"
+  >
+    
+    <button
+      class="c-filter-toggle__trigger"
+      type="button"
+    >
+      <span
+        class="c-filter-toggle__current-option"
+      >
+        - All
+      </span>
+      <div
+        class="c-filter-toggle__icon"
+      >
+        <ui-icon
+          class="c-icon"
+          name="caret-down"
+          ng-reflect-name="caret-down"
+          ng-reflect-size="small"
+          size="small"
+        >
+          <i
+            class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+          />
+        </ui-icon>
+      </div>
+    </button>
+  </div>
+</ui-filter-toggle>
+`;

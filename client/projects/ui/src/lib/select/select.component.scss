@@ -1,0 +1,111 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Select field
+// =============================================================================
+.c-select-field {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	background: none;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-select-field__label {
+	position: absolute;
+	top: 0.4rem;
+	left: 2rem;
+
+	order: -1;
+
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-56;
+
+	transform: scale(1.15) translateY(1rem);
+
+	transform-origin: left center;
+
+	transition: transform $animation-base;
+
+	pointer-events: none;
+}
+
+.c-select-field__icon {
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+
+	transform: translateY(-50%);
+
+	pointer-events: none;
+}
+
+.c-select-field__field {
+	display: inline-block;
+	padding: 2.4rem 5rem 0.2rem 2rem;
+
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+	border-radius: 0;
+	border: $border-width-base solid $border-color-grey-76;
+	color: $text-color-base;
+	background: none;
+
+	transition:
+		border $animation-base,
+		box-shadow $animation-base;
+
+	&:valid {
+		outline: none;
+		border: $border-width-base solid $text-color-base;
+
+		+ .c-select-field__label {
+			transform: scale(1) translateY(0);
+		}
+	}
+
+	&:focus {
+		outline: none;
+		border: $border-width-base solid $text-color-base;
+		box-shadow: 0 0 0 0.3rem rgba($box-shadow-color-base, 0.1);
+	}
+}
+
+.c-select-field__error {
+	display: flex;
+	align-items: center;
+	// added margin to correctly place the error message
+	margin: 0.6rem 0 0 0.4rem;
+
+	font-size: $font-size-2x-small;
+
+	color: $ui-color-error-dark;
+}
+
+.c-select-field__error-text {
+	margin-left: 0.6rem;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-select-field--error {
+
+	.c-select-field__field {
+		border: $border-width-base solid $ui-color-error-dark;
+	}
+}

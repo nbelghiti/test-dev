@@ -1,0 +1,47 @@
+<div
+	class="c-input-field"
+	[ngClass]="{
+		'c-input-field--disabled': value.disabled,
+		'c-input-field--error': error
+	}"
+>
+	<ui-icon
+		*ngIf="icon"
+		[name]="icon"
+		class="c-input-field__icon"
+	>
+	</ui-icon>
+
+	<div class="c-input-field__content">
+		<div class="c-input-field__input">
+			<input
+				[id]="name"
+				[name]="name"
+				[type]="type"
+				class="c-input-field__field"
+				[placeholder]="placeholder"
+				[formControl]="value"
+				required
+			/>
+
+			<label
+				class="c-input-field__label"
+				[for]="name"
+			>
+				{{label}}
+			</label>
+		</div>
+
+		<div *ngIf="error" class="c-error">
+			<ui-icon
+				name="exclamation-circle"
+				size="small"
+			>
+			</ui-icon>
+
+			<span class="c-error__text">
+				{{error}}
+			</span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,68 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Project Info
+// =============================================================================
+.c-project-info {
+	border-bottom: $border-width-base solid $border-color-grey-86;
+	background-color: $background-color-base;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-project-info__title {
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	font-weight: $font-weight-bold;
+
+	color: $text-color-base;
+}
+
+.c-project-info__content {
+	padding: 2rem 3rem;
+}
+
+.c-project-info__image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+.c-project-info__image {
+	max-height: 15rem;
+	object-fit: contain;
+}
+
+.c-project-info__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+
+	border-bottom: $border-width-base solid $border-color-grey-76;
+
+	&:last-child {
+		padding-bottom: 0;
+
+		border-bottom: none;
+	}
+}
+
+.c-project-info__label {
+	font-size: $font-size-1x-small;
+
+	color: $text-color-grey-56;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-project-info__value--uppercase {
+	text-transform: uppercase;
+}

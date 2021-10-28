@@ -1,0 +1,52 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: List
+// =============================================================================
+.c-list {
+	width: 100%;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-list--ordered {
+	counter-reset: list;
+
+	.c-list__item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		&::before {
+			content: counter(list) ".";
+
+			margin-right: 0.7rem;
+
+			counter-increment: list;
+		}
+
+		&:first-child {
+			flex: 1;
+		}
+	}
+}
+
+.c-list__item--with-spacing {
+	margin-top: 0.4rem;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.c-list__item--with-border {
+	border-top: $border-width-base solid $border-color-grey-76;
+
+	&:first-child {
+		border-top: none;
+	}
+}

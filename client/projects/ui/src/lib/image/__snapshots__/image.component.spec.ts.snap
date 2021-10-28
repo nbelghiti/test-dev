@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageComponent Should render correctly 1`] = `
+<ui-image
+  image={[Function String]}
+>
+  <div
+    class="c-image"
+    style="background-image: url(assets/fallback/fallback.png);"
+  />
+</ui-image>
+`;

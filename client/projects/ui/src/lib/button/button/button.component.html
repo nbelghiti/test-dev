@@ -1,0 +1,58 @@
+<button
+	*ngIf="!link; else isLink"
+	class="c-button {{ type }} {{ classes }}"
+	[title]="buttonTitle"
+	[ngClass]="{
+		'c-button--disabled': disabled,
+		'c-button--loading': loading,
+		'c-button--fluid': fluid
+	}"
+	[disabled]="disabled"
+	(click)="loading ? null : clicked.emit($event)"
+>
+	<ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+</button>
+
+<ng-template #isLink>
+	<a
+		class="c-button {{ type }} {{ classes }}"
+		[ngClass]="{
+			'c-button--disabled': disabled,
+			'c-button--loading': loading,
+			'c-button--fluid': fluid
+		}"
+		[routerLink]="!disabled && link"
+	>
+		<ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+	</a>
+</ng-template>
+
+<ng-template #buttonContent>
+	<div
+		*ngIf="iconBefore"
+		class="c-button__icon c-button__icon--before"
+	>
+		<ui-icon
+			[name]="iconBefore"
+			[size]="type === 'c-button--tertiary' && 'small'"
+		>
+		</ui-icon>
+	</div>
+
+	<span class="c-button__text">
+		<ng-content></ng-content>
+	</span>
+
+	<i class="c-button__loader fas fa-spinner fa-spin"></i>
+
+	<div
+		*ngIf="iconAfter"
+		class="c-button__icon c-button__icon--after"
+	>
+		<ui-icon
+			[name]="iconAfter"
+			[size]="type === 'c-button--tertiary' && 'small'"
+		>
+		</ui-icon>
+	</div>
+</ng-template>

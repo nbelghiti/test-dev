@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInputComponent Should render correctly 1`] = `
+<ui-search-input
+  compact="false"
+  handleSearch={[Function EventEmitter]}
+  searchForm={[Function FormGroup]}
+>
+  <form
+    class="c-search-input ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-klass="c-search-input"
+    ng-reflect-ng-class="[object Object]"
+    novalidate=""
+  >
+    <input
+      autocomplete="off"
+      class="c-search-input__field ng-untouched ng-pristine ng-valid"
+      formcontrolname="value"
+      name="search-field"
+      ng-reflect-name="value"
+      placeholder="undefined"
+      type="search"
+    />
+    <button
+      class="c-search-input__submit"
+      type="submit"
+    >
+      <ui-icon
+        class="c-icon"
+        name="search"
+        ng-reflect-name="search"
+      >
+        <i
+          class="c-icon__glyph   fas fa-search"
+        />
+      </ui-icon>
+    </button>
+  </form>
+</ui-search-input>
+`;

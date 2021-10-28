@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchQueryComponent Should render correctly 1`] = `
+<ui-search-query
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  clicked={[Function EventEmitter]}
+  handleClick={[Function Function]}
+>
+  <button
+    class="c-search-query"
+  >
+    <span
+      class="c-search-query__icon"
+    >
+      <ui-icon
+        class="c-icon"
+        ng-reflect-name="search"
+        ng-reflect-size="small"
+      >
+        <i
+          class="c-icon__glyph c-icon__glyph--small  fas fa-search"
+        />
+      </ui-icon>
+    </span>
+    
+    <span
+      class="c-search-query__text"
+    >
+        
+    </span>
+  </button>
+</ui-search-query>
+`;

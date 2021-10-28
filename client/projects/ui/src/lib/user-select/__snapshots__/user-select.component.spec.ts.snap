@@ -1,0 +1,579 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSelectComponent Should render correctly 1`] = `
+<ui-user-select
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  label={[Function String]}
+  removeUser={[Function EventEmitter]}
+  role=""
+  searchQuery={[Function FormControl]}
+  searchUsers={[Function EventEmitter]}
+  selectUser={[Function EventEmitter]}
+  selectedUser="null"
+  users={[Function Array]}
+>
+  <div
+    class="c-user-select c-flyout is-closed"
+    uiflyout=""
+  >
+    <div
+      class="c-user-select__trigger"
+    >
+      
+      <div
+        class="c-user-select__trigger-avatar"
+      />
+      <input
+        class="c-user-select__trigger-input c-flyout__focus ng-untouched ng-pristine ng-valid"
+        ng-reflect-form="[object Object]"
+        placeholder="Select TEAM_MEMBER_ROLE__"
+        uiflyoutfocus=""
+      />
+      
+      
+    </div>
+    <div
+      class="c-flyout__content--left c-flyout__content"
+      ng-reflect-class="c-flyout__content--left"
+      uiflyoutcontent=""
+    >
+      
+      <ui-empty-state
+        icon="users"
+        ng-reflect-icon="users"
+        ng-reflect-message="NO_USERS"
+        ng-reflect-size="small"
+        size="small"
+      >
+        <div
+          class="c-empty-state c-empty-state--small"
+          ng-reflect-klass="c-empty-state"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <span
+            class="c-empty-state__icon c-empty-state__icon--small"
+            ng-reflect-klass="c-empty-state__icon"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <i
+              class="fas fa-users"
+            />
+          </span>
+          <p
+            class="c-empty-state__message"
+          >
+            NO_USERS
+          </p>
+          <div
+            ng-reflect-ng-class="[object Object]"
+          />
+        </div>
+      </ui-empty-state>
+      
+    </div>
+  </div>
+</ui-user-select>
+`;
+
+exports[`UserSelectComponent init with selected user should render 1`] = `
+<ui-user-select
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  label={[Function String]}
+  removeUser={[Function EventEmitter]}
+  role=""
+  searchQuery={[Function FormControl]}
+  searchUsers={[Function EventEmitter]}
+  selectUser={[Function EventEmitter]}
+  selectedUser={[Function Object]}
+  users={[Function Array]}
+>
+  <div
+    class="c-user-select c-flyout is-closed"
+    uiflyout=""
+  >
+    <div
+      class="c-user-select__trigger"
+    >
+      
+      <ui-user
+        class="c-user-select__trigger-user c-flyout__toggle"
+        ng-reflect-user="[object Object]"
+        uiflyouttoggle=""
+      >
+        
+        
+        <button
+          class="c-user"
+          ng-reflect-klass="c-user"
+          ng-reflect-ng-class="[object Object]"
+          title="John"
+        >
+          
+          <ui-avatar
+            ng-reflect-compact="true"
+            ng-reflect-name="John"
+          >
+            <span
+              class="c-avatar is-compact"
+              ng-reflect-klass="c-avatar"
+              ng-reflect-ng-class="[object Object]"
+            >
+              <abbr
+                title="undefined"
+              >
+                J
+              </abbr>
+            </span>
+          </ui-avatar>
+          <div
+            class="c-user__content"
+          >
+            <span
+              class="c-user__name"
+            >
+               John
+              
+            </span>
+            <span
+              class="c-user__role"
+            >
+               TEAM_MEMBER_ROLE__engineer 
+            </span>
+          </div>
+        </button>
+        
+        
+      </ui-user>
+      
+      <ui-icon-button
+        class="u-margin-left-1x u-margin-right-1x"
+        ng-reflect-type="c-button--tertiary"
+      >
+        
+        <button
+          class="c-icon-button c-icon-button--tertiary c-icon-button--border"
+          ng-reflect-klass="c-icon-button"
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          <ui-icon
+            class="c-icon"
+            ng-reflect-name="times"
+          >
+            <i
+              class="c-icon__glyph   fas fa-times"
+            />
+          </ui-icon>
+          
+        </button>
+        
+        
+      </ui-icon-button>
+      
+    </div>
+    <div
+      class="c-flyout__content--left c-flyout__content"
+      ng-reflect-class="c-flyout__content--left"
+      uiflyoutcontent=""
+    >
+      
+      <ui-empty-state
+        icon="users"
+        ng-reflect-icon="users"
+        ng-reflect-message="NO_USERS"
+        ng-reflect-size="small"
+        size="small"
+      >
+        <div
+          class="c-empty-state c-empty-state--small"
+          ng-reflect-klass="c-empty-state"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <span
+            class="c-empty-state__icon c-empty-state__icon--small"
+            ng-reflect-klass="c-empty-state__icon"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <i
+              class="fas fa-users"
+            />
+          </span>
+          <p
+            class="c-empty-state__message"
+          >
+            NO_USERS
+          </p>
+          <div
+            ng-reflect-ng-class="[object Object]"
+          />
+        </div>
+      </ui-empty-state>
+      
+    </div>
+  </div>
+</ui-user-select>
+`;
+
+exports[`UserSelectComponent init with users should render 1`] = `
+<ui-user-select
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  label={[Function String]}
+  removeUser={[Function EventEmitter]}
+  role=""
+  searchQuery={[Function FormControl]}
+  searchUsers={[Function EventEmitter]}
+  selectUser={[Function EventEmitter]}
+  selectedUser="null"
+  users={[Function Array]}
+>
+  <div
+    class="c-user-select c-flyout is-closed"
+    uiflyout=""
+  >
+    <div
+      class="c-user-select__trigger"
+    >
+      
+      <div
+        class="c-user-select__trigger-avatar"
+      />
+      <input
+        class="c-user-select__trigger-input c-flyout__focus ng-untouched ng-pristine ng-valid"
+        ng-reflect-form="[object Object]"
+        placeholder="Select TEAM_MEMBER_ROLE__"
+        uiflyoutfocus=""
+      />
+      
+      
+    </div>
+    <div
+      class="c-flyout__content--left c-flyout__content"
+      ng-reflect-class="c-flyout__content--left"
+      uiflyoutcontent=""
+    >
+      
+      <ul
+        class="c-flyout__toggle"
+        uiflyouttoggle=""
+      >
+        
+        <li
+          class="c-user-select__content-item"
+        >
+          <ui-user
+            ng-reflect-user="[object Object]"
+          >
+            
+            
+            <button
+              class="c-user"
+              ng-reflect-klass="c-user"
+              ng-reflect-ng-class="[object Object]"
+              title="John"
+            >
+              
+              <ui-avatar
+                ng-reflect-compact="true"
+                ng-reflect-name="John"
+              >
+                <span
+                  class="c-avatar is-compact"
+                  ng-reflect-klass="c-avatar"
+                  ng-reflect-ng-class="[object Object]"
+                >
+                  <abbr
+                    title="undefined"
+                  >
+                    J
+                  </abbr>
+                </span>
+              </ui-avatar>
+              <div
+                class="c-user__content"
+              >
+                <span
+                  class="c-user__name"
+                >
+                   John
+                  
+                </span>
+                <span
+                  class="c-user__role"
+                >
+                   TEAM_MEMBER_ROLE__engineer 
+                </span>
+              </div>
+            </button>
+            
+            
+          </ui-user>
+        </li>
+        <li
+          class="c-user-select__content-item"
+        >
+          <ui-user
+            ng-reflect-user="[object Object]"
+          >
+            
+            
+            <button
+              class="c-user"
+              ng-reflect-klass="c-user"
+              ng-reflect-ng-class="[object Object]"
+              title="John"
+            >
+              
+              <ui-avatar
+                ng-reflect-compact="true"
+                ng-reflect-name="John"
+              >
+                <span
+                  class="c-avatar is-compact"
+                  ng-reflect-klass="c-avatar"
+                  ng-reflect-ng-class="[object Object]"
+                >
+                  <abbr
+                    title="undefined"
+                  >
+                    J
+                  </abbr>
+                </span>
+              </ui-avatar>
+              <div
+                class="c-user__content"
+              >
+                <span
+                  class="c-user__name"
+                >
+                   John
+                  
+                </span>
+                <span
+                  class="c-user__role"
+                >
+                   TEAM_MEMBER_ROLE__engineer 
+                </span>
+              </div>
+            </button>
+            
+            
+          </ui-user>
+        </li>
+        <li
+          class="c-user-select__content-item"
+        >
+          <ui-user
+            ng-reflect-user="[object Object]"
+          >
+            
+            
+            <button
+              class="c-user"
+              ng-reflect-klass="c-user"
+              ng-reflect-ng-class="[object Object]"
+              title="John"
+            >
+              
+              <ui-avatar
+                ng-reflect-compact="true"
+                ng-reflect-name="John"
+              >
+                <span
+                  class="c-avatar is-compact"
+                  ng-reflect-klass="c-avatar"
+                  ng-reflect-ng-class="[object Object]"
+                >
+                  <abbr
+                    title="undefined"
+                  >
+                    J
+                  </abbr>
+                </span>
+              </ui-avatar>
+              <div
+                class="c-user__content"
+              >
+                <span
+                  class="c-user__name"
+                >
+                   John
+                  
+                </span>
+                <span
+                  class="c-user__role"
+                >
+                   TEAM_MEMBER_ROLE__engineer 
+                </span>
+              </div>
+            </button>
+            
+            
+          </ui-user>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</ui-user-select>
+`;
+
+exports[`UserSelectComponent init without selected user should render 1`] = `
+<ui-user-select
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  label={[Function String]}
+  removeUser={[Function EventEmitter]}
+  role=""
+  searchQuery={[Function FormControl]}
+  searchUsers={[Function EventEmitter]}
+  selectUser={[Function EventEmitter]}
+  selectedUser="null"
+  users={[Function Array]}
+>
+  <div
+    class="c-user-select c-flyout is-closed"
+    uiflyout=""
+  >
+    <div
+      class="c-user-select__trigger"
+    >
+      
+      <div
+        class="c-user-select__trigger-avatar"
+      />
+      <input
+        class="c-user-select__trigger-input c-flyout__focus ng-untouched ng-pristine ng-valid"
+        ng-reflect-form="[object Object]"
+        placeholder="Select TEAM_MEMBER_ROLE__"
+        uiflyoutfocus=""
+      />
+      
+      
+    </div>
+    <div
+      class="c-flyout__content--left c-flyout__content"
+      ng-reflect-class="c-flyout__content--left"
+      uiflyoutcontent=""
+    >
+      
+      <ui-empty-state
+        icon="users"
+        ng-reflect-icon="users"
+        ng-reflect-message="NO_USERS"
+        ng-reflect-size="small"
+        size="small"
+      >
+        <div
+          class="c-empty-state c-empty-state--small"
+          ng-reflect-klass="c-empty-state"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <span
+            class="c-empty-state__icon c-empty-state__icon--small"
+            ng-reflect-klass="c-empty-state__icon"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <i
+              class="fas fa-users"
+            />
+          </span>
+          <p
+            class="c-empty-state__message"
+          >
+            NO_USERS
+          </p>
+          <div
+            ng-reflect-ng-class="[object Object]"
+          />
+        </div>
+      </ui-empty-state>
+      
+    </div>
+  </div>
+</ui-user-select>
+`;
+
+exports[`UserSelectComponent init without users should render 1`] = `
+<ui-user-select
+  ButtonType={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  label={[Function String]}
+  removeUser={[Function EventEmitter]}
+  role=""
+  searchQuery={[Function FormControl]}
+  searchUsers={[Function EventEmitter]}
+  selectUser={[Function EventEmitter]}
+  selectedUser="null"
+  users={[Function Array]}
+>
+  <div
+    class="c-user-select c-flyout is-closed"
+    uiflyout=""
+  >
+    <div
+      class="c-user-select__trigger"
+    >
+      
+      <div
+        class="c-user-select__trigger-avatar"
+      />
+      <input
+        class="c-user-select__trigger-input c-flyout__focus ng-untouched ng-pristine ng-valid"
+        ng-reflect-form="[object Object]"
+        placeholder="Select TEAM_MEMBER_ROLE__"
+        uiflyoutfocus=""
+      />
+      
+      
+    </div>
+    <div
+      class="c-flyout__content--left c-flyout__content"
+      ng-reflect-class="c-flyout__content--left"
+      uiflyoutcontent=""
+    >
+      
+      <ui-empty-state
+        icon="users"
+        ng-reflect-icon="users"
+        ng-reflect-message="NO_USERS"
+        ng-reflect-size="small"
+        size="small"
+      >
+        <div
+          class="c-empty-state c-empty-state--small"
+          ng-reflect-klass="c-empty-state"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <span
+            class="c-empty-state__icon c-empty-state__icon--small"
+            ng-reflect-klass="c-empty-state__icon"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <i
+              class="fas fa-users"
+            />
+          </span>
+          <p
+            class="c-empty-state__message"
+          >
+            NO_USERS
+          </p>
+          <div
+            ng-reflect-ng-class="[object Object]"
+          />
+        </div>
+      </ui-empty-state>
+      
+    </div>
+  </div>
+</ui-user-select>
+`;

@@ -1,0 +1,32 @@
+<nav class="c-breadcrumb">
+	<div class="c-breadcrumb__content">
+		<ul
+			class="c-breadcrumb__list"
+			[ngClass]="{
+				'c-breadcrumb--border': border
+		}"
+		>
+			<li *ngFor="let item of items">
+				<ui-breadcrumb-item
+					[first]="first"
+					[label]="item?.label"
+					[value]="item?.value"
+					[link]="item?.link"
+					[items]="item?.items"
+					[queryParams]="item?.queryParams"
+				>
+				</ui-breadcrumb-item>
+			</li>
+		</ul>
+
+		<ui-button
+			*ngIf="editLink"
+			classes="u-margin-left-2x u-border-top-none u-border-bottom-none"
+			[iconBefore]="IconName.edit"
+			[link]="editLink"
+			[type]="ButtonType.secondary"
+		>
+			{{ 'EDIT_COMPONENT__EDIT_FIELDS' | translate }}
+		</ui-button>
+	</div>
+</nav>

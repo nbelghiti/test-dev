@@ -1,0 +1,28 @@
+// =============================================================================
+// :: Input - (no classes)
+// =============================================================================
+input {
+	outline: none;
+	border: none;
+	background: none;
+
+	/**
+	 * Slicing applied when there is no class applied. For example: rendered in
+	 * a WYSIWYG.
+	 */
+	// &:not([class]) {}
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+input {
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+
+		cursor: pointer;
+	}
+}

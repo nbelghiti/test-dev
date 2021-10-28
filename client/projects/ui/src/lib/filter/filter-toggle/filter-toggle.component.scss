@@ -1,0 +1,160 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: User Info
+// =============================================================================
+.c-filter-toggle {
+	display: flex;
+	flex-direction: column;
+
+	&:hover {
+
+		.c-filter-toggle__trigger {
+			border: $border-width-base solid $border-color-black;
+		}
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-filter-toggle__label {
+	margin-bottom: 0.2rem;
+
+	font-size: $font-size-2x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-46;
+}
+
+.c-filter-toggle__trigger {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.6rem 2rem;
+
+	white-space: nowrap;
+
+	background: none;
+	border: $border-width-base solid $border-color-base;
+	background-color: $background-color-base;
+
+	transition:
+		border $animation-base,
+		background-color $animation-base,
+		box-shadow $animation-base;
+
+	cursor: pointer;
+
+	&:focus {
+		border: $border-width-base solid $border-color-black;
+	}
+
+	&:hover {
+
+		.c-filter-toggle__current-option {
+			text-decoration: underline;
+		}
+	}
+}
+
+.c-filter-toggle__current-option {
+	overflow: hidden;
+	margin-right: 1rem;
+
+	font-weight: $font-weight-ultrabold;
+	font-size: $font-size-2x-small;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-filter-toggle--inline {
+	flex-direction: row;
+	align-items: center;
+
+	.c-filter-toggle__label {
+		margin-right: 1rem;
+		margin-bottom: 0;
+
+		color: $text-color-base;
+	}
+
+	.c-filter-toggle__trigger {
+		flex-grow: 1;
+	}
+}
+
+.c-filter-toggle--borderless {
+
+	.c-filter-toggle__trigger {
+		border-color: transparent;
+	}
+
+	&:hover {
+
+		.c-filter-toggle__trigger {
+			border-color: transparent;
+			background-color: $background-color-grey-96;
+		}
+	}
+}
+
+.c-filter-toggle--compact {
+
+	.c-filter-toggle__trigger {
+		padding: 0 1rem;
+	}
+}
+
+.c-filter-toggle--transparent {
+
+	.c-filter-toggle__trigger {
+		background-color: transparent;
+	}
+}
+
+.c-filter-toggle--grey {
+
+	.c-filter-toggle__trigger {
+		color: $text-color-grey-46;
+		background-color: $background-color-grey-96;
+
+		&:focus {
+			color: $text-color-base;
+		}
+	}
+
+	&.c-filter-toggle--borderless:hover {
+
+		.c-filter-toggle__trigger {
+			box-shadow: 0 0 0 $border-width-base $border-color-black;
+		}
+	}
+}
+
+.c-filter-toggle--large {
+
+	.c-filter-toggle__current-option {
+		font-size: $font-size-1x-large;
+
+		&:focus {
+			color: $text-color-base;
+		}
+	}
+
+	.c-filter-toggle__trigger {
+		padding: 0;
+
+		border: none;
+
+		&:hover {
+			border: none;
+		}
+	}
+}

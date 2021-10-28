@@ -1,0 +1,108 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$toggle-width: 2.8rem;
+$toggle-height: 1.5rem;
+
+// =============================================================================
+// :: Switch
+// =============================================================================
+.c-switch {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	min-height: 3rem;
+	padding: 0 2rem;
+
+	border: $border-width-base solid $border-color-grey-76;
+
+	transition: border $animation-base;
+
+	cursor: pointer;
+
+	&:hover {
+		border: $border-width-base solid $border-color-black;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-switch__input {
+	width: 0;
+	height: 0;
+
+	opacity: 0;
+}
+
+.c-switch__label {
+	font-size: $font-size-2x-small;
+	font-weight: $font-weight-ultrabold;
+	line-height: $line-height-normalize;
+	text-transform: uppercase;
+
+	transition: color $animation-base;
+}
+
+.c-switch__label-true {
+	color: $text-color-grey-56;
+}
+
+.c-switch__label-false {
+	color: $text-color-base;
+}
+
+.c-switch__toggle {
+	position: relative;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: $toggle-width;
+	height: $toggle-height;
+	margin: 0 1rem;
+	padding: 0.2rem;
+
+	border-radius: 5rem;
+	background-color: $background-color-grey-76;
+
+	transition: background-color $animation-base;
+}
+
+.c-switch__toggle-handle {
+	width: calc(#{$toggle-height} - 0.4rem);
+	height: calc(#{$toggle-height} - 0.4rem);
+
+	border-radius: 50%;
+	background-color: $white;
+
+	transition: transform $animation-base;
+}
+
+// =============================================================================
+// :: Modifier
+// =============================================================================
+.c-switch__input:checked {
+
+	~ .c-switch__label-true {
+		color: $text-color-base;
+	}
+
+	~ .c-switch__label-false {
+		color: $text-color-grey-56;
+	}
+
+	~ .c-switch__toggle {
+		background-color: $background-color-black;
+
+		.c-switch__toggle-handle {
+			transform: translateX(calc(#{-$toggle-width} + 100% + 0.4rem));
+		}
+	}
+}

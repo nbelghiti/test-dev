@@ -1,0 +1,33 @@
+<span
+	class="c-status-label"
+	[ngClass]="{
+		'c-status-label--grey': statusType.inProgress === type || statusType.engineering === type,
+		'c-status-label--orange': statusType.bidding === type || statusType.construction === type,
+		'c-status-label--green': statusType.pac === type || statusType.fac === type
+	}"
+	(click)="handleClickEvent()"
+>
+	<span class="c-status-label__icon">
+		<ui-icon
+			*ngIf="statusType.released === type"
+			name="check-circle"
+			size="tiny"
+		>
+		</ui-icon>
+	</span>
+
+	<span class="c-status-label__icon">
+		<ui-icon
+			*ngIf="statusType.conflicted === type"
+			name="exclamation-circle"
+			size="tiny"
+		>
+		</ui-icon>
+	</span>
+
+	<span [ngClass]="{
+		'c-status-label__text': statusType.released === type || statusType.conflicted === type
+	}">
+		{{type}}
+	</span>
+</span>

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterMenuItemComponent Should render correctly 1`] = `
+<ui-filter-menu-item
+  clickHandler={[Function Function]}
+  label={[Function String]}
+>
+  <button
+    class="c-filter-menu-item"
+    ng-reflect-klass="c-filter-menu-item"
+    ng-reflect-ng-class="[object Object]"
+    title="Label"
+  >
+    <span
+      class="c-filter-menu-item__value"
+    >
+      Label
+    </span>
+    <div
+      class="c-filter-menu-item__icon"
+    >
+      <ui-icon
+        class="c-icon"
+        name="check"
+        ng-reflect-name="check"
+      >
+        <i
+          class="c-icon__glyph   fas fa-check"
+        />
+      </ui-icon>
+    </div>
+  </button>
+</ui-filter-menu-item>
+`;

@@ -1,0 +1,98 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$border-width-search-input: $border-width-base;
+
+// =============================================================================
+// :: Input field
+// =============================================================================
+.c-search-input {
+	position: relative;
+
+	display: inline-block;
+	width: 100%;
+
+	&:hover {
+
+		.c-search-input__field {
+			border: $border-width-search-input solid $text-color-base;
+		}
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-search-input__submit {
+	position: absolute;
+	top: 50%;
+	// show border
+	right: $border-width-search-input;
+
+	display: flex;
+	align-items: center;
+	// show border
+	height: calc(100% - #{$border-width-search-input * 2});
+	padding: 0 2rem;
+
+	color: $text-color-grey-56;
+
+	transform: translateY(-50%);
+
+	transition:
+		background-color $animation-base,
+		color $animation-base;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: $background-color-grey-86;
+		color: $text-color-base;
+	}
+}
+
+.c-search-input__field {
+	width: 100%;
+	min-width: 30rem;
+	padding: 1rem 6rem 1rem 2rem;
+
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	text-overflow: ellipsis;
+
+	border: $border-width-base solid $border-color-grey-76;
+	background-color: $background-color-base;
+
+	transition:
+		border $animation-base,
+		box-shadow $animation-base;
+
+	&::placeholder {
+		color: $text-color-grey-46;
+	}
+
+	&:focus {
+		border: $border-width-base solid $text-color-base;
+		box-shadow: 0 0 0 0.3rem $border-color-grey-86;
+
+		+ .c-search-input__submit {
+			color: $text-color-base;
+		}
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-search-input--compact {
+
+	.c-search-input__field {
+		min-width: 25rem;
+		padding: 0.5rem 6rem 0.5rem 2rem;
+	}
+}

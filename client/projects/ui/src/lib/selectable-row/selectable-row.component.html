@@ -1,0 +1,24 @@
+<label class="c-selectable-row">
+	<input
+		class="c-selectable-row__checkbox"
+		type="radio"
+		[name]="name"
+		[value]="value"
+		[formControl]="isChecked"
+	/>
+
+	<div
+		class="c-selectable-row__container"
+	>
+		<div class="c-selectable-row__content">
+			<div
+				*ngIf="iconBefore"
+				class="c-selectable-row__icon c-selectable-row__icon--before"
+			>
+				<ui-icon [name]="iconBefore"></ui-icon>
+			</div>
+
+			<ng-content></ng-content>
+		</div>
+	</div>
+</label>

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectComponent Should render correctly 1`] = `
+<ui-select
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  error=""
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+>
+  <div
+    class="c-select-field"
+    ng-reflect-klass="c-select-field"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <select
+      class="c-select-field__field ng-untouched ng-pristine ng-invalid"
+      id="undefined"
+      ng-reflect-required=""
+      required=""
+    >
+      <option
+        disabled=""
+        hidden=""
+        ng-reflect-value=""
+        selected=""
+        value=""
+      />
+      
+    </select>
+    <label
+      class="c-select-field__label"
+      for="undefined"
+    >
+        
+    </label>
+    <div
+      class="c-select-field__icon"
+    >
+      <ui-icon
+        class="c-icon"
+        ng-reflect-name="caret-down"
+        ng-reflect-size="small"
+      >
+        <i
+          class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+        />
+      </ui-icon>
+    </div>
+    
+  </div>
+</ui-select>
+`;

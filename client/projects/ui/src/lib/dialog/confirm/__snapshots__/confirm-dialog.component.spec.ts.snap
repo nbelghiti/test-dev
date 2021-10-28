@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmDialogComponent Should render correctly 1`] = `
+<ui-confirm-dialog
+  ButtonType={[Function Object]}
+  HeadingLevel={[Function Object]}
+  IconName={[Function Object]}
+  dialogClassName={[Function Boolean]}
+>
+  <ui-loader
+    ng-reflect-simple-loader="true"
+  >
+    
+    <div
+      class="c-dialog__content"
+    >
+      <ui-heading
+        classes="c-dialog__title"
+        ng-reflect-classes="c-dialog__title"
+        ng-reflect-level="2"
+      >
+        <div
+          class="c-heading c-dialog__title"
+          ng-reflect-klass="c-heading c-dialog__title"
+          ng-reflect-ng-class="[object Object]"
+        >
+          
+          
+          
+          <h2>
+            
+          </h2>
+          
+          <div
+            class="c-heading__meta"
+          >
+            
+            
+            
+          </div>
+        </div>
+      </ui-heading>
+      
+    </div>
+    
+    
+  </ui-loader><div
+    class="c-dialog__actions"
+  >
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-type="c-button--secondary"
+      >
+        
+        <button
+          class="c-button c-button--secondary"
+          ng-reflect-klass="c-button c-button--secondary "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+            
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button>
+        
+        <button
+          class="c-button"
+          ng-reflect-klass="c-button  "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+            
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+  </div>
+</ui-confirm-dialog>
+`;

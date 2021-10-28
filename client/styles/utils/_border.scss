@@ -1,0 +1,22 @@
+/* stylelint-disable declaration-no-important */
+// =============================================================================
+// :: Border
+// =============================================================================
+.u-border-left {
+	border-left: $border-width-base solid $border-color-base !important;
+}
+
+.u-border-bottom {
+	border-bottom: $border-width-base solid $border-color-base !important;
+}
+
+// =============================================================================
+// :: Border - none
+// =============================================================================
+.u-border-top-none {
+	border-top: none !important;
+}
+
+.u-border-bottom-none {
+	border-bottom: none !important;
+}

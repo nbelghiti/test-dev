@@ -1,0 +1,31 @@
+FROM node:erbium-alpine
+
+# Expose ports
+EXPOSE 3000 5858
+
+# Install latest yarn version
+RUN yarn global upgrade --silent yarn@latest
+
+# Create folder for postgres
+RUN mkdir -p /var/lib/postgresql/data/pgdata && chown node:node /var/lib/postgresql/data/pgdata
+
+# Install dependencies
+RUN mkdir /app && chown node:node /app
+WORKDIR /app
+USER node
+COPY --chown=node:node package.json yarn.lock .npmrc ./
+
+RUN yarn install --silent
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Set working directory for source code
+RUN mkdir /app/server
+WORKDIR /app/server
+COPY --chown=node:node ./ ./
+
+## Add the wait script to the image
+ADD --chown=node:node https://github.com/ufoscout/docker-compose-wait/releases/download/2.6.0/wait /wait
+RUN chmod +x /wait
+
+# Start application with live reload
+CMD /wait && ts-node-dev -r tsconfig-paths/register --transpileOnly --poll --inspect=0.0.0.0:5858 -- index.ts

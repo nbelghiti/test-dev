@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchGroupComponent Should render correctly 1`] = `
+<ui-search-group>
+  <div
+    class="c-search-group"
+  >
+    
+    <div
+      class="c-search-group__content"
+    />
+  </div>
+</ui-search-group>
+`;

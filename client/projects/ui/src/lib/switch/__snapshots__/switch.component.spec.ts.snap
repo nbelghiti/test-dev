@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoComponent Should render correctly 1`] = `
+<ui-switch
+  active="false"
+  falseValue={[Function String]}
+  trueValue={[Function String]}
+>
+  <label
+    class="c-switch"
+  >
+    <input
+      class="c-switch__input"
+      type="checkbox"
+    />
+    <span
+      class="c-switch__label c-switch__label-true"
+    >
+      On
+    </span>
+    <div
+      class="c-switch__toggle"
+    >
+      <div
+        class="c-switch__toggle-handle"
+      />
+    </div>
+    <span
+      class="c-switch__label c-switch__label-false"
+    >
+      Off
+    </span>
+  </label>
+</ui-switch>
+`;

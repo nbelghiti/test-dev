@@ -1,0 +1,19 @@
+// =============================================================================
+// :: Loader
+// =============================================================================
+.c-loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+	padding: 2.5rem;
+
+	&__message {
+		margin-left: 1.6rem;
+	}
+}
+
+.c-loader__animation {
+	width: 8rem;
+	height: 8rem;
+}

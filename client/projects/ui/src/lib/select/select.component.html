@@ -1,0 +1,44 @@
+<div
+	class="c-select-field"
+	[ngClass]="{
+		'c-select-field--error': error
+	}"
+>
+	<select
+		[id]="name"
+		[name]="name"
+		class="c-select-field__field"
+		required
+		[ngModel]="value"
+		(ngModelChange)="writeValue($event)"
+	>
+		<option
+			value=""
+			hidden
+			disabled
+			selected
+			[ngValue]="null"
+		>
+		</option>
+
+		<option
+			*ngFor="let option of options"
+			[ngValue]="option.value"
+		>
+			{{option.label}}
+		</option>
+	</select>
+
+	<label class="c-select-field__label" [for]="name">
+		{{label}}
+	</label>
+
+	<div class="c-select-field__icon">
+		<ui-icon [name]="IconName.caretDown" [size]="IconSize.small"></ui-icon>
+	</div>
+
+	<div *ngIf="error" class="c-select-field__error">
+		<ui-icon name="exclamation-circle" size="small"></ui-icon>
+		<span class="c-select-field__error-text">{{error}}</span>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="c-info-panel">
+	<header class="c-info-panel__header">
+		<ui-heading
+			class="c-info-panel__title"
+			level=3
+			[title]="title"
+		>
+		</ui-heading>
+	</header>
+
+	<div
+		#content
+		*ngIf="hasContent"
+		class="c-info-panel__content"
+	>
+		<ng-content></ng-content>
+	</div>
+</div>

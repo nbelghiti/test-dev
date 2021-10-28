@@ -1,0 +1,33 @@
+<button
+	*ngIf="hasClick; else link"
+	type="button"
+	class="c-link {{ type }}"
+	(click)="clicked.emit()"
+>
+	<div *ngIf="iconBefore" class="c-link__icon c-link__icon--before">
+		<ui-icon [name]="iconBefore"></ui-icon>
+	</div>
+
+	<span class="c-link__text">{{label}}</span>
+
+	<div *ngIf="iconAfter" class="c-link__icon c-link__icon--after">
+		<ui-icon [name]="iconAfter"></ui-icon>
+	</div>
+</button>
+
+<ng-template #link>
+	<a
+		class="c-link {{ type }}"
+		[routerLink]="url"
+	>
+		<div *ngIf="iconBefore" class="c-link__icon c-link__icon--before">
+			<ui-icon [name]="iconBefore"></ui-icon>
+		</div>
+
+		<span class="c-link__text">{{label}}</span>
+
+		<div *ngIf="iconAfter" class="c-link__icon c-link__icon--after">
+			<ui-icon [name]="iconAfter"></ui-icon>
+		</div>
+	</a>
+</ng-template>

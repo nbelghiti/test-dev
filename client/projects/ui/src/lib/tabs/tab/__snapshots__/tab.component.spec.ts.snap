@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabComponent Should render correctly 1`] = `
+<ui-tab
+  active="false"
+>
+  <div
+    class="c-tab"
+    hidden=""
+  />
+</ui-tab>
+`;

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoPanelComponent Should render correctly 1`] = `
+<ui-info-panel
+  contentChild={[Function ElementRef]}
+  hasContent={[Function Boolean]}
+>
+  <div
+    class="c-info-panel"
+  >
+    <header
+      class="c-info-panel__header"
+    >
+      <ui-heading
+        class="c-info-panel__title"
+        level="3"
+        ng-reflect-level="3"
+      >
+        <div
+          class="c-heading"
+          ng-reflect-klass="c-heading "
+          ng-reflect-ng-class="[object Object]"
+        >
+          
+          
+          
+          
+          <h3>
+            
+          </h3>
+          <div
+            class="c-heading__meta"
+          >
+            
+            
+            
+          </div>
+        </div>
+      </ui-heading>
+    </header>
+    
+    <div
+      class="c-info-panel__content"
+    />
+  </div>
+</ui-info-panel>
+`;

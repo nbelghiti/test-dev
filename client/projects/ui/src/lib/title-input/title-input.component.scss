@@ -1,0 +1,71 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+.c-title-input__wrapper {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+}
+
+// =============================================================================
+// :: Title Input Field
+// =============================================================================
+.c-title-input {
+	@include extend-h2-base();
+
+	display: inline-flex;
+	padding: 0.5rem 1rem;
+
+	line-height: $line-height-normalize;
+
+	background: none;
+
+	border: $border-width-base solid $border-color-grey-76;
+
+	transition:
+		border $animation-base,
+		box-shadow $animation-base;
+
+	&::placeholder {
+		color: $text-color-grey-76;
+	}
+
+	&:focus {
+		border: $border-width-base solid $text-color-base;
+		box-shadow: 0 0 0 0.3rem $border-color-grey-86;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-title-input__error {
+	display: flex;
+	align-items: center;
+	// added margin to correctly place the error message
+	margin: 0.6rem 0 0 0.4rem;
+
+	font-size: $font-size-2x-small;
+
+	color: $ui-color-error-dark;
+}
+
+.c-title-input__error-text {
+	margin-left: 0.6rem;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-title-input--error {
+	border-color: $ui-color-error-dark;
+}
+
+.c-title-input--h1 {
+	@include extend-h1-base();
+
+	font-size: $font-size-2x-large;
+}

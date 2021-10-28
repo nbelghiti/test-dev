@@ -1,0 +1,11 @@
+<ul class="c-filter-menu">
+	<li *ngFor="let item of items" class="c-filter-menu__item">
+		<ui-filter-menu-item
+			[active]="item?.active"
+			[label]="item[label]"
+			[link]="item?.link"
+			[queryParams]="item?.queryParams"
+			(click)="select(item)"
+		></ui-filter-menu-item>
+	</li>
+</ul>

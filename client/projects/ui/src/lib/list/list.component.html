@@ -1,0 +1,29 @@
+<ng-container [ngSwitch]="type">
+	<ol
+		*ngSwitchCase="ListType.ORDERED"
+		class="c-list c-list--ordered"
+	>
+		<ng-container *ngTemplateOutlet="listContentTpl"></ng-container>
+	</ol>
+
+	<ul
+		*ngSwitchCase="ListType.UNORDERED"
+		class="c-list"
+	>
+		<ng-container *ngTemplateOutlet="listContentTpl"></ng-container>
+	</ul>
+</ng-container>
+
+<ng-template #listContentTpl>
+	<ng-container *ngFor="let item of listItems">
+		<li
+			class="c-list__item"
+			[ngClass]="{
+				'c-list__item--with-spacing': withSpacing,
+				'c-list__item--with-border': withBorder
+			}"
+		>
+			<ng-container *ngTemplateOutlet="item.itemTemplate"></ng-container>
+		</li>
+	</ng-container>
+</ng-template>

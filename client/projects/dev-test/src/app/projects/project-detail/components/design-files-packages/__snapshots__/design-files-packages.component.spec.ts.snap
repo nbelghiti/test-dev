@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DesignFilesPackagesComponent Should render correctly 1`] = `
+<adb-design-files-packages
+  CardAlignType={[Function Object]}
+  HeadingLevel={[Function Object]}
+>
+  <div
+    class="l-content__item"
+  >
+    <ui-row
+      _nghost-a-c4=""
+    >
+      <div
+        _ngcontent-a-c4=""
+        class="c-row"
+        ng-reflect-klass="c-row"
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        <div
+          _ngcontent-a-c4=""
+          class="c-row__content"
+        >
+          <h2>
+            OVERVIEW_TITLE__PACKAGES
+          </h2>
+        </div>
+        
+      </div>
+    </ui-row>
+  </div><div
+    class="l-content__item"
+  >
+    <div
+      class="l-grid l-grid--with-spacing l-grid--stretch"
+    >
+      
+    </div>
+  </div>
+</adb-design-files-packages>
+`;

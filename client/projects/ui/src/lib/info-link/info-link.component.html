@@ -1,0 +1,28 @@
+<a
+	#button
+	[routerLink]="link"
+	class="c-info-link"
+	[ngClass]="{
+		'c-info-link--background-grey': grey,
+		'c-info-link--background-red': red
+	}"
+>
+	<div class="c-info-link__content">
+		<span class="c-info-link__icon">
+			<ui-icon [name]="icon" size="large"></ui-icon>
+		</span>
+
+		<ui-heading
+			class="c-info-link__title"
+			level="3"
+			[title]="title"
+		></ui-heading>
+	</div>
+
+	<span
+		*ngIf="arrow"
+		class="c-info-link__arrow"
+	>
+		<ui-icon name="arrow-right"></ui-icon>
+	</span>
+</a>

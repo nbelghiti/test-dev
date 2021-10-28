@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpansionPanelComponent Should render correctly 1`] = `
+<ui-expansion-panel
+  ButtonType={[Function Object]}
+  ExpansionPanelLevel={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  actions={[Function ElementRef]}
+  expanded="false"
+  hasActions="false"
+  level=""
+  ref={[Function ViewRef_]}
+  toggle={[Function EventEmitter]}
+  withSpacing={[Function Boolean]}
+>
+  <div
+    class="c-expansion-panel c-expansion-panel--with-spacing"
+    ng-reflect-klass="c-expansion-panel "
+    ng-reflect-ng-class="[object Object]"
+  >
+    <div
+      class="c-expansion-panel__header"
+    >
+      <span
+        class="c-expansion-panel__title"
+      >
+        
+      </span>
+      <div
+        class="c-expansion-panel__actions"
+      >
+        <div
+          class="c-card__actions"
+        />
+        <span
+          class="c-expansion-panel__icon"
+        >
+          
+          <ui-icon
+            class="c-icon"
+            ng-reflect-name="caret-down"
+          >
+            <i
+              class="c-icon__glyph   fas fa-caret-down"
+            />
+          </ui-icon>
+          
+        </span>
+      </div>
+    </div>
+    
+    <div />
+  </div>
+</ui-expansion-panel>
+`;

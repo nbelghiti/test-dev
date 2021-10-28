@@ -1,0 +1,28 @@
+// =============================================================================
+// :: Textarea - (no classes)
+// =============================================================================
+textarea {
+	outline: none;
+	border: none;
+	background: none;
+
+	/**
+	 * Slicing applied when there is no class applied. For example: rendered in
+	 * a WYSIWYG.
+	 */
+	// &:not([class]) {}
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+textarea {
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+
+		cursor: pointer;
+	}
+}

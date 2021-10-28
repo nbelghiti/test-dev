@@ -1,0 +1,50 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: User tag
+// =============================================================================
+.c-user-tag {
+	display: inline-flex;
+	align-items: center;
+
+	background-color: $background-color-grey-96;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-user-tag__content {
+	padding: 0.4rem 1rem;
+}
+
+.c-user-tag__icon {
+	padding: 0 1rem;
+
+	color: $text-color-base;
+}
+
+.c-user-tag__button {
+	align-self: stretch;
+	padding: 0 1rem;
+
+	color: $text-color-grey-46;
+
+	transition:
+		color $animation-base,
+		background-color $animation-base;
+
+	&:hover {
+		background-color: $background-color-grey-86;
+		color: $text-color-base;
+	}
+}
+
+// =============================================================================
+// Modifier
+// =============================================================================
+.c-user-tag--fluid {
+	width: 100%;
+}

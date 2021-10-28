@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoComponent Should render correctly 1`] = `
+<ui-checkbox
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  destroyed$={[Function Subject]}
+  indeterminate="false"
+  isChecked={[Function FormControl]}
+  name={[Function String]}
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+>
+  <label
+    class="c-checkbox"
+    ng-reflect-klass="c-checkbox"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <input
+      class="c-checkbox__input ng-untouched ng-pristine ng-valid"
+      id="checkbox-input"
+      name="checkbox-input"
+      ng-reflect-form="[object Object]"
+      type="checkbox"
+    />
+    <span
+      class="c-checkbox__box"
+    >
+      <span
+        class="c-checkbox__check"
+      >
+        <ui-icon
+          class="c-icon"
+          ng-reflect-name="check"
+          ng-reflect-size="tiny"
+        >
+          <i
+            class="c-icon__glyph c-icon__glyph--tiny  fas fa-check"
+          />
+        </ui-icon>
+      </span>
+    </span>
+    
+  </label>
+</ui-checkbox>
+`;

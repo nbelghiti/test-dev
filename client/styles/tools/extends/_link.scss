@@ -1,0 +1,30 @@
+// =============================================================================
+// :: Link
+// =============================================================================
+@mixin extend-link-base() {
+	font-family: $font-family-secondary;
+	font-weight: $font-weight-normal;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	text-decoration: none;
+}
+
+@mixin extend-link-bold() {
+	font-family: $font-family-secondary;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	text-decoration: none;
+}
+
+// =============================================================================
+// :: Link
+// =============================================================================
+@mixin extend-link-inline() {
+	font-family: $font-family-secondary;
+	font-weight: $font-weight-normal;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}

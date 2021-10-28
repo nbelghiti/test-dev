@@ -1,0 +1,91 @@
+<div class="c-dialog__content">
+	<ui-heading
+		[level]="HeadingLevel.heading2"
+		[title]="data?.title"
+		classes="c-dialog__title"
+	>
+	</ui-heading>
+
+	<form
+		*ngIf="itemValueForm"
+		[formGroup]="itemValueForm"
+		class="l-form__grid"
+	>
+		<div class="l-grid">
+			<div class="l-grid__col">
+				<ui-input
+					[label]="'GENERAL__LABEL' | translate"
+					name="key"
+					type="text"
+					[formControl]="itemValueForm.get('key')"
+				>
+				</ui-input>
+			</div>
+
+			<div class="l-grid__col">
+				<ui-input
+					[label]="'GENERAL__INPUT' | translate"
+					name="value"
+					type="text"
+					[formControl]="itemValueForm.get('value')"
+				>
+				</ui-input>
+			</div>
+
+			<div class="l-grid__col--6">
+				<ui-select
+					*ngIf="unitTypeOptions.length > 0"
+					[label]="'GENERAL__UNIT_TYPE' | translate"
+					name="unitType"
+					[formControl]="itemValueForm.get('unitType')"
+					[options]="unitTypeOptions"
+				>
+				</ui-select>
+			</div>
+
+			<div class="l-grid__col--6">
+				<ui-select
+					*ngIf="unitOptions.length > 0"
+					[label]="'GENERAL__UNIT_VALUE' | translate"
+					name="unit"
+					[formControl]="itemValueForm.get('defaultUnit')"
+					[options]="unitOptions"
+				>
+				</ui-select>
+			</div>
+		</div>
+	</form>
+
+	<div *ngIf="error" class="c-error u-margin-bottom-2x">
+		<ui-icon
+			name="exclamation-circle"
+			size="small"
+		>
+		</ui-icon>
+
+		<span class="c-error__text">
+			{{ error }}
+		</span>
+	</div>
+</div>
+
+<div class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button
+			(clicked)="onCancel()"
+			[type]="ButtonType.secondary"
+		>
+			{{ 'GENERAL__CANCEL' | translate }}
+		</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button
+			(clicked)="onSubmit()"
+			[disabled]="isPending"
+			[loading]="isPending"
+		>
+			{{ data?.submitLabel }}
+		</ui-button>
+	</div>
+</div>

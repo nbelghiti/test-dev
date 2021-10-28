@@ -1,0 +1,67 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: File
+// =============================================================================
+.c-file {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 8rem;
+	padding-right: 2.5rem;
+	padding-left: 1.6rem;
+
+	text-decoration: none;
+
+	background-color: $background-color-base;
+
+	color: $text-color-base;
+
+	@include respond-at(get-breakpoint("desktop")) {
+		height: 4.4rem;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-file__label {
+	max-width: 32rem;
+	overflow: hidden;
+	margin-right: 1rem;
+
+	font-size: $font-size-1x-small;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.c-file__left,
+.c-file__right {
+	display: inline-flex;
+	align-items: center;
+}
+
+.c-file__last-updates {
+	font-size: $font-size-1x-small;
+	white-space: nowrap;
+
+	color: $text-color-grey-46;
+}
+
+.c-file__link {
+	margin-left: 1rem;
+}
+
+.c-file__right {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin-left: 2rem;
+}
+
+.c-file__icon {
+	margin-right: 1.6rem;
+}

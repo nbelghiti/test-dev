@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultComponent Should render correctly 1`] = `
+<ui-search-result
+  element={[Function ElementRef]}
+>
+  <span
+    class="c-search-result"
+  >
+    
+    <span
+      class="c-search-result__title"
+    />
+    
+    
+  </span>
+</ui-search-result>
+`;

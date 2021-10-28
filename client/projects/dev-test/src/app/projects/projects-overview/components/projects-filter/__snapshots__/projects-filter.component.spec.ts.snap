@@ -1,0 +1,929 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsFilterComponent Should render correctly 1`] = `
+<adb-projects-filter
+  onChange={[Function Function]}
+  onDestroy$={[Function Subject]}
+  onTouched={[Function Function]}
+  projectLocationOptions={[Function Array]}
+  projectStatusOptions={[Function Array]}
+  selectFilterForm={[Function FormGroup]}
+>
+  <form
+    class="l-form ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <div
+      class="l-form__grid"
+    >
+      <div
+        class="l-grid l-grid--with-spacing l-grid--stretch"
+      >
+        <div
+          class="l-grid__col--3"
+        >
+          <ui-filter>
+            <div
+              class="c-filter c-flyout is-closed"
+              uiflyout=""
+            >
+              <div
+                class="c-flyout__toggle"
+                uiflyouttoggle=""
+              >
+                <ui-filter-toggle
+                  _nghost-a-c4=""
+                  background="grey"
+                  ng-reflect-background="grey"
+                  ng-reflect-current-option="- All"
+                  ng-reflect-label="MY_PROJECTS__FILTER__PROJECT_P"
+                >
+                  <div
+                    _ngcontent-a-c4=""
+                    class="c-filter-toggle c-filter-toggle--grey"
+                    ng-reflect-klass="c-filter-toggle"
+                    ng-reflect-ng-class="[object Object]"
+                  >
+                    
+                    <span
+                      _ngcontent-a-c4=""
+                      class="c-filter-toggle__label"
+                    >
+                      MY_PROJECTS__FILTER__PROJECT_PHASE
+                    </span>
+                    <button
+                      _ngcontent-a-c4=""
+                      class="c-filter-toggle__trigger"
+                      type="button"
+                    >
+                      <span
+                        _ngcontent-a-c4=""
+                        class="c-filter-toggle__current-option"
+                      >
+                        - All
+                      </span>
+                      <div
+                        _ngcontent-a-c4=""
+                        class="c-filter-toggle__icon"
+                      >
+                        <ui-icon
+                          _ngcontent-a-c4=""
+                          _nghost-a-c6=""
+                          class="c-icon"
+                          name="caret-down"
+                          ng-reflect-name="caret-down"
+                          ng-reflect-size="small"
+                          size="small"
+                        >
+                          <i
+                            _ngcontent-a-c6=""
+                            class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+                          />
+                        </ui-icon>
+                      </div>
+                    </button>
+                  </div>
+                </ui-filter-toggle>
+              </div>
+              <div
+                class="c-filter__content c-flyout__content--left c-flyout__content c-flyout__toggle"
+                ng-reflect-class="c-filter__content c-flyout__co"
+                ng-reflect-toggle-state="CLOSED"
+                uiflyoutcontent=""
+                uiflyouttoggle=""
+              >
+                <ui-filter-menu
+                  _nghost-a-c5=""
+                  class="ng-untouched ng-pristine ng-valid"
+                  formcontrolname="status"
+                  ng-reflect-items="[object Object],[object Object"
+                  ng-reflect-name="status"
+                >
+                  <ul
+                    _ngcontent-a-c5=""
+                    class="c-filter-menu"
+                  >
+                    
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="true"
+                        ng-reflect-label="- All"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item c-filter-menu-item--active"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="- All"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            - All
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Bidding"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Bidding"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Bidding
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Engineering"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Engineering"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Engineering
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Construction"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Construction"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Construction
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Pac"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Pac"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Pac
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Fac"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Fac"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Fac
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                  </ul>
+                </ui-filter-menu>
+              </div>
+            </div>
+          </ui-filter>
+        </div>
+        <div
+          class="l-grid__col--3"
+        >
+          <ui-filter>
+            <div
+              class="c-filter c-flyout is-closed"
+              uiflyout=""
+            >
+              <div
+                class="c-flyout__toggle"
+                uiflyouttoggle=""
+              >
+                <ui-filter-toggle
+                  _nghost-a-c4=""
+                  background="grey"
+                  ng-reflect-background="grey"
+                  ng-reflect-current-option="- All"
+                  ng-reflect-label="MY_PROJECTS__FILTER__LOCATION"
+                >
+                  <div
+                    _ngcontent-a-c4=""
+                    class="c-filter-toggle c-filter-toggle--grey"
+                    ng-reflect-klass="c-filter-toggle"
+                    ng-reflect-ng-class="[object Object]"
+                  >
+                    
+                    <span
+                      _ngcontent-a-c4=""
+                      class="c-filter-toggle__label"
+                    >
+                      MY_PROJECTS__FILTER__LOCATION
+                    </span>
+                    <button
+                      _ngcontent-a-c4=""
+                      class="c-filter-toggle__trigger"
+                      type="button"
+                    >
+                      <span
+                        _ngcontent-a-c4=""
+                        class="c-filter-toggle__current-option"
+                      >
+                        - All
+                      </span>
+                      <div
+                        _ngcontent-a-c4=""
+                        class="c-filter-toggle__icon"
+                      >
+                        <ui-icon
+                          _ngcontent-a-c4=""
+                          _nghost-a-c6=""
+                          class="c-icon"
+                          name="caret-down"
+                          ng-reflect-name="caret-down"
+                          ng-reflect-size="small"
+                          size="small"
+                        >
+                          <i
+                            _ngcontent-a-c6=""
+                            class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+                          />
+                        </ui-icon>
+                      </div>
+                    </button>
+                  </div>
+                </ui-filter-toggle>
+              </div>
+              <div
+                class="c-filter__content c-flyout__content--left c-flyout__content c-flyout__toggle"
+                ng-reflect-class="c-filter__content c-flyout__co"
+                ng-reflect-toggle-state="CLOSED"
+                uiflyoutcontent=""
+                uiflyouttoggle=""
+              >
+                <ui-filter-menu
+                  _nghost-a-c5=""
+                  class="ng-untouched ng-pristine ng-valid"
+                  formcontrolname="location"
+                  ng-reflect-items="[object Object],[object Object"
+                  ng-reflect-name="location"
+                >
+                  <ul
+                    _ngcontent-a-c5=""
+                    class="c-filter-menu"
+                  >
+                    
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="true"
+                        ng-reflect-label="- All"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item c-filter-menu-item--active"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="- All"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            - All
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Bahrain"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Bahrain"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Bahrain
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Canada"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Canada"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Canada
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="France"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="France"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            France
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Italy"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Italy"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Italy
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Saudi Arabia"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Saudi Arabia"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Saudi Arabia
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="Taiwan"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="Taiwan"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            Taiwan
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="USA, Nevada"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="USA, Nevada"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            USA, Nevada
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="USA, Oklahoma"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="USA, Oklahoma"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            USA, Oklahoma
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                    <li
+                      _ngcontent-a-c5=""
+                      class="c-filter-menu__item"
+                    >
+                      <ui-filter-menu-item
+                        _ngcontent-a-c5=""
+                        _nghost-a-c7=""
+                        ng-reflect-active="false"
+                        ng-reflect-label="USA, Pennsylvania"
+                      >
+                        
+                        <button
+                          _ngcontent-a-c7=""
+                          class="c-filter-menu-item"
+                          ng-reflect-klass="c-filter-menu-item"
+                          ng-reflect-ng-class="[object Object]"
+                          title="USA, Pennsylvania"
+                        >
+                          <span
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__value"
+                          >
+                            USA, Pennsylvania
+                          </span>
+                          <div
+                            _ngcontent-a-c7=""
+                            class="c-filter-menu-item__icon"
+                          >
+                            <ui-icon
+                              _ngcontent-a-c7=""
+                              _nghost-a-c6=""
+                              class="c-icon"
+                              name="check"
+                              ng-reflect-name="check"
+                            >
+                              <i
+                                _ngcontent-a-c6=""
+                                class="c-icon__glyph   fas fa-check"
+                              />
+                            </ui-icon>
+                          </div>
+                        </button>
+                        
+                      </ui-filter-menu-item>
+                    </li>
+                  </ul>
+                </ui-filter-menu>
+              </div>
+            </div>
+          </ui-filter>
+        </div>
+      </div>
+    </div>
+  </form>
+</adb-projects-filter>
+`;

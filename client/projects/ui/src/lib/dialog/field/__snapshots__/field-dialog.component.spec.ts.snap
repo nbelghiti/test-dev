@@ -1,0 +1,604 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldDialogComponent init should render 1`] = `
+<ui-field-dialog
+  ButtonType={[Function Object]}
+  HeadingLevel={[Function Object]}
+  IconName={[Function Object]}
+  confirmSave="false"
+  data={[Function Object]}
+  destroyed$={[Function Subject]}
+  dialogClassName={[Function Boolean]}
+  fieldForm={[Function FormGroup]}
+  fieldTypes={[Function Object]}
+  formBuilder={[Function FormBuilder]}
+  isEdit={[Function Boolean]}
+  isPending="false"
+  translate={[Function TranslateService]}
+  typeOptions={[Function Array]}
+  unitOptions={[Function Array]}
+  unitTypeOptions={[Function Array]}
+  unitTypes={[Function Object]}
+>
+  <ui-loader
+    ng-reflect-simple-loader="true"
+  >
+    
+    <div
+      class="c-dialog__content"
+    >
+      <ui-heading
+        classes="c-dialog__title"
+        ng-reflect-classes="c-dialog__title"
+        ng-reflect-level="2"
+        ng-reflect-title="EDIT_FIELD_DIALOG__TITLE"
+      >
+        <div
+          class="c-heading c-dialog__title"
+          ng-reflect-klass="c-heading c-dialog__title"
+          ng-reflect-ng-class="[object Object]"
+        >
+          
+          
+          
+          <h2>
+            EDIT_FIELD_DIALOG__TITLE
+          </h2>
+          
+          <div
+            class="c-heading__meta"
+          >
+            
+            
+            
+          </div>
+        </div>
+      </ui-heading>
+      
+      <form
+        class="l-form__grid ng-untouched ng-pristine ng-invalid"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        <div
+          class="l-grid l-grid--with-spacing"
+        >
+          <div
+            class="l-grid__col"
+          >
+            
+            <ui-select
+              class="ng-untouched ng-pristine ng-valid"
+              name="type"
+              ng-reflect-error="false"
+              ng-reflect-form="[object Object]"
+              ng-reflect-label="FIELD_DIALOG__TYPE"
+              ng-reflect-name="type"
+              ng-reflect-options="[object Object],[object Object"
+            >
+              <div
+                class="c-select-field"
+                ng-reflect-klass="c-select-field"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <select
+                  class="c-select-field__field ng-untouched ng-pristine ng-invalid"
+                  id="type"
+                  ng-reflect-model="manual"
+                  ng-reflect-name="type"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <option
+                    disabled=""
+                    hidden=""
+                    ng-reflect-value=""
+                    selected=""
+                    value=""
+                  />
+                  
+                  <option
+                    ng-reflect-ng-value="calculated"
+                    value="1: calculated"
+                  >
+                     calculated 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="manual"
+                    value="2: manual"
+                  >
+                     manual 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="external"
+                    value="3: external"
+                  >
+                     external 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="datalist"
+                    value="4: datalist"
+                  >
+                     datalist 
+                  </option>
+                </select>
+                <label
+                  class="c-select-field__label"
+                  for="type"
+                >
+                   FIELD_DIALOG__TYPE 
+                </label>
+                <div
+                  class="c-select-field__icon"
+                >
+                  <ui-icon
+                    class="c-icon"
+                    ng-reflect-name="caret-down"
+                    ng-reflect-size="small"
+                  >
+                    <i
+                      class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+                    />
+                  </ui-icon>
+                </div>
+                
+              </div>
+            </ui-select>
+          </div>
+          <div
+            class="l-grid__col"
+          >
+            <ui-input
+              class="ng-untouched ng-pristine ng-valid"
+              name="description"
+              ng-reflect-form="[object Object]"
+              ng-reflect-label="FIELD_DIALOG__DESCRIPTION"
+              ng-reflect-name="description"
+              ng-reflect-type="text"
+              type="text"
+            >
+              <div
+                class="c-input-field"
+                ng-reflect-klass="c-input-field"
+                ng-reflect-ng-class="[object Object]"
+              >
+                
+                <div
+                  class="c-input-field__content"
+                >
+                  <div
+                    class="c-input-field__input"
+                  >
+                    <input
+                      class="c-input-field__field ng-untouched ng-pristine ng-valid"
+                      id="description"
+                      name="description"
+                      ng-reflect-form="[object Object]"
+                      ng-reflect-required=""
+                      placeholder=""
+                      required=""
+                      type="text"
+                    />
+                    <label
+                      class="c-input-field__label"
+                      for="description"
+                    >
+                       FIELD_DIALOG__DESCRIPTION 
+                    </label>
+                  </div>
+                  
+                </div>
+              </div>
+            </ui-input>
+          </div>
+          
+          <div
+            class="l-grid__col--6"
+          >
+            
+            <ui-select
+              class="ng-untouched ng-pristine ng-invalid"
+              name="unitType"
+              ng-reflect-error="false"
+              ng-reflect-form="[object Object]"
+              ng-reflect-label="FIELD_DIALOG__UNIT-TYPE"
+              ng-reflect-name="unitType"
+              ng-reflect-options="[object Object],[object Object"
+            >
+              <div
+                class="c-select-field"
+                ng-reflect-klass="c-select-field"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <select
+                  class="c-select-field__field ng-untouched ng-pristine ng-invalid"
+                  id="unitType"
+                  ng-reflect-name="unitType"
+                  ng-reflect-required=""
+                  required=""
+                >
+                  <option
+                    disabled=""
+                    hidden=""
+                    ng-reflect-value=""
+                    selected=""
+                    value=""
+                  />
+                  
+                  <option
+                    ng-reflect-ng-value="Acceleration"
+                    value="1: Acceleration"
+                  >
+                     Acceleration 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Angle"
+                    value="2: Angle"
+                  >
+                     Angle 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="ApparentPower"
+                    value="3: ApparentPower"
+                  >
+                     ApparentPower 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Area"
+                    value="4: Area"
+                  >
+                     Area 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Charge"
+                    value="5: Charge"
+                  >
+                     Charge 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Current"
+                    value="6: Current"
+                  >
+                     Current 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Density"
+                    value="7: Density"
+                  >
+                     Density 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Energy"
+                    value="8: Energy"
+                  >
+                     Energy 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Force"
+                    value="9: Force"
+                  >
+                     Force 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Frequency"
+                    value="10: Frequency"
+                  >
+                     Frequency 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Generic"
+                    value="11: Generic"
+                  >
+                     Generic 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Length"
+                    value="12: Length"
+                  >
+                     Length 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="LinearDensity"
+                    value="13: LinearDensity"
+                  >
+                     LinearDensity 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Mass"
+                    value="14: Mass"
+                  >
+                     Mass 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="MassFlowRate"
+                    value="15: MassFlowRate"
+                  >
+                     MassFlowRate 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Pace"
+                    value="16: Pace"
+                  >
+                     Pace 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Power"
+                    value="17: Power"
+                  >
+                     Power 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Pressure"
+                    value="18: Pressure"
+                  >
+                     Pressure 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="ReactiveEnergy"
+                    value="19: ReactiveEnergy"
+                  >
+                     ReactiveEnergy 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="ReactivePower"
+                    value="20: ReactivePower"
+                  >
+                     ReactivePower 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="RotationalStiffness"
+                    value="21: RotationalStiffness"
+                  >
+                     RotationalStiffness 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Sound"
+                    value="22: Sound"
+                  >
+                     Sound 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Speed"
+                    value="23: Speed"
+                  >
+                     Speed 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Stiffness"
+                    value="24: Stiffness"
+                  >
+                     Stiffness 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Temperature"
+                    value="25: Temperature"
+                  >
+                     Temperature 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Time"
+                    value="26: Time"
+                  >
+                     Time 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="TorsionalStiffness"
+                    value="27: TorsionalStiffness"
+                  >
+                     TorsionalStiffness 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Voltage"
+                    value="28: Voltage"
+                  >
+                     Voltage 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="Volume"
+                    value="29: Volume"
+                  >
+                     Volume 
+                  </option>
+                  <option
+                    ng-reflect-ng-value="VolumeFlowRate"
+                    value="30: VolumeFlowRate"
+                  >
+                     VolumeFlowRate 
+                  </option>
+                </select>
+                <label
+                  class="c-select-field__label"
+                  for="unitType"
+                >
+                   FIELD_DIALOG__UNIT-TYPE 
+                </label>
+                <div
+                  class="c-select-field__icon"
+                >
+                  <ui-icon
+                    class="c-icon"
+                    ng-reflect-name="caret-down"
+                    ng-reflect-size="small"
+                  >
+                    <i
+                      class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+                    />
+                  </ui-icon>
+                </div>
+                
+              </div>
+            </ui-select>
+          </div>
+          
+          <div
+            class="l-grid__col--6"
+          >
+            
+          </div>
+          <div
+            class="l-grid__col--6"
+          >
+            <ui-input
+              class="ng-untouched ng-pristine ng-invalid"
+              name="field-code"
+              ng-reflect-error="false"
+              ng-reflect-form="[object Object]"
+              ng-reflect-label="FIELD_DIALOG__FIELD_CODE"
+              ng-reflect-name="field-code"
+              ng-reflect-type="text"
+              type="text"
+            >
+              <div
+                class="c-input-field"
+                ng-reflect-klass="c-input-field"
+                ng-reflect-ng-class="[object Object]"
+              >
+                
+                <div
+                  class="c-input-field__content"
+                >
+                  <div
+                    class="c-input-field__input"
+                  >
+                    <input
+                      class="c-input-field__field ng-untouched ng-pristine ng-invalid"
+                      id="field-code"
+                      name="field-code"
+                      ng-reflect-form="[object Object]"
+                      ng-reflect-required=""
+                      placeholder=""
+                      required=""
+                      type="text"
+                    />
+                    <label
+                      class="c-input-field__label"
+                      for="field-code"
+                    >
+                       FIELD_DIALOG__FIELD_CODE 
+                    </label>
+                  </div>
+                  
+                </div>
+              </div>
+            </ui-input>
+          </div>
+          <div
+            class="l-grid__col--6"
+          >
+            <ui-input
+              class="ng-untouched ng-pristine ng-invalid"
+              name="cad-id"
+              ng-reflect-error="false"
+              ng-reflect-form="[object Object]"
+              ng-reflect-label="FIELD_DIALOG__CAD_ID"
+              ng-reflect-name="cad-id"
+              ng-reflect-type="text"
+              type="text"
+            >
+              <div
+                class="c-input-field"
+                ng-reflect-klass="c-input-field"
+                ng-reflect-ng-class="[object Object]"
+              >
+                
+                <div
+                  class="c-input-field__content"
+                >
+                  <div
+                    class="c-input-field__input"
+                  >
+                    <input
+                      class="c-input-field__field ng-untouched ng-pristine ng-invalid"
+                      id="cad-id"
+                      name="cad-id"
+                      ng-reflect-form="[object Object]"
+                      ng-reflect-required=""
+                      placeholder=""
+                      required=""
+                      type="text"
+                    />
+                    <label
+                      class="c-input-field__label"
+                      for="cad-id"
+                    >
+                       FIELD_DIALOG__CAD_ID 
+                    </label>
+                  </div>
+                  
+                </div>
+              </div>
+            </ui-input>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+    
+    
+  </ui-loader><div
+    class="c-dialog__actions"
+  >
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-type="c-button--secondary"
+      >
+        
+        <button
+          class="c-button c-button--secondary"
+          ng-reflect-klass="c-button c-button--secondary "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+             GENERAL__CANCEL 
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-disabled="false"
+        ng-reflect-loading="false"
+      >
+        
+        <button
+          class="c-button"
+          ng-reflect-klass="c-button  "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+             FIELD_DIALOG__SAVE 
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+  </div>
+</ui-field-dialog>
+`;

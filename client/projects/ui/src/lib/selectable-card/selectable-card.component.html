@@ -1,0 +1,39 @@
+<label>
+	<input
+		class="c-card__checkbox"
+		type="radio"
+		[name]="name"
+		[value]="value"
+		[formControl]="isChecked"
+	/>
+
+	<div
+		class="c-card"
+		[ngClass]="{
+			'c-card--align-end': align === CardAlignType.end,
+			'c-card--align-center': align === CardAlignType.center,
+			'c-card--noborder': !border,
+			'c-card--loading': loading
+		}"
+	>
+		<ng-container *ngTemplateOutlet="cardContent"></ng-container>
+	</div>
+</label>
+
+<ng-template #cardContent>
+	<div class="c-card__container">
+		<div class="c-card__thumbnail">
+			<ui-image [source]="imageSrc"></ui-image>
+		</div>
+
+		<div class="c-card__content">
+			<div>
+				<ng-content></ng-content>
+			</div>
+
+			<div class="c-card__actions" #actions>
+				<ng-content select=[action]></ng-content>
+			</div>
+		</div>
+	</div>
+</ng-template>

@@ -1,0 +1,17 @@
+<ng-content *ngIf="!loading; else loadingTpl"></ng-content>
+
+<ng-template #loadingTpl>
+	<div class="c-loader">
+		<div
+			#loader
+			*ngIf="!simpleLoader; else spinner"
+			class="c-loader__animation lottie">
+		</div>
+
+		<ng-template #spinner>
+			<div class="c-loader__spinner"></div>
+		</ng-template>
+
+		<p class="c-loader__message u-margin-left-1x" *ngIf="uploadingMsg">Uploading file...</p>
+	</div>
+</ng-template>

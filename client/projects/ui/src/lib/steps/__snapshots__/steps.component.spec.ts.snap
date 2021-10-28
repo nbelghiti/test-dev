@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepsComponent Should render correctly 1`] = `
+<ui-steps
+  StepType={[Function Object]}
+  activeIndex={[Function Number]}
+>
+  <nav
+    class="c-steps"
+  >
+    <ul
+      class="c-steps__list"
+    >
+      
+    </ul>
+  </nav>
+</ui-steps>
+`;

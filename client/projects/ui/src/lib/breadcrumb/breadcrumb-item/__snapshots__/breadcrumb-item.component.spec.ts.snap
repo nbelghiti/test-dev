@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadcrumbItemComponent Should render correctly 1`] = `
+<ui-breadcrumb-item
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  IconType={[Function Object]}
+  activeBreadcrumb={[Function FormControl]}
+  conflict="false"
+  first="false"
+  items="null"
+  label=""
+  value=""
+>
+  <a
+    class="c-breadcrumb-item"
+    href="/"
+    ng-reflect-klass="c-breadcrumb-item"
+    ng-reflect-ng-class="[object Object]"
+    title=""
+  >
+    <span
+      class="c-breadcrumb-item__label"
+    >
+        
+    </span>
+    <div
+      class="c-breadcrumb-item__item"
+    >
+      
+      <span
+        class="c-breadcrumb-item__value"
+      >
+          
+      </span>
+    </div>
+  </a>
+</ui-breadcrumb-item>
+`;

@@ -1,0 +1,66 @@
+<div class="c-project-info">
+	<div *ngIf="imageSrc" class="c-project-info__image-container">
+		<img [src]="imageSrc" alt="Project overview model" class="c-project-info__image">
+	</div>
+
+	<div class="c-project-info__content">
+		<p
+			*ngIf="title"
+			class="c-project-info__title"
+		>
+			{{title}}
+		</p>
+
+		<div
+			class="c-project-info__item"
+		>
+			<span class="c-project-info__label">{{ 'PROJECT__CREATED_AT' | translate }}</span>
+
+			<span class="c-project-info__value">{{created}}</span>
+		</div>
+
+		<div
+			class="c-project-info__item"
+		>
+			<span class="c-project-info__label">{{ 'PROJECT__PHASE' | translate }}</span>
+
+			<ui-status-label
+				[type]="phase"
+				class="c-project-info__value"
+			>
+			</ui-status-label>
+		</div>
+
+		<div
+			class="c-project-info__item"
+		>
+			<span class="c-project-info__label">{{ 'PROJECT__VAULT' | translate }} #</span>
+
+			<span class="c-project-info__value c-project-info__value--uppercase">{{ vault || '-' }}</span>
+		</div>
+
+		<div
+			class="c-project-info__item"
+		>
+			<span class="c-project-info__label">{{ 'PROJECT__CLIENT' | translate }}</span>
+
+			<span class="c-project-info__value">{{ client || '-' }}</span>
+		</div>
+
+		<div
+			class="c-project-info__item"
+		>
+			<span class="c-project-info__label">{{ 'PROJECT__LOCATION' | translate }}</span>
+
+			<span class="c-project-info__value">{{ location || '-' }}</span>
+		</div>
+
+		<div
+			class="c-project-info__item"
+		>
+			<span class="c-project-info__label">{{ 'PROJECT__FORMAT' | translate }}</span>
+
+			<span class="c-project-info__value">{{ ACCFormat || '-' }}</span>
+		</div>
+	</div>
+</div>

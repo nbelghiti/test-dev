@@ -1,0 +1,59 @@
+<div class="c-dialog__content">
+	<ui-heading
+		[level]="HeadingLevel.heading2"
+		[title]="data?.title"
+		classes="c-dialog__title"
+	>
+		<small *ngIf="data?.description">
+			{{data?.description}}
+		</small>
+	</ui-heading>
+
+	<div *ngIf="error" class="c-error u-margin-bottom-2x">
+		<ui-icon
+			name="exclamation-circle"
+			size="small"
+		>
+		</ui-icon>
+
+		<span class="c-error__text">
+			{{ error }}
+		</span>
+	</div>
+
+	<form
+		*ngIf="datalistsForm"
+		[formGroup]="datalistsForm"
+		class="l-form__grid l-grid--with-spacing"
+	>
+		<div class="l-grid__col--12">
+			<ui-multi-select
+				[label]="data?.multiSelectLabel"
+				name="lists"
+				[formControl]="datalistsForm.get('lists')"
+				[options]="data?.options"
+				[error]="data?.noOptions"
+			>
+			</ui-multi-select>
+		</div>
+	</form>
+</div>
+
+
+<div class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button (clicked)="onCancel()" [type]="ButtonType.secondary">
+			{{ 'GENERAL__CANCEL' | translate }}
+		</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button
+			(clicked)="onConfirm()"
+			[loading]="isPending"
+			[disabled]="isPending"
+		>
+			{{ data?.confirmLabel }}
+		</ui-button>
+	</div>
+</div>

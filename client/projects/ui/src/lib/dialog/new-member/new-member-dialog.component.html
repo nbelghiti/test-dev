@@ -1,0 +1,36 @@
+<div class="c-dialog__content">
+	<ui-heading
+		[level]="HeadingLevel.heading2"
+		title="Add a new member."
+		classes="c-dialog__title"
+	>
+	</ui-heading>
+
+	<form
+		*ngIf="newMemberForm"
+		[formGroup]="newMemberForm"
+		class="l-form__grid l-grid--with-spacing"
+	>
+		<div class="l-grid__col--12">
+			<ui-select
+				[label]="'NEW_MEMBER__TITLE_LABEL' | translate"
+				name="role"
+				[formControlName]="role"
+				[options]="data?.options"
+				[error]="(roleFormControl?.dirty || roleFormControl?.touched) && roleFormControl?.errors?.required && ('NEW_MEMBER__TITLE_ERROR' | translate)"
+			>
+			</ui-select>
+		</div>
+	</form>
+</div>
+
+
+<div class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button (click)="onCancel()" [type]="ButtonType.secondary">Cancel</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button (click)="onSubmit()">Add team member</ui-button>
+	</div>
+</div>

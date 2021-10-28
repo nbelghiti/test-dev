@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExportDialogComponent init should render 1`] = `
+<ui-export-dialog
+  ButtonType={[Function Object]}
+  HeadingLevel={[Function Object]}
+  IconName={[Function Object]}
+  UIExportType={[Function Object]}
+  dialogClassName={[Function Boolean]}
+  exportForm={[Function FormGroup]}
+  formBuilder={[Function FormBuilder]}
+  templateOptions="null"
+  typeOptions="null"
+>
+  <ui-loader
+    ng-reflect-simple-loader="true"
+  >
+    
+    <div
+      class="c-dialog__content"
+    >
+      <ui-heading
+        classes="c-dialog__title"
+        ng-reflect-classes="c-dialog__title"
+        ng-reflect-level="2"
+      >
+        <div
+          class="c-heading c-dialog__title"
+          ng-reflect-klass="c-heading c-dialog__title"
+          ng-reflect-ng-class="[object Object]"
+        >
+          
+          
+          
+          <h2>
+            
+          </h2>
+          
+          <div
+            class="c-heading__meta"
+          >
+            
+            
+            
+          </div>
+        </div>
+      </ui-heading>
+      
+      <form
+        class="l-form__grid ng-untouched ng-pristine ng-invalid"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        <div
+          class="l-grid l-grid--with-spacing"
+        >
+          <div
+            class="l-grid__col"
+          >
+            
+            
+            
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    
+  </ui-loader><div
+    class="c-dialog__actions"
+  >
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-type="c-button--secondary"
+      >
+        
+        <button
+          class="c-button c-button--secondary"
+          ng-reflect-klass="c-button c-button--secondary "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+            
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+    <div
+      class="c-dialog__action-item"
+    >
+      
+      <ui-button
+        ng-reflect-disabled="true"
+        ng-reflect-icon-after="caret-right"
+      >
+        
+        <button
+          class="c-button c-button--disabled"
+          disabled=""
+          ng-reflect-klass="c-button  "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+              
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          <div
+            class="c-button__icon c-button__icon--after"
+          >
+            <ui-icon
+              class="c-icon"
+              ng-reflect-name="caret-right"
+              ng-reflect-size="false"
+            >
+              <i
+                class="c-icon__glyph false  fas fa-caret-right"
+              />
+            </ui-icon>
+          </div>
+          
+        </button>
+        
+        
+      </ui-button>
+      
+    </div>
+  </div>
+</ui-export-dialog>
+`;

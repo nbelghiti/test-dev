@@ -1,0 +1,21 @@
+<div
+	class="c-step-item"
+	[ngClass]="{
+		'c-step-item--completed': state === StepType.completed,
+		'c-step-item--active': state === StepType.active
+	}"
+>
+	<span class="c-step-item__number">
+		{{ number }}
+	</span>
+
+	<div class="c-step-item__content">
+		<p class="c-step-item__title">
+			{{ title }}
+		</p>
+
+		<p class="c-step-item__description">
+			{{ description }}
+		</p>
+	</div>
+</div>

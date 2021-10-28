@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextareaComponent Should render correctly 1`] = `
+<ui-textarea
+  disabled="false"
+  error=""
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+  placeholder=""
+  rows={[Function Number]}
+>
+  <div
+    class="c-textarea"
+    ng-reflect-klass="c-textarea"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <textarea
+      class="c-textarea__field ng-untouched ng-pristine ng-invalid"
+      id="undefined"
+      ng-reflect-is-disabled="false"
+      ng-reflect-required=""
+      placeholder=""
+      required=""
+      rows="4"
+    >
+      	
+    </textarea>
+    <label
+      class="c-textarea__label"
+      for="undefined"
+    >
+        
+    </label>
+    
+  </div>
+</ui-textarea>
+`;

@@ -1,0 +1,99 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Info Accordion
+// =============================================================================
+.c-info-accordion {
+	width: 100%;
+	padding: 2rem 3rem;
+
+	text-decoration: none;
+	text-align: left;
+
+	border-bottom: $border-width-base solid $border-color-grey-76;
+
+	transition: background-color $animation-base;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-info-accordion__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+}
+
+.c-info-accordion__header-content {
+	display: flex;
+	align-items: center;
+}
+
+.c-info-accordion__content {
+	margin-top: 1.5rem;
+}
+
+.c-info-accordion__icon {
+	display: flex;
+	margin-right: 1.6rem;
+
+	line-height: $line-height-normalize;
+}
+
+.c-info-accordion__count {
+	margin-left: 1.5rem;
+	padding: 0 0.4rem;
+
+	text-align: center;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-2x-small;
+	line-height: $font-size-1x-small;
+	// this letter spacing will make sure the text is centered in the box
+	letter-spacing: $border-width-base;
+
+	border: $border-width-base solid $border-color-black;
+	color: $text-color-base;
+}
+
+.c-info-accordion__arrow {
+	display: flex;
+
+	transition: transform $animation-base;
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-info-accordion {
+
+	&.is-open {
+
+		.c-info-accordion__arrow {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.c-info-accordion--with-background {
+
+	&.is-open {
+		background-color: $background-color-grey-96;
+	}
+}
+
+.c-info-accordion--no-spacing {
+	padding: 0;
+
+	.c-info-accordion__header {
+		padding: 2rem 3rem;
+	}
+
+	.c-info-accordion__content {
+		margin-top: 0;
+	}
+}

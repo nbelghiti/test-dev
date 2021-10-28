@@ -1,0 +1,45 @@
+<ui-loader
+	[loading]="loading"
+	[simpleLoader]="true"
+>
+	<div class="l-content">
+		<div class="l-content__item" *ngIf="editLink?.to">
+			<ui-row
+				contentAfter="true"
+				alignMiddle="true"
+			>
+				<ui-button
+					contentAfter
+					[type]="ButtonType.primary"
+					[iconBefore]="IconName.edit"
+					[link]="editLink?.to"
+				>
+					{{ editLink?.label }}
+				</ui-button>
+			</ui-row>
+		</div>
+
+		<div class="l-content__item">
+			<ul class="l-grid l-grid--with-spacing l-grid--stretch" *ngIf="teams?.length; else noTeams">
+				<li
+					*ngFor="let team of teams; let first = first;"
+					class="l-grid__col--4"
+				>
+					<ui-card
+						[column]="true"
+					>
+						<ui-team
+							[team]="team.members"
+							[title]="first ? ('TEAM_MANAGEMENT' | translate) : team?.title"
+						>
+						</ui-team>
+					</ui-card>
+				</li>
+			</ul>
+
+			<ng-template #noTeams>
+				<p>{{ 'TEAM__FALLBACK' | translate }}</p>
+			</ng-template>
+		</div>
+	</div>
+</ui-loader>

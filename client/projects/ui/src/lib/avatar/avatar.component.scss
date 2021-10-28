@@ -1,0 +1,47 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$avatar-size-base: 4.4rem;
+$avatar-size-compact: 3.2rem;
+
+// =============================================================================
+// :: Avatar
+// =============================================================================
+.c-avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $avatar-size-base;
+	min-width: $avatar-size-base;
+	height: $avatar-size-base;
+
+	font-size: $font-size-1x-large;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+	text-transform: uppercase;
+	text-align: center;
+
+	border-radius: 50%;
+	background-color: $background-color-grey-96;
+
+	cursor: default;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-avatar {
+
+	&.is-compact {
+		width: $avatar-size-compact;
+		min-width: $avatar-size-compact;
+		height: $avatar-size-compact;
+
+		font-size: $font-size-base;
+	}
+}

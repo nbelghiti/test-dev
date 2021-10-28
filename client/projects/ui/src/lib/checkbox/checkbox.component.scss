@@ -1,0 +1,101 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$checkbox-size: 1.7rem;
+
+// =============================================================================
+// :: Checkbox
+// =============================================================================
+.c-checkbox {
+	display: inline-flex;
+	align-items: center;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-checkbox__input {
+	position: absolute;
+
+	width: 0;
+	height: 0;
+
+	opacity: 0;
+
+	&:checked {
+
+		+ .c-checkbox__box {
+			background-color: $primary-color;
+			border-color: $primary-color;
+
+			.c-checkbox__check {
+				opacity: 1;
+
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.c-checkbox__box {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: $checkbox-size;
+	height: $checkbox-size;
+
+	border-radius: 0.3rem;
+
+	border: 0.2rem solid $border-color-grey-76;
+
+	transition:
+		border-color $animation-base,
+		background-color $animation-base;
+
+	cursor: pointer;
+
+	&:hover {
+		border-color: $border-color-black;
+	}
+}
+
+.c-checkbox__check {
+	display: flex;
+
+	line-height: $checkbox-size;
+
+	color: $background-color-base;
+	opacity: 0;
+
+	transform: scale(0);
+
+	transition:
+		opacity $animation-base,
+		transform $animation-base;
+}
+
+.c-checkbox__label {
+	margin-left: 1.2rem;
+
+	white-space: nowrap;
+	font-size: $font-size-base;
+	line-height: $line-height-normalize;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-checkbox.is-indeterminate {
+
+	.c-checkbox__input {
+
+		+ .c-checkbox__box {
+			opacity: 0.5;
+		}
+	}
+}

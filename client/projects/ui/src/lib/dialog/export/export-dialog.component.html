@@ -1,0 +1,74 @@
+<ui-loader [simpleLoader]="true">
+	<div class="c-dialog__content">
+		<ui-heading
+			[level]="HeadingLevel.heading2"
+			[title]="data?.title"
+			classes="c-dialog__title"
+		>
+		</ui-heading>
+
+		<form
+			*ngIf="exportForm"
+			[formGroup]="exportForm"
+			class="l-form__grid"
+		>
+			<div class="l-grid l-grid--with-spacing">
+				<div class="l-grid__col">
+					<ui-select
+						*ngIf="typeOptions?.length > 0"
+						[label]="'EXPORT_DIALOG__SELECT_TYPE' | translate"
+						name="type"
+						[formControl]="exportForm.get('type')"
+						[options]="typeOptions"
+					>
+					</ui-select>
+					<ui-select
+						*ngIf="templateOptions?.length > 0 && exportForm.get('type').value === UIExportType.template"
+						[label]="'EXPORT_DIALOG__SELECT_TEMPLATE' | translate"
+						name="template"
+						[formControl]="exportForm.get('template')"
+						[options]="templateOptions"
+						[error]="(exportForm.get('template')?.dirty || exportForm.get('template')?.touched) && exportForm.get('template')?.errors?.required && ('EXPORT_DIALOG__TEMPLATE_ERROR' | translate)"
+					>
+					</ui-select>
+					<div *ngIf="!templateOptions?.length && exportForm.get('type').value === UIExportType.template" class="c-error">
+						<ui-icon
+							name="exclamation-circle"
+							size="small"
+						>
+						</ui-icon>
+
+						<span class="c-error__text">
+							{{ 'EXPORT_DIALOG__NO_TEMPLATES' | translate }}
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</ui-loader>
+
+<div class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button (clicked)="onCancel()" [type]="ButtonType.secondary">{{data?.cancelLabel}}</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button
+			*ngIf="!exportForm.get('type').value || exportForm.get('type').value === UIExportType.file"
+			[iconAfter]="IconName.caretRight"
+			[disabled]="!exportForm.get('type').value"
+			(clicked)="onConfirm()"
+		>
+			{{data?.nextLabel}}
+		</ui-button>
+		<ui-button
+			*ngIf="exportForm.get('type').value === UIExportType.template"
+			[iconBefore]="IconName.download"
+			[disabled]="!templateOptions?.length"
+			(clicked)="onConfirm()"
+		>
+			{{data?.exportTemplateLabel}}
+		</ui-button>
+	</div>
+</div>

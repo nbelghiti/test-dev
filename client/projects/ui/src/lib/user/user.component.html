@@ -1,0 +1,39 @@
+<ng-template #userContent>
+	<ui-avatar
+		[name]="user?.name"
+		[compact]="true"
+	>
+	</ui-avatar>
+
+	<div class="c-user__content">
+		<span class="c-user__name">
+			{{user?.name}}<span *ngIf="user?.myself"> (you)</span>
+		</span>
+
+		<span
+				class="c-user__role"
+			>
+				{{ label | translate }}
+			</span>
+	</div>
+</ng-template>
+
+<div
+	*ngIf="!isButton; else isButton"
+	class="c-user"
+	[ngClass]="{ 'c-user--with-background': backgroundColor }"
+	[title]="user?.name"
+>
+	<ng-container [ngTemplateOutlet]="userContent"></ng-container>
+</div>
+
+<ng-template #isButton>
+	<button
+		class="c-user"
+		[ngClass]="{ 'c-user--with-background': backgroundColor }"
+		[title]="user?.name"
+		(click)="clicked.emit(user)"
+	>
+		<ng-container [ngTemplateOutlet]="userContent"></ng-container>
+	</button>
+<ng-template>

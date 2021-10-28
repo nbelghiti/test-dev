@@ -1,0 +1,9 @@
+<div uiFlyout class="c-filter">
+	<div uiFlyoutToggle>
+		<ng-content select="ui-filter-toggle"></ng-content>
+	</div>
+
+	<div uiFlyoutContent class="c-filter__content c-flyout__content--left {{classes}}" uiFlyoutToggle [toggleState]="FlyoutState.CLOSED">
+		<ng-content select="ui-filter-menu"></ng-content>
+	</div>
+</div>

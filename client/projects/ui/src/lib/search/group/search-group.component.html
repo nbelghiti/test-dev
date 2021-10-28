@@ -1,0 +1,14 @@
+<div class="c-search-group">
+	<span
+		*ngIf="title"
+		class="c-search-group__title"
+	>
+		{{title}}
+	</span>
+
+	<div class="c-search-group__content">
+		<ng-content></ng-content>
+	</div>
+
+	<ng-content select="ul"></ng-content>
+</div>

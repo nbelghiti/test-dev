@@ -1,0 +1,79 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$icon-size: 2.4rem;
+
+// =============================================================================
+// :: Notification
+// =============================================================================
+.c-notification {
+	@include extend-list-clear();
+
+	padding: 2.5rem 3rem 2rem;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-notification__title {
+	display: flex;
+	align-items: center;
+}
+
+.c-notification__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $icon-size;
+	height: $icon-size;
+	margin-right: 0.8rem;
+
+	line-height: $icon-size;
+
+	border-radius: 50%;
+	background-color: $background-color-grey-96;
+}
+
+.c-notification__time {
+	font-size: $font-size-1x-small;
+
+	color: $text-color-grey-56;
+}
+
+.c-notification__content {
+	margin-top: 1rem;
+}
+
+.c-notification__mark {
+	width: 100%;
+
+	margin-top: 1rem;
+
+	text-align: right;
+
+	color: $primary-color;
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-notification--success {
+
+	.c-notification__icon {
+		color: $ui-color-success-dark;
+		background-color: $ui-color-success-light;
+	}
+}
+
+.c-notification--error {
+
+	.c-notification__icon {
+		color: $ui-color-error-dark;
+		background-color: $ui-color-error-light;
+	}
+}

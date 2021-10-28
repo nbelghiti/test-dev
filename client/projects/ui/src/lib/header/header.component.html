@@ -1,0 +1,60 @@
+<div class="c-header">
+	<div class="c-header__container">
+		<div class="c-header__item">
+			<a href="/" class="c-header__link">
+				<img
+					class="c-header__image"
+					src="/assets/logo/logo.svg"
+					alt=""
+				>
+
+				<h2
+					*ngIf="!backLink"
+					class="c-header__title-container"
+				>
+					<span class="c-header__title">{{ 'APP_NAME' | translate }}</span>
+					<span class="c-header__subtitle">{{ 'APP_SUBTITLE' | translate }}</span>
+				</h2>
+			</a>
+
+			<ui-icon-button
+				*ngIf="backLink"
+				class="c-header__button"
+				[link]="backLink"
+				[fluid]="true"
+				[border]="false"
+			>
+				<ui-icon [name]="IconName.arrowLeft"></ui-icon>
+			</ui-icon-button>
+		</div>
+
+		<div class="c-header__item c-header__item--stretch">
+			<ui-breadcrumb
+				*ngIf="breadcrumb?.length"
+				[items]="breadcrumb"
+				[editLink]="editLink"
+				[first]=true
+			>
+			</ui-breadcrumb>
+		</div>
+
+		<div class="c-header__item c-header__item-actions">
+			<div
+				#notifications
+				class="c-header__action"
+			>
+				<ng-content select="ui-notifications"></ng-content>
+			</div>
+
+			<div class="c-header__action">
+				<ng-content select="ui-search-indicator"></ng-content>
+			</div>
+
+			<div class="c-header__action">
+				<ng-content select="ui-settings-indicator"></ng-content>
+			</div>
+
+			<ng-content select="ui-user-info"></ng-content>
+		</div>
+	</div>
+</div>

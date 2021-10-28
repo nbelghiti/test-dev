@@ -1,0 +1,50 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+
+// =============================================================================
+// :: Info Item
+// =============================================================================
+.c-info-item {
+	display: flex;
+	align-items: center;
+
+	font-family: $font-family-secondary;
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-base;
+
+	.c-icon {
+		width: $font-size-1x-small * $line-height-base;
+		margin-right: 1rem;
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-info-item--uppercase {
+	text-transform: uppercase;
+}
+
+// .c-list--ordered {
+// 	counter-reset: list;
+
+// 	.c-list__item {
+
+// 		&::before {
+// 			content: counter(list) ".";
+
+// 			margin-right: 0.7rem;
+
+// 			counter-increment: list;
+// 		}
+// 	}
+// }
+

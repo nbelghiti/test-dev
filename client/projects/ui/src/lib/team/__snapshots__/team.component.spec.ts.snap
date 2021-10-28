@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamComponent Should render correctly 1`] = `
+<ui-team
+  IconName={[Function Object]}
+  class={[Function String]}
+  team={[Function Array]}
+>
+  <div
+    class="c-team"
+  >
+    <p
+      class="c-team__title"
+    >
+        
+    </p>
+    
+    <ui-empty-state
+      ng-reflect-icon="users"
+      ng-reflect-message="TEAM__PACKAGE__FALLBACK_TITLE"
+      ng-reflect-small-icon="true"
+    >
+      <div
+        class="c-empty-state"
+        ng-reflect-klass="c-empty-state"
+        ng-reflect-ng-class="[object Object]"
+      >
+        <span
+          class="c-empty-state__icon c-empty-state__icon--small"
+          ng-reflect-klass="c-empty-state__icon"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <i
+            class="fas fa-users"
+          />
+        </span>
+        <p
+          class="c-empty-state__message"
+        >
+          TEAM__PACKAGE__FALLBACK_TITLE
+        </p>
+        <div
+          class="c-empty-state__sub-message"
+          ng-reflect-ng-class="[object Object]"
+        >
+           TEAM__PACKAGE__FALLBACK 
+        </div>
+      </div>
+    </ui-empty-state>
+    
+  </div>
+</ui-team>
+`;

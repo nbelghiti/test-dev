@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleInputComponent Should render correctly 1`] = `
+<ui-title-input
+  autofocus="false"
+  disabled="false"
+  level=""
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+>
+  <div
+    class="c-title-input__wrapper"
+  >
+    <input
+      autofocus="autofocus"
+      class="c-title-input ng-untouched ng-pristine ng-valid"
+      ng-reflect-is-disabled="false"
+      placeholder="undefined"
+      type="text"
+    />
+    
+  </div>
+</ui-title-input>
+`;

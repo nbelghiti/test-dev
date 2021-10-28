@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepItemComponent Should render correctly 1`] = `
+<ui-step-item
+  StepType={[Function Object]}
+  state=""
+>
+  <div
+    class="c-step-item"
+    ng-reflect-klass="c-step-item"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <span
+      class="c-step-item__number"
+    >
+        
+    </span>
+    <div
+      class="c-step-item__content"
+    >
+      <p
+        class="c-step-item__title"
+      >
+          
+      </p>
+      <p
+        class="c-step-item__description"
+      >
+          
+      </p>
+    </div>
+  </div>
+</ui-step-item>
+`;

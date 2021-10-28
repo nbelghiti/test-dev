@@ -1,0 +1,24 @@
+<form
+	(submit)="onSubmit()"
+	class="c-search-input"
+	[ngClass]="{
+		'c-search-input--compact': compact
+	}"
+	[formGroup]="searchForm"
+>
+	<input
+		type="search"
+		class="c-search-input__field"
+		name="search-field"
+		[placeholder]="placeholder"
+		formControlName="value"
+		autocomplete="off"
+	/>
+
+	<button
+		type="submit"
+		class="c-search-input__submit"
+	>
+		<ui-icon name="search"></ui-icon>
+	</button>
+</form>

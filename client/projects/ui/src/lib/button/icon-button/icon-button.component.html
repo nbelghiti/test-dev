@@ -1,0 +1,33 @@
+<button
+	*ngIf="!link; else isLink"
+	class="c-icon-button"
+	[title]="buttonTitle"
+	[ngClass]="{
+		'c-icon-button--secondary': type === ButtonType.secondary,
+		'c-icon-button--tertiary': type === ButtonType.tertiary,
+		'c-icon-button--border': border,
+		'c-icon-button--fluid': fluid
+	}"
+	(click)="clicked.emit($event)"
+>
+	<ng-container [ngTemplateOutlet]="iconButtonContent"></ng-container>
+</button>
+
+<ng-template #isLink>
+	<a
+		[routerLink]="link"
+		class="c-icon-button"
+		[ngClass]="{
+			'c-icon-button--secondary': type === ButtonType.secondary,
+			'c-icon-button--tertiary': type === ButtonType.tertiary,
+			'c-icon-button--border': border,
+			'c-icon-button--fluid': fluid
+		}"
+	>
+		<ng-container [ngTemplateOutlet]="iconButtonContent"></ng-container>
+	</a>
+</ng-template>
+
+<ng-template #iconButtonContent>
+	<ng-content></ng-content>
+</ng-template>

@@ -1,0 +1,41 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Info Link
+// =============================================================================
+.c-info-button {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 1.5rem 3rem;
+
+	text-decoration: none;
+	text-align: left;
+
+	border-bottom: $border-width-base solid $border-color-grey-76;
+
+	background-color: $background-color-grey-96;
+
+	cursor: pointer;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-info-button__icon {
+	display: flex;
+	justify-content: center;
+	width: 2.4rem;
+	margin-right: 1.6rem;
+
+	line-height: $line-height-normalize;
+
+	transition: color $animation-base;
+}
+
+.c-info-link__title {
+	transition: color $animation-base;
+}

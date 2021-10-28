@@ -1,0 +1,42 @@
+<div
+	class="c-multi-select-field"
+	[ngClass]="{
+		'c-multi-select-field--error': error
+	}"
+>
+	<div uiFlyout>
+		<div uiFlyoutToggle>
+			<input
+				[value]="selectedLabels"
+				class="c-multi-select-field__field"
+				disabled
+				type="text"
+			/>
+
+			<label
+				class="c-multi-select-field__label"
+				[ngClass]="{ 'c-multi-select-field__label--small': selectedLabels !== '' }"
+			>
+				{{label}}
+			</label>
+		</div>
+
+		<div uiFlyoutContent class="c-flyout__content c-flyout__content--full-width" uiFlyoutToggle>
+			<div *ngFor="let control of selectForm?.controls | keyvalue: asIsOrder; let i = index; let last = last" class="u-margin-bottom-1x">
+				<label
+					[for]="i"
+					class="c-multi-select-field__option__label"
+				>
+					<ui-checkbox [name]="i" [formControl]="control?.value" [ngClass]="{ 'c-multi-select-field__label--small': !last }"></ui-checkbox>
+					{{ options[i].label }}
+				</label>
+			</div>
+
+		</div>
+	</div>
+
+	<div *ngIf="error" class="c-multi-select-field__error">
+		<ui-icon name="exclamation-circle" size="small"></ui-icon>
+		<span class="c-multi-select-field__error-text">{{error}}</span>
+	</div>
+</div>

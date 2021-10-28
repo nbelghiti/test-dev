@@ -1,0 +1,85 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Status Label
+// =============================================================================
+.c-status-label {
+	display: inline-block;
+	padding: 0.4rem 0.6rem;
+
+	font-family: $font-family-secondary;
+	font-weight: $font-weight-ultrabold;
+	font-size: $font-size-2x-small;
+	line-height: $line-height-normalize;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	border: $border-color-base solid $border-width-base;
+
+	background-color: $background-color-grey-96;
+	color: $text-color-grey-46;
+
+	&:active {
+		background-color: $background-color-grey-86;
+
+		transition: background-color 0s;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.c-status-label__icon {
+	line-height: $line-height-normalize;
+}
+
+.c-status-label__text {
+	margin-left: 0.4rem;
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-status-label--grey {
+	background-color: $background-color-grey-96;
+	border: $border-color-base solid $border-width-base;
+	color: $text-color-grey-46;
+
+	&:active {
+		background-color: rgba($background-color-grey-86, 0.4);
+	}
+}
+
+.c-status-label--green {
+	background-color: $ui-color-success-light;
+	border: $ui-color-success solid $border-width-base;
+	color: $ui-color-success-dark;
+
+	&:active {
+		background-color: $ui-color-success;
+	}
+}
+
+.c-status-label--orange {
+	background-color: $ui-color-warning-light;
+	border: $ui-color-warning solid $border-width-base;
+	color: $ui-color-warning-dark;
+
+	&:active {
+		background-color: $ui-color-warning;
+	}
+}
+
+.c-status-label--red {
+	background-color: $ui-color-error-light;
+	border: $ui-color-error solid $border-width-base;
+	color: $ui-color-error-dark;
+
+	&:active {
+		background-color: $ui-color-error;
+	}
+}

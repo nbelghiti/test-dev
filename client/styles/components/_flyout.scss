@@ -1,0 +1,143 @@
+// =============================================================================
+// :: Flyout [Directive]
+// =============================================================================
+/**
+ * The flyout directive is a "component" (without an angular component) that's
+ * used for handling dropdowns, selects, flyouts. The content elements can
+ * contain everything that fits (ex. menu lists, wysiwyg content,...).
+ */
+
+// =============================================================================
+// :: Root
+// =============================================================================
+.c-flyout {
+	position: relative;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-flyout__toggle {
+	display: inline-block;
+	width: 100%;
+}
+
+.c-flyout__content {
+	position: absolute;
+	top: calc(100% + 1rem);
+	left: 50%;
+	z-index: $z-index-roof;
+
+	width: 100%;
+	min-width: min-content;
+	max-width: 25rem;
+	max-height: 35rem;
+	overflow-y: auto;
+	padding: 1.2rem;
+
+	background-color: $background-color-base;
+	box-shadow: $box-shadow-medium;
+
+	transform: translateX(-50%);
+
+	transition: $animation-base;
+}
+
+.c-select__icon,
+.c-filter-toggle__icon,
+.c-instance-select__icon,
+.c-breadcrumb-item__arrow {
+	transition: transform $animation-base;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-flyout__content--left {
+	left: 0;
+
+	transform: translateX(0);
+}
+
+.c-flyout__content--right {
+	left: auto;
+	right: 0;
+
+	width: 100%;
+	min-width: 25rem;
+
+	transform: translateX(0);
+}
+
+.c-flyout__content--full-width {
+	max-width: none;
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-flyout {
+
+	&.is-open {
+
+		.c-flyout__content {
+			opacity: 1;
+
+			transform: translateX(-50%) translateY(0);
+
+			pointer-events: all;
+		}
+
+		.c-flyout__content--right {
+			transform: translateY(0);
+		}
+
+		.c-flyout__content--left {
+			transform: translateY(0);
+		}
+
+		.c-select__icon,
+		.c-filter-toggle__icon,
+		.c-instance-select__icon,
+		.c-breadcrumb-item__arrow {
+			transform-origin: center;
+			transform: rotate(180deg);
+		}
+
+		.c-instance-select__current-option {
+			text-decoration: underline;
+		}
+
+		.c-notification-indicator {
+			background-color: $background-color-grey-86;
+
+			transform: scale(0.98) translateY(0.1rem);
+		}
+	}
+
+	&.is-closed {
+
+		.c-flyout__content {
+			opacity: 0;
+
+			transform: translateX(-50%) translateY(-1rem);
+
+			pointer-events: none;
+		}
+
+		.c-flyout__content--left {
+			transform: translateY(-1rem);
+		}
+
+		.c-flyout__content--right {
+			transform: translateY(-1rem);
+		}
+
+		.c-select__icon,
+		.c-filter-toggle__icon,
+		.c-instance-select__icon,
+		.c-breadcrumb-item__arrow {
+			transform: rotate(0);
+		}
+	}
+}

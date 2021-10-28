@@ -1,0 +1,53 @@
+<header
+	class="l-step-wizard__header"
+	[class.l-step-wizard__header--with-breadcrumb]="breadcrumb.length > 0"
+>
+	<div class="l-step-wizard__header-content l-container l-container--fluid">
+		<ng-content select="header"></ng-content>
+	</div>
+
+	<div
+		*ngIf="breadcrumb?.length > 0"
+		class="l-step-wizard__header-breadcrumb"
+	>
+		<ui-breadcrumb [items]="breadcrumb"></ui-breadcrumb>
+	</div>
+</header>
+
+
+<div
+	class="l-step-wizard__scroll-container"
+	[class.u-padding-none]="!withPadding"
+>
+	<div
+		class="l-step-wizard__container"
+		[class.l-container]="withPadding"
+		[class.l-container--fluid]="withPadding"
+	>
+		<div
+			class="l-step-wizard__content"
+			[ngClass]="{
+				'l-step-wizard__content--standalone': !standalone,
+				'l-step-wizard__content--full-width': isFullScreen
+			}"
+		>
+			<ng-content select="body"></ng-content>
+		</div>
+
+		<ui-steps
+			class="l-step-wizard__steps"
+			*ngIf="showSteps"
+			[activeIndex]="activeIndex"
+			[steps]="steps"
+		></ui-steps>
+	</div>
+</div>
+
+<footer class="l-step-wizard__footer">
+	<div
+		class="l-container l-container--fluid"
+		[class.l-step-wizard__footer-content]="!hideFooter"
+	>
+		<ng-content select="footer"></ng-content>
+	</div>
+</footer>

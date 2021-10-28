@@ -1,0 +1,126 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Header
+// =============================================================================
+.c-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	border-bottom: $border-width-base solid $border-color-grey-76;
+
+	background-color: $background-color-base;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.c-header__item {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.c-header__item-actions {
+	margin: 0 2.4rem 0 1rem;
+	padding: 1rem 0;
+}
+
+.c-header__image {
+	width: 4.4rem;
+	height: 4.4rem;
+
+	transform-origin: center;
+
+	transition: $animation-base;
+}
+
+.c-header__title-container {
+	margin-left: 1rem;
+
+	font-family: $font-family-quaternary;
+	font-size: $font-size-2x-large;
+
+	color: $text-color-white;
+}
+
+.c-header__title {
+	display: block;
+
+	font-weight: $font-weight-dark;
+	font-size: $font-size-2x-large;
+	text-transform: lowercase;
+	line-height: $line-height-normalize;
+	letter-spacing: 0.1rem;
+}
+
+.c-header__subtitle {
+	display: block;
+
+	font-size: $font-size-2x-small;
+	font-weight: $font-weight-normal;
+	line-height: $line-height-normalize;
+}
+
+.c-header__action {
+
+	&:not(:empty) {
+		margin-right: 2rem;
+	}
+}
+
+.c-header__link {
+	display: flex;
+	align-items: center;
+	padding: 1rem 2.2rem;
+
+	text-decoration: none;
+
+	background:
+		linear-gradient(
+			135deg,
+			$background-color-orange-54 0%,
+			$background-color-orange-48 100%
+		);
+
+	&:hover {
+
+		.c-header__image {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.c-header__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5rem;
+	// specific height is needed for the borders
+	height: 6.4rem;
+
+	border-right: $border-width-1x-large solid $border-color-base;
+
+	transition: $animation-base;
+
+	&:hover {
+		color: $text-color-base;
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-header__item--stretch {
+	flex: 1;
+}

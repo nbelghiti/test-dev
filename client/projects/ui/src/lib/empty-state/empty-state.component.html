@@ -1,0 +1,18 @@
+<div class="c-empty-state" [ngClass]="{
+	'c-empty-state--small': size === EmptyStateSize.small,
+	'c-empty-state--large': size === EmptyStateSize.large
+}">
+	<span class="c-empty-state__icon" [ngClass]="{
+		'c-empty-state__icon--small': smallIcon || size === EmptyStateSize.small
+	}">
+		<i class="fas fa-{{ icon }}"></i>
+	</span>
+
+	<p class="c-empty-state__message">{{ message }}</p>
+
+	<div #subMessage [ngClass]="{
+		'c-empty-state__sub-message': subMessage.childNodes.length !== 0
+	}">
+		<ng-content></ng-content>
+	</div>
+</div>

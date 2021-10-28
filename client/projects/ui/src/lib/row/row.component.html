@@ -1,0 +1,22 @@
+<div
+	class="c-row"
+	[ngClass]="{
+		'c-row--top': alignTop,
+		'c-row--middle': alignMiddle,
+		'c-row--bottom': alignBottom,
+		'c-row--inline': inline,
+		'c-row--space-between': spaceBetween
+	}"
+>
+	<div *ngIf="contentBefore" class="c-row__before">
+		<ng-content select=[contentBefore]></ng-content>
+	</div>
+
+	<div class="c-row__content">
+		<ng-content></ng-content>
+	</div>
+
+	<div *ngIf="contentAfter" class="c-row__after">
+		<ng-content select=[contentAfter]></ng-content>
+	</div>
+</div>

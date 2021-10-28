@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyValueComponent Should render correctly 1`] = `
+<ui-key-value>
+  <div
+    class="c-key-value"
+  >
+    <span
+      class="c-key-value__key"
+    >
+        
+    </span>
+    <span
+      class="c-key-value__value"
+    />
+  </div>
+</ui-key-value>
+`;

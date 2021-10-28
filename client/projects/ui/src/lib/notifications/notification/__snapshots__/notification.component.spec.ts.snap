@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationComponent Should render correctly 1`] = `
+<ui-notification
+  icon={[Function String]}
+  isToday={[Function Function]}
+  notificationReadStatus={[Function EventEmitter]}
+  notificationType={[Function Object]}
+  type={[Function String]}
+>
+  <div
+    class="c-notification c-notification--success"
+    ng-reflect-klass="c-notification"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <ui-row
+      contentafter="true"
+      ng-reflect-content-after="true"
+    >
+      <div
+        class="c-row"
+        ng-reflect-klass="c-row"
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        <div
+          class="c-row__content"
+        >
+          <div
+            class="c-notification__title"
+          >
+            <div
+              class="c-notification__icon"
+            >
+              <ui-icon
+                class="c-icon"
+                ng-reflect-name="exclamation-circle"
+                ng-reflect-size="tiny"
+                size="tiny"
+              >
+                <i
+                  class="c-icon__glyph c-icon__glyph--tiny  fas fa-exclamation-circle"
+                />
+              </ui-icon>
+            </div>
+            <ui-heading
+              ng-reflect-level="3"
+            >
+              <div
+                class="c-heading"
+                ng-reflect-klass="c-heading "
+                ng-reflect-ng-class="[object Object]"
+              >
+                
+                
+                
+                
+                <h3>
+                  
+                </h3>
+                <div
+                  class="c-heading__meta"
+                >
+                  
+                  
+                  
+                </div>
+              </div>
+            </ui-heading>
+          </div>
+        </div>
+        
+        <div
+          class="c-row__after"
+        >
+          
+        </div>
+      </div>
+    </ui-row>
+    <div
+      class="c-notification__content"
+    />
+    
+    <button
+      class="c-notification__mark"
+    >
+       Mark as read 
+    </button>
+  </div>
+</ui-notification>
+`;

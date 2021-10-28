@@ -1,0 +1,28 @@
+/* stylelint-disable declaration-no-important */
+
+// =============================================================================
+// :: Visibility
+// =============================================================================
+.u-hide {
+	display: none !important;
+}
+
+// =============================================================================
+// :: Responsive suffixes
+// =============================================================================
+// @each $breakpoint, $params in $breakpoints {
+
+// 	.u-hide\@above-#{$breakpoint} {
+
+// 		@include respond-at(get-breakpoint($breakpoint)) {
+// 			display: none !important;
+// 		}
+// 	}
+
+// 	.u-hide\@below-#{$breakpoint} {
+
+// 		@include respond-to(get-breakpoint($breakpoint)) {
+// 			display: none !important;
+// 		}
+// 	}
+// }

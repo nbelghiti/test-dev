@@ -1,0 +1,27 @@
+// =============================================================================
+// :: Container
+// =============================================================================
+.l-container {
+	width: calc(100% - (#{get-viewport-spacing("mobile")} * 2));
+	max-width: $container-width-base;
+	margin: 0 auto;
+
+	@each $breakpoint, $params in trim-to($breakpoints, "tablet") {
+		$viewport-spacing: map-get($params, viewport-spacing);
+
+		@include respond-at(get-breakpoint($breakpoint)) {
+			width: calc(100% - (#{$viewport-spacing} * 2));
+		}
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.l-container--fluid {
+	max-width: 100%;
+}
+
+.l-container--full-height {
+	height: 100%;
+}

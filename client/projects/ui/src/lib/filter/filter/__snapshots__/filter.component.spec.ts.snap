@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterComponent Should render correctly 1`] = `
+<ui-filter
+  FlyoutState={[Function Object]}
+>
+  <div
+    class="c-filter c-flyout is-closed"
+    uiflyout=""
+  >
+    <div
+      class="c-flyout__toggle"
+      uiflyouttoggle=""
+    />
+    <div
+      class="c-filter__content c-flyout__content--left c-flyout__content c-flyout__toggle"
+      ng-reflect-class="c-filter__content c-flyout__co"
+      ng-reflect-toggle-state="CLOSED"
+      uiflyoutcontent=""
+      uiflyouttoggle=""
+    />
+  </div>
+</ui-filter>
+`;

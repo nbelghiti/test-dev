@@ -1,0 +1,56 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"noUnusedParameters": true,
+		"target": "es5",
+		"downlevelIteration": true,
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"lib": [
+			"es2018",
+			"dom"
+		],
+		"paths": {
+			"adb-auth": [
+				"dist/auth"
+			],
+			"adb-auth/*": [
+				"dist/auth/*"
+			],
+			"adb-custom-views": [
+				"dist/custom-views"
+			],
+			"adb-custom-views/*": [
+				"dist/custom-views/*"
+			],
+			"adb-ui": [
+				"dist/ui"
+			],
+			"adb-ui/*": [
+				"dist/ui/*"
+			],
+			"adb-utils": [
+				"dist/utils"
+			],
+			"adb-utils/*": [
+				"dist/utils/*"
+			],
+			"adb-test/*": [
+				"projects/dev-test/src/test/*"
+			],
+			"~/*": [
+				"projects/dev-test/src/app/*"
+			]
+		}
+	}
+}

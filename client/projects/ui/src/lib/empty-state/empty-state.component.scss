@@ -1,0 +1,84 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Empty state
+// =============================================================================
+.c-empty-state {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+
+	text-align: center;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-empty-state__icon {
+	font-size: 5.2rem;
+
+	color: $text-color-grey-76;
+}
+
+.c-empty-state__message {
+	margin-top: 2rem;
+
+	font-size: $font-size-1x-large;
+	font-weight: $font-weight-bold;
+
+	color: $text-color-grey-46;
+}
+
+.c-empty-state__sub-message {
+	margin-top: 1rem;
+
+	font-size: $font-size-base;
+
+	color: $text-color-grey-46;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-empty-state__icon--small {
+	font-size: 3.6rem;
+
+	+ .c-empty-state__message {
+		margin-top: 1rem;
+	}
+}
+
+.c-empty-state__icon--large {
+	font-size: 10rem;
+
+	+ .c-empty-state__message {
+		margin-top: 4rem;
+	}
+}
+
+.c-empty-state--small {
+
+	.c-empty-state__message {
+		font-size: $font-size-base;
+	}
+
+	.c-empty-state__sub-message {
+		font-size: $font-size-1x-small;
+	}
+}
+
+.c-empty-state--large {
+
+	.c-empty-state__message {
+		font-size: $font-size-2x-large;
+	}
+
+	.c-empty-state__sub-message {
+		font-size: $font-size-1x-large;
+	}
+}

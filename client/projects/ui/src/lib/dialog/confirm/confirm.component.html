@@ -1,0 +1,16 @@
+<ui-button [disabled]="disabled" (clicked)="openConfirmDialog()" [fluid]="true" *ngIf="!iconButton; else iconButtonComponent">
+	<ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+</ui-button>
+
+<ng-template #iconButtonComponent>
+	<ui-icon-button
+		[type]="ButtonType.secondary"
+		(clicked)="openConfirmDialog()"
+	>
+		<ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+	</ui-icon-button>
+</ng-template>
+
+<ng-template #buttonContent>
+	<ng-content></ng-content>
+</ng-template>

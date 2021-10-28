@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputComponent Should render correctly 1`] = `
+<ui-input
+  destroyed$={[Function Subject]}
+  error=""
+  icon=""
+  placeholder=""
+  type={[Function String]}
+  value={[Function FormControl]}
+>
+  <div
+    class="c-input-field"
+    ng-reflect-klass="c-input-field"
+    ng-reflect-ng-class="[object Object]"
+  >
+    
+    <div
+      class="c-input-field__content"
+    >
+      <div
+        class="c-input-field__input"
+      >
+        <input
+          class="c-input-field__field ng-untouched ng-pristine ng-invalid"
+          id="undefined"
+          name="undefined"
+          ng-reflect-form="[object Object]"
+          ng-reflect-required=""
+          placeholder=""
+          required=""
+          type="text"
+        />
+        <label
+          class="c-input-field__label"
+          for="undefined"
+        >
+            
+        </label>
+      </div>
+      
+    </div>
+  </div>
+</ui-input>
+`;

@@ -1,0 +1,58 @@
+<div
+	*ngIf="!uploaded; else isUploaded"
+	class="c-upload-dropzone"
+>
+	<ui-loader
+		[simpleLoader]="true"
+		[uploadingMsg]="true"
+		[loading]="data?.uploading$ | async"
+	>
+		<div
+			for="file"
+			class="c-upload-dropzone__content"
+			[class.is-disabled]="uploading"
+		>
+			<input
+				class="c-upload-dropzone__input" type="file"
+				(change)="onFilesAdded()"
+				[disabled]="uploading"
+				#file
+			/>
+
+			<div class="c-upload-dropzone__label">
+				<ui-icon [name]="IconName.plus"></ui-icon>
+
+				<span class="c-upload-dropzone__label-text">
+					{{ 'UPLOAD__INSTRUCTIONS' | translate }}
+				</span>
+			</div>
+		</div>
+	</ui-loader>
+
+	<ul class="c-upload-dropzone__list">
+		<li
+			*ngFor="let file of files"
+			class="c-upload-dropzone__list-item"
+		>
+			<ui-icon [name]="IconName.file"></ui-icon>
+
+			{{ file.name }}
+		</li>
+	</ul>
+</div>
+
+<ng-template #isUploaded>
+	<div class="c-upload-dropzone__label">
+		<ui-icon [name]="IconName.check"></ui-icon>
+
+		<span class="c-upload-dropzone__success-message">
+			{{ 'UPLOAD__DONE' | translate }}
+		</span>
+	</div>
+
+	<div class="u-margin-top-2x">
+		<small>
+			{{ 'UPLOAD__HINT' | translate }}
+		</small>
+	</div>
+</ng-template>

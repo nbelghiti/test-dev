@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserComponent Should render correctly 1`] = `
+<ui-user
+  backgroundColor="false"
+  clicked={[Function EventEmitter]}
+  isButton="false"
+  label={[Function String]}
+  translate={[Function TranslateService]}
+  user={[Function Object]}
+>
+  <button
+    class="c-user"
+    ng-reflect-klass="c-user"
+    ng-reflect-ng-class="[object Object]"
+    title="John"
+  >
+    
+    <ui-avatar
+      ng-reflect-compact="true"
+      ng-reflect-name="John"
+    >
+      <span
+        class="c-avatar is-compact"
+        ng-reflect-klass="c-avatar"
+        ng-reflect-ng-class="[object Object]"
+      >
+        <abbr
+          title="undefined"
+        >
+          J
+        </abbr>
+      </span>
+    </ui-avatar>
+    <div
+      class="c-user__content"
+    >
+      <span
+        class="c-user__name"
+      >
+         John
+        
+      </span>
+      <span
+        class="c-user__role"
+      >
+         TEAM_MEMBER_ROLE__engineer 
+      </span>
+    </div>
+  </button>
+</ui-user>
+`;

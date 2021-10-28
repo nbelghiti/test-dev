@@ -1,0 +1,44 @@
+<button
+	*ngIf="!link; else isLink"
+	class="c-alt-button"
+	(click)="clicked.emit($event)"
+>
+	<ng-container [ngTemplateOutlet]="altButtonContent"></ng-container>
+</button>
+
+<ng-template #isLink>
+	<a
+		class="c-alt-button"
+		[routerLink]="link"
+	>
+		<ng-container [ngTemplateOutlet]="altButtonContent"></ng-container>
+	</a>
+</ng-template>
+
+<ng-template #altButtonContent>
+	<div
+		*ngIf="iconBefore"
+		class="c-alt-button__icon c-alt-button__icon--before"
+	>
+		<ui-icon
+			[name]="iconBefore"
+			[size]="IconSize.small"
+		>
+		</ui-icon>
+	</div>
+
+	<span class="c-alt-button__text">
+		<ng-content></ng-content>
+	</span>
+
+	<div
+		*ngIf="iconAfter"
+		class="c-alt-button__icon c-alt-button__icon--after"
+	>
+		<ui-icon
+			[name]="iconAfter"
+			[size]="IconSize.small"
+		>
+		</ui-icon>
+	</div>
+</ng-template>

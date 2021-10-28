@@ -1,0 +1,87 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Settings
+// =============================================================================
+$step-number-size: 6rem;
+
+// =============================================================================
+// :: Step Item
+// =============================================================================
+.c-step-item {
+	display: flex;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-step-item__number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $step-number-size;
+	height: $step-number-size;
+
+	font-family: $font-family-tertiary;
+	font-size: $font-size-4x-large;
+	font-weight: $font-weight-extrablack;
+	font-variant-numeric: tabular-nums lining-nums;
+	line-height: $step-number-size;
+	text-align: center;
+
+	color: $text-color-grey-76;
+	border-radius: 50%;
+	background-color: $background-color-base;
+}
+
+.c-step-item__content {
+	max-width: 17.5rem;
+	margin-left: 1.5rem;
+}
+
+.c-step-item__title {
+	font-size: $font-size-base;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-56;
+}
+
+.c-step-item__description {
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-56;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-step-item--active {
+
+	.c-step-item__number {
+		color: $text-color-white;
+		border: none;
+		background-color: $primary-color;
+	}
+
+	.c-step-item__title {
+		color: $text-color-base;
+	}
+
+	.c-step-item__description {
+		color: $text-color-grey-46;
+	}
+}
+
+.c-step-item--completed {
+
+	.c-step-item__number {
+		color: $text-color-white;
+		border: none;
+		background-color: $background-color-orange-78;
+	}
+}

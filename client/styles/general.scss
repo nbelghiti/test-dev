@@ -1,0 +1,109 @@
+// =============================================================================
+// :: General
+// =============================================================================
+/**
+ * Contains all the general styling used to create the layout and basic look of
+ * the application. It's needed to style basic html tags, load fonts, layouts,
+ * utilities,...
+ */
+
+@charset "utf-8";
+
+// =============================================================================
+// :: Globals
+// =============================================================================
+/**
+ * Global styling
+ */
+
+@import "./global.scss";
+
+// =============================================================================
+// :: Vendors
+// =============================================================================
+/**
+ * Third party styling used to correctly style libraries or reset/normalize
+ * the standard browser CSS. Place on top to easily overwrite these properties.
+ */
+
+@import
+	"_vendors/_normalize",
+	"_vendors/_toastr";
+
+// =============================================================================
+// :: Base
+// =============================================================================
+/**
+ * The base styling of the project. These files do not contain any classes and
+ * are used to style HTML-tags or load in fonts. When starting the slicing,
+ * everything starts here.
+ */
+
+@import
+	"base/_fonts",
+	"base/_root",
+	"base/_fonts",
+	"base/_heading",
+	"base/_paragraph",
+	"base/_link",
+	"base/_list",
+	"base/_img",
+	"base/_button",
+	"base/_input",
+	"base/_textarea",
+	"base/_root";
+
+// =============================================================================
+// :: Components
+// =============================================================================
+/**
+ * Components provide the styling for Angular Directives where you can't access
+ * the dom directly.
+ */
+@import
+	"components/_breadcrumb",
+	"components/_dialog",
+	"components/_flyout",
+	"components/_loader",
+	"components/_error",
+	"components/_notifications";
+
+// =============================================================================
+// :: Layouts
+// =============================================================================
+/**
+ * Layouts are used in giving the structure to the pages and large collection of
+ * components. These are more focused on the position and structure of elements
+ * and are not as standalone as the components. They can be either contextual
+ * or reusable.
+ */
+
+@import
+	"layouts/_container",
+	"layouts/_grid",
+	"layouts/_grid-table",
+	"layouts/_form",
+	"layouts/_section",
+	"layouts/_content",
+	"layouts/_wizard",
+	"layouts/_sheet",
+	"layouts/_split",
+	"layouts/_split-changes",
+	"layouts/_root";
+
+// =============================================================================
+// :: Utils
+// =============================================================================
+/**
+ * Utility classes are used to apply one type of styling to the element.
+ * These properties usually have an !important on them because when you apply
+ * a utility, you want it to apply that style so that it is not canceled out
+ * by a component. You should not try to overwrite a utility's styling.
+ */
+
+@import
+	"utils/_visibility",
+	"utils/_padding",
+	"utils/_border",
+	"utils/_margin",
+	"utils/_layout";

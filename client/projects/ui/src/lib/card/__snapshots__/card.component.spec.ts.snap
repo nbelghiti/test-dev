@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardComponent Should render correctly 1`] = `
+<ui-card
+  CardAlignType={[Function Object]}
+  align=""
+  border={[Function Boolean]}
+  cardThumbnail="null"
+  column="false"
+  hasActions="false"
+  loading="false"
+  withImage="false"
+>
+  <div
+    class="c-card c-card--min-height"
+    ng-reflect-klass="c-card"
+    ng-reflect-ng-class="[object Object]"
+  >
+    
+    <div
+      class="c-card__container"
+    >
+      
+      <div
+        class="c-card__content"
+      >
+        <div />
+        
+      </div>
+    </div>
+  </div>
+</ui-card>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoMessageComponent Should render correctly 1`] = `
+<ui-info-message>
+  <div
+    class="c-info-message"
+  >
+    <ui-icon
+      class="c-info-message__icon c-icon"
+    >
+      <i
+        class="c-icon__glyph   fas fa-"
+      />
+    </ui-icon>
+    <div
+      class="c-info-message__content"
+    />
+  </div>
+</ui-info-message>
+`;

@@ -1,0 +1,149 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Input field
+// =============================================================================
+.c-input-field {
+	display: flex;
+	align-items: center;
+
+	background-color: $background-color-base;
+	border: $border-width-base solid $border-color-grey-76;
+
+	& + .c-input-field {
+		margin-top: -0.1rem;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-input-field__content,
+.c-input-field__input {
+	position: relative;
+
+	width: 100%;
+}
+
+.c-input-field__icon {
+	margin: 0 1rem;
+}
+
+.c-input-field__label {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+
+	order: -1;
+
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-56;
+
+	transform-origin: left center;
+	transform: scale(1.15) translateY(-50%);
+
+	transition: transform $animation-base;
+
+	pointer-events: none;
+}
+
+.c-input-field__field {
+	display: inline-block;
+
+	width: 100%;
+	padding: 2.4rem 2rem 0.2rem 1rem;
+
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	background: none;
+
+	color: $text-color-base;
+
+	border: $border-width-base solid transparent;
+
+	transition:
+		border $animation-base,
+		box-shadow $animation-base;
+
+	cursor: text;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::placeholder {
+		color: $text-color-grey-56;
+
+		opacity: 0;
+
+		transition: all $animation-base;
+
+		visibility: hidden;
+	}
+
+	&:focus,
+	&:valid {
+
+		+ .c-input-field__label {
+			transform: scale(1) translateY(-100%);
+		}
+
+		&::placeholder {
+
+			opacity: 1;
+
+			visibility: visible;
+		}
+	}
+
+	&:disabled {
+
+		+ .c-input-field__label {
+			transform: scale(1) translateY(-100%);
+		}
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-input-field--disabled {
+	cursor: not-allowed;
+
+	.c-input-field__field {
+		background-color: $background-color-grey-96;
+		color: $text-color-grey-46;
+
+		pointer-events: none;
+	}
+
+	.c-input-field__label {
+		cursor: not-allowed;
+	}
+}
+
+.c-input-field--error {
+
+	.c-input-field__field {
+		width: calc(100% - 3rem);
+
+		margin: 2.4rem 2rem 0.2rem 1rem;
+		padding: 0;
+
+		border: $border-width-base solid $ui-color-error-dark;
+	}
+
+	.c-input-field__label {
+		transform: scale(1) translateY(-100%);
+	}
+
+	.c-error {
+		padding: 0 0 0.2rem 1rem;
+	}
+}

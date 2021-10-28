@@ -1,0 +1,34 @@
+<div class="l-section">
+	<div class="l-container">
+		<div class="l-section__content">
+			<div class="l-content">
+				<form [formGroup]="filterForm">
+					<div class="l-content__item l-grid l-grid--align-bottom l-grid--space-between">
+						<div class="l-grid__col--3">
+							<ui-filter classes="c-flyout__content--right">
+								<ui-filter-toggle
+									[label]="'MY_PROJECTS__SORTING_LABEL' | translate"
+									[currentOption]="filterForm?.value?.sort?.label"
+									background="transparent"
+									[borderless]="true"
+									[inline]="true"
+								>
+								</ui-filter-toggle>
+								<ui-filter-menu
+									[items]="articleSortOptions"
+									formControlName="sort"
+								></ui-filter-menu>
+
+							</ui-filter>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="l-content">
+				<adb-articles-overview [articles]="articles$ | async" [loading]="loading$ | async">
+				</adb-articles-overview>
+			</div>
+		</div>
+	</div>
+</div>

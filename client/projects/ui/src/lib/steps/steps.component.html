@@ -1,0 +1,16 @@
+<nav class="c-steps">
+	<ul class="c-steps__list">
+		<li
+			class="c-steps__item"
+			[ngClass]="{'c-steps-item--completed' : i < activeIndex}"
+			*ngFor="let step of steps; let i = index"
+		>
+			<ui-step-item
+				[state]="activeIndex === i ? StepType.active : i < activeIndex ? StepType.completed : StepType.default"
+				[number]="i + 1"
+				[title]="step.title"
+				[description]="step.description"
+			></ui-step-item>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,63 @@
+version: "2.4"
+
+x-default-options: &default-options
+  tty: true
+  logging:
+    options:
+      max-size: "10m"
+      max-file: "3"
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    image: dev-test-server
+    container_name: dev-test-server
+    env_file: ./server/.env/local.env
+    environment:
+      - WAIT_HOSTS=postgres:5432
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=10
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    init: true
+    ports:
+      # App port
+      - 3000:3000
+      # Debug port
+      - 5858:5858
+    depends_on:
+      - postgres
+    volumes:
+      # Delegated option for faster mounted volumes
+      - ./server:/app/server:delegated
+      # Because `npm install`
+      - ./server/package.json:/app/package.json
+      - ./server/yarn.lock:/app/yarn.lock
+      # Block local modules
+      - /app/server/node_modules
+    networks:
+      - asset-database
+    <<: *default-options
+
+  postgres:
+    image: postgres:12.0
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: assetdb
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres:/var/lib/postgresql/data/pgdata
+    networks:
+      - asset-database
+
+networks:
+  asset-database:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local

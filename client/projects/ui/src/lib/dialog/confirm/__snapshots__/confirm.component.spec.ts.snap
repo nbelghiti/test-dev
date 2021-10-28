@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmComponent Should render correctly 1`] = `
+<ui-confirm
+  ButtonType={[Function Object]}
+  cancelLabel={[Function String]}
+  confirm={[Function EventEmitter]}
+  confirmLabel={[Function String]}
+  dialogService={[Function DialogService]}
+  disabled="false"
+  iconButton="false"
+  title={[Function String]}
+>
+  <ui-button
+    ng-reflect-disabled="false"
+    ng-reflect-fluid="true"
+  >
+    
+    <button
+      class="c-button c-button--fluid"
+      ng-reflect-klass="c-button  "
+      ng-reflect-ng-class="[object Object]"
+      title=""
+    >
+      
+      
+      <span
+        class="c-button__text"
+      >
+        
+        
+      </span>
+      <i
+        class="c-button__loader fas fa-spinner fa-spin"
+      />
+      
+      
+    </button>
+    
+    
+  </ui-button>
+</ui-confirm>
+`;

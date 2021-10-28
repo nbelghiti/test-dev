@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelectComponent Should render correctly 1`] = `
+<ui-multi-select
+  FlyoutState={[Function Object]}
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  destroyed$={[Function Subject]}
+  error=""
+  formBuilder={[Function FormBuilder]}
+  onChange={[Function Function]}
+  onTouched={[Function Function]}
+  options={[Function Array]}
+  selectedLabels=""
+>
+  <div
+    class="c-multi-select-field"
+    ng-reflect-klass="c-multi-select-field"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <div
+      class="c-flyout is-closed"
+      uiflyout=""
+    >
+      <div
+        class="c-flyout__toggle"
+        uiflyouttoggle=""
+      >
+        <input
+          class="c-multi-select-field__field"
+          disabled=""
+          type="text"
+        />
+        <label
+          class="c-multi-select-field__label"
+          ng-reflect-klass="c-multi-select-field__label"
+          ng-reflect-ng-class="[object Object]"
+        >
+            
+        </label>
+      </div>
+      <div
+        class="c-flyout__content c-flyout__content--full-width c-flyout__toggle"
+        ng-reflect-class="c-flyout__content c-flyout__co"
+        uiflyoutcontent=""
+        uiflyouttoggle=""
+      >
+        
+      </div>
+    </div>
+    
+  </div>
+</ui-multi-select>
+`;

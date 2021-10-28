@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusLabelComponent Should render correctly 1`] = `
+<ui-status-label
+  statusType={[Function Object]}
+  type={[Function String]}
+>
+  <span
+    class="c-status-label c-status-label--grey"
+    ng-reflect-klass="c-status-label"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <span
+      class="c-status-label__icon"
+    >
+      
+    </span>
+    <span
+      class="c-status-label__icon"
+    >
+      
+    </span>
+    <span
+      ng-reflect-ng-class="[object Object]"
+    >
+       engineering 
+    </span>
+  </span>
+</ui-status-label>
+`;

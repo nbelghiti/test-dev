@@ -1,0 +1,45 @@
+<ui-loader [simpleLoader]="true">
+	<div class="c-dialog__content">
+		<ui-heading
+			[level]="HeadingLevel.heading2"
+			[title]="data?.title"
+			classes="c-dialog__title"
+		>
+		</ui-heading>
+
+		<div *ngIf="data?.response">
+			<ui-heading
+				*ngIf="data?.response?.title"
+				[level]="HeadingLevel.heading3"
+				[title]="data?.response?.title"
+				classes="c-dialog__title"
+			>
+			</ui-heading>
+
+			<div *ngIf="data?.response?.message" class="u-margin-bottom-1x">
+				<p>{{ data?.response?.message }}</p>
+			</div>
+
+			<ui-list>
+				<ng-container *ngFor="let error of data?.response?.errors">
+					<ui-info-item
+						*uiListItem
+						[text]="error"
+						[icon]="IconName.exclamationCircle"
+					>
+					</ui-info-item>
+				</ng-container>
+			</ui-list>
+		</div>
+	</div>
+</ui-loader>
+
+<div class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button (clicked)="onCancel()" [type]="ButtonType.secondary">{{data?.cancelLabel}}</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button (clicked)="onConfirm()">{{data?.confirmLabel}}</ui-button>
+	</div>
+</div>

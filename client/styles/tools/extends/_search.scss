@@ -1,0 +1,13 @@
+// =============================================================================
+// :: keyword highlight
+// =============================================================================
+@mixin extend-keyword-highlight() {
+	display: inline-block;
+	padding: 0.2rem 0.8rem;
+
+	line-height: $line-height-normalize;
+
+	background-color: $primary-color;
+	color: $text-color-white;
+	border-radius: 1rem;
+}

@@ -1,0 +1,143 @@
+// =============================================================================
+// :: Settings
+// =============================================================================
+$form-grid-spacing-base: 2rem;
+$count: 0;
+
+// =============================================================================
+// :: Form
+// =============================================================================
+// .l-form {}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.l-form__fieldset {
+	padding-bottom: 3rem;
+
+	border-bottom: $border-width-base solid $border-color-grey-86;
+
+	+ .l-form__fieldset {
+		padding-top: 3rem;
+	}
+}
+
+.l-form__fieldset-item {
+	max-width: 40rem;
+}
+
+.l-form__label {
+	@include extend-h3-base();
+
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.l-form__grid {
+
+	> .l-grid--with-spacing {
+		width: calc(100% + #{$form-grid-spacing-base});
+		margin: calc(#{$form-grid-spacing-base * -0.5});
+
+		> [class*="l-grid__col"] {
+			margin: #{$form-grid-spacing-base / 2};
+		}
+
+		@for $i from 1 through $grid-columns {
+			$col: 100% * ($i / $grid-columns);
+
+			> .l-grid__col--#{$i} {
+				width: calc(#{$col} - #{$form-grid-spacing-base});
+			}
+
+			> .l-grid__col--offset-#{$i} {
+				margin-left: calc(#{$col} + #{$form-grid-spacing-base * 0.5});
+			}
+		}
+
+		@each $breakpoint, $params in $breakpoints {
+			$count: $count + 1;
+			$suffixicate: map-get($params, grid-suffixicate);
+			$width: map-get($params, width);
+
+			@if ($suffixicate) {
+				@for $i from 1 through $grid-columns {
+					$col: 100% * ($i / $grid-columns);
+
+					> .l-grid__col--#{$i}\@#{$breakpoint} {
+						$innerCount: 0;
+
+						@each $innerBreakpoint, $innerParams in $breakpoints {
+							$innerCount: $innerCount + 1;
+							$innerWidth: map-get($innerParams, width);
+							$innerSpacing: $form-grid-spacing-base;
+
+							@if ($innerCount >= $count) {
+								@include respond-at(px($innerWidth)) {
+									width: calc(#{$col} - #{$innerSpacing});
+								}
+							}
+						}
+					}
+
+					> .l-grid__col--offset-#{$i}\@#{$breakpoint} {
+						$innerCount: 0;
+
+						@each $innerBreakpoint, $innerParams in $breakpoints {
+							$innerCount: $innerCount + 1;
+							$innerWidth: map-get($innerParams, width);
+							$innerSpacing: $form-grid-spacing-base;
+
+							@if ($innerCount >= $count) {
+								@include respond-at(px($innerWidth)) {
+									margin-left:
+										calc(
+											#{$col} + #{$innerSpacing * 0.5}
+										);
+								}
+							}
+						}
+					}
+				}
+
+				> .l-grid__col--auto\@#{$breakpoint} {
+					@include respond-at(px($width)) {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
+	+ .l-form__grid {
+		margin-top: 2rem;
+	}
+}
+
+.l-form__input {
+
+	& + .l-form__input div {
+		margin-top: -0.1rem;
+	}
+}
+
+.l-form__footer {
+	margin-top: 6rem;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.l-form__input--large {
+
+	.c-input-field__content {
+		height: 8rem;
+	}
+}
+
+.l-form__label--large {
+	margin-bottom: 1.5rem;
+
+	font-size: $font-size-2x-large;
+}
+

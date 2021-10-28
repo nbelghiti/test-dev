@@ -1,0 +1,22 @@
+<button
+	class="c-search-query"
+	(click)="handleClick()"
+>
+	<span class="c-search-query__icon">
+		<ui-icon
+			name="{{IconName.search}}"
+			size="{{IconSize.small}}"
+		></ui-icon>
+	</span>
+
+	<span
+		*ngIf="tag"
+		class="c-search-query__tag"
+	>
+		IN: {{tag}}
+	</span>
+
+	<span class="c-search-query__text">
+		{{text}}
+	</span>
+</button>

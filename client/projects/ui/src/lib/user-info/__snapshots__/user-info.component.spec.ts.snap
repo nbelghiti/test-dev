@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoComponent Should render correctly 1`] = `
+<ui-user-info
+  HeadingLevel={[Function Object]}
+  initials="null"
+  logout={[Function EventEmitter]}
+>
+  <div
+    class="c-user-info"
+    uiflyout=""
+  >
+    <button
+      class="c-user-info__toggle"
+      uiflyouttoggle=""
+    >
+      <span
+        class="c-user-info__toggle-text"
+      >
+          
+      </span>
+      <div
+        class="c-user-info__toggle-icon"
+      >
+        <ui-icon
+          class="c-icon"
+          name="caret-down"
+          ng-reflect-name="caret-down"
+        >
+          <i
+            class="c-icon__glyph   fas fa-caret-down"
+          />
+        </ui-icon>
+      </div>
+    </button>
+    <div
+      class="c-flyout__content c-flyout__content--right"
+      uiflyoutcontent=""
+    >
+      <div
+        class="c-user-info__flyout-general"
+      >
+        <ui-heading
+          ng-reflect-level="3"
+        >
+          <div
+            class="c-heading"
+            ng-reflect-klass="c-heading "
+            ng-reflect-ng-class="[object Object]"
+          >
+            
+            
+            
+            
+            <h3>
+              
+            </h3>
+            <div
+              class="c-heading__meta"
+            >
+              
+                
+              
+              
+            </div>
+          </div>
+        </ui-heading>
+      </div>
+      <div
+        class="c-user-info__flyout-content"
+      >
+        <button
+          class="c-user-info__flyout-item"
+        >
+          <span>
+            Logout
+          </span>
+          <ui-icon
+            class="c-icon"
+            name="sign-out-alt"
+            ng-reflect-name="sign-out-alt"
+          >
+            <i
+              class="c-icon__glyph   fas fa-sign-out-alt"
+            />
+          </ui-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</ui-user-info>
+`;

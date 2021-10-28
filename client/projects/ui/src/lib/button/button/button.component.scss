@@ -1,0 +1,185 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Button
+// =============================================================================
+.c-button {
+	position: relative;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 8rem;
+
+	padding: 1rem 2rem;
+
+	text-align: center;
+	text-decoration: none;
+
+	border: $border-width-base solid $primary-color;
+	background-color: $primary-color;
+	color: $text-color-white;
+
+	transition: background-color $animation-base, border-color $animation-base;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: transparent;
+		color: $primary-color;
+	}
+
+	&:active {
+		background-color: rgba($primary-color, 0.08);
+
+		transition: background-color 0s;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-button__icon {
+	display: flex;
+
+	font-size: 1.5rem;
+	line-height: $line-height-base;
+
+	color: currentColor;
+
+	transition: color $animation-base;
+}
+
+.c-button__text {
+	display: inline-block;
+	max-width: 25rem;
+	overflow: hidden;
+
+	font-family: $font-family-secondary;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	color: currentColor;
+
+	transition: color $animation-base;
+}
+
+.c-button__loader {
+	position: absolute;
+
+	display: none;
+
+	transform: translate(-50%, -50%);
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-button--secondary,
+.c-button--tertiary {
+	border: $border-width-base solid $border-color-grey-76;
+	background-color: $background-color-base;
+	color: $text-color-grey-46;
+
+	&:active {
+		background-color: rgba($background-color-black, 0.08);
+
+		transition: background-color $animation-base;
+	}
+
+	&:focus {
+		outline-color: $border-color-black;
+	}
+
+	&:hover {
+		border-color: $border-color-black;
+		color: $text-color-base;
+	}
+}
+
+.c-button--tertiary {
+	padding: 0.8rem 1rem;
+
+	.c-button__icon {
+		line-height: $line-height-normalize;
+	}
+
+	.c-button__text {
+		font-size: $font-size-2x-small;
+	}
+
+	.c-button__icon--after {
+		margin-left: 0.8rem;
+	}
+
+	.c-button__icon--before {
+		margin-right: 0.8rem;
+	}
+}
+
+.c-button__icon--after {
+	margin-left: 1rem;
+}
+
+.c-button__icon--before {
+	margin-right: 1rem;
+}
+
+.c-button--disabled:not(.c-button--secondary):not(.c-button--tertiary) {
+	background-color: $background-color-grey-86;
+	border-color: $background-color-grey-86;
+
+	pointer-events: none;
+}
+
+.c-button--secondary,
+.c-button--tertiary {
+
+	&.c-button--disabled {
+		color: $text-color-grey-76;
+
+		pointer-events: none;
+	}
+}
+
+.c-button--loading {
+	pointer-events: none;
+
+	.c-button__text,
+	.c-button__icon {
+		opacity: 0;
+	}
+
+	.c-button__loader {
+		display: block;
+	}
+}
+
+.c-button--fluid {
+	width: 100%;
+
+	.c-button__text {
+		max-width: 100%;
+	}
+}
+
+.c-button--destructive {
+	color: $ui-color-error-dark;
+	background-color: $ui-color-error-light;
+	border-color: $ui-color-error-light;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $ui-color-error-light;
+		background-color: $ui-color-error-dark;
+		border-color: $ui-color-error-dark;
+	}
+}

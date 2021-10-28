@@ -1,0 +1,63 @@
+<div class="l-section">
+	<div class="l-container">
+		<div class="l-section__content">
+			<div class="l-content">
+				<form [formGroup]="filterForm">
+					<div
+						class="l-content__item l-grid l-grid--align-bottom l-grid--space-between"
+					>
+						<div class="l-grid__col--3">
+							<ui-filter classes="c-flyout__content--right">
+								<ui-filter-toggle
+									[label]="'MY_PROJECTS__SORTING_LABEL' | translate"
+									[currentOption]="filterForm?.value?.sort?.label"
+									background="transparent"
+									[borderless]="true"
+									[inline]="true"
+								>
+								</ui-filter-toggle>
+
+								<ui-filter-menu
+									[items]="projectSortOptions"
+									formControlName="sort"
+								></ui-filter-menu>
+							</ui-filter>
+						</div>
+					</div>
+
+					<div class="l-content__item l-form__grid">
+						<div
+							class="l-grid l-grid--with-default-spacing l-grid--align-bottom l-grid--space-between"
+						>
+							<div class="l-grid__col--9">
+								<adb-projects-filter
+									formControlName="selectInputs"
+								></adb-projects-filter>
+							</div>
+
+							<div class="l-grid__col--2 l-grid__col--auto">
+								<ui-button
+									*ngIf="filterForm.get('selectInputs').dirty"
+									[type]="ButtonType.tertiary"
+									[iconAfter]="IconName.times"
+									(clicked)="clearFilters()"
+								>
+									{{ 'MY_PROJECTS__CLEAR_FILTERS' | translate
+									}}
+								</ui-button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="l-content">
+				<adb-projects-overview
+					[projects]="projects$ | async"
+					[loading]="loading$ | async"
+				>
+				</adb-projects-overview>
+			</div>
+		</div>
+	</div>
+</div>

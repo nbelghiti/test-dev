@@ -1,0 +1,22 @@
+<div
+	class="c-heading {{ classes }}"
+	[ngClass]="{'c-heading--inline': inline}"
+>
+	<ng-container [ngSwitch]="level">
+		<h1 *ngSwitchCase="HeadingLevel.heading1">{{title}}</h1>
+		<h2 *ngSwitchCase="HeadingLevel.heading2">{{title}}</h2>
+		<h3 *ngSwitchCase="HeadingLevel.heading3">{{title}}</h3>
+	</ng-container>
+
+	<div class="c-heading__meta">
+		<i
+			*ngIf="loading; else withContent"
+			class="fas fa-{{IconName.spinner}} fa-spin c-heading__loader"
+		>
+		</i>
+
+		<ng-template #withContent>
+			<ng-content></ng-content>
+		</ng-template>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<div
+	class="c-textarea"
+	[ngClass]="{
+		'c-textarea--disabled': disabled,
+		'c-textarea--error': error
+	}"
+>
+	<textarea
+		[id]="name"
+		[name]="name"
+		class="c-textarea__field"
+		[placeholder]="placeholder"
+		[disabled]="disabled"
+		[rows]="rows"
+		[ngModel]="value"
+		(ngModelChange)="writeValue($event)"
+		required
+	>
+	</textarea>
+
+	<label
+		class="c-textarea__label"
+		[for]="name"
+	>
+		{{label}}
+	</label>
+
+	<div *ngIf="error" class="c-error">
+		<ui-icon
+			name="exclamation-circle"
+			size="small"
+		>
+		</ui-icon>
+
+		<span class="c-error__text">
+			{{error}}
+		</span>
+	</div>
+</div>

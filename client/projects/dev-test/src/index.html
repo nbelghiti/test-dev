@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Dev Test</title>
+	<base href="/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#e05215" />
+	<meta name="description" content="Dev Test" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+	<adb-root id="root">
+		<div class="c-loader">
+			<div class="c-loader__spinner"></div>
+		</div>
+	</adb-root>
+</body>
+
+<script>
+	if (!!window.MSInputMethodContext && !!document.documentMode) {
+		document.getElementById('root').innerHTML = '';
+		document.write('This browser is not supported, please use a different browser.')
+	}
+</script>
+
+</html>

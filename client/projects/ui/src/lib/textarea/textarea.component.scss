@@ -1,0 +1,113 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Textarea
+// =============================================================================
+.c-textarea {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	background: none;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-textarea__label {
+	position: absolute;
+	top: 0;
+	left: 1rem;
+
+	order: -1;
+
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-56;
+
+	transform-origin: left center;
+	transform: scale(1.15) translateY(1rem);
+
+	transition: transform $animation-base;
+
+	pointer-events: none;
+}
+
+.c-textarea__field {
+	display: inline-block;
+	padding: 2.4rem 2rem 0.2rem;
+
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	background: none;
+	border: $border-width-base solid $border-color-grey-76;
+	color: $text-color-base;
+
+	transition:
+		border $animation-base,
+		box-shadow $animation-base;
+
+	resize: none;
+	cursor: text;
+
+	&:focus {
+		border: $border-width-base solid $text-color-base;
+		box-shadow: 0 0 0 0.3rem rgba($box-shadow-color-base, 0.1);
+	}
+
+	&::placeholder {
+		color: $text-color-grey-56;
+
+		opacity: 0;
+
+		transition: all $animation-base;
+
+		visibility: hidden;
+	}
+
+	&:focus,
+	&:valid {
+
+		+ .c-textarea__label {
+			transform: scale(1) translateY(0);
+		}
+
+		&::placeholder {
+
+			opacity: 1;
+
+			visibility: visible;
+		}
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-textarea--disabled {
+	cursor: not-allowed;
+
+	.c-textarea__field {
+		background-color: $background-color-grey-96;
+		color: $text-color-grey-46;
+
+		pointer-events: none;
+	}
+
+	.c-textarea__label {
+		cursor: not-allowed;
+	}
+}
+
+.c-textarea--error {
+
+	.c-textarea__field {
+		border: $border-width-base solid $ui-color-error-dark;
+	}
+}

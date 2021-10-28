@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchComponent Should render correctly 1`] = `
+<ui-search
+  clicked={[Function EventEmitter]}
+>
+  <div
+    class="c-search l-container"
+  >
+    <div
+      class="c-search__overlay"
+    />
+  </div>
+</ui-search>
+`;

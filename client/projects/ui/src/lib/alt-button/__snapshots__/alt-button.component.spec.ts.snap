@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AltButtonComponent Should render correctly 1`] = `
+<ui-alt-button
+  IconSize={[Function Object]}
+  clicked={[Function EventEmitter]}
+>
+  <button
+    class="c-alt-button"
+  >
+    
+    
+    <span
+      class="c-alt-button__text"
+    />
+    
+    
+  </button>
+</ui-alt-button>
+`;

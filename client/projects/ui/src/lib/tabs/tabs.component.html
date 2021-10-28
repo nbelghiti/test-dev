@@ -1,0 +1,30 @@
+<ul
+	class="c-tabs"
+	[class.c-tabs--with-spacing]="withSpacing"
+>
+	<li
+		*ngFor="let tab of tabs; index as i"
+		class="c-tabs__tab"
+		[class.is-active]="tab.active"
+	>
+		<a
+			*ngIf="tab.link; else buttonTpl"
+			[routerLink]="tab.link"
+			class="c-tabs__button"
+			(click)="selectTab.emit(i)"
+		>
+			{{tab.title}}<span *ngIf="tab.count > 0" class="c-tabs__count">{{tab.count}}</span>
+		</a>
+
+		<ng-template #buttonTpl>
+			<button
+				class="c-tabs__button"
+				(click)="selectTab.emit(i)"
+			>
+				{{tab.title}}<span *ngIf="tab.count > 0" class="c-tabs__count">{{tab.count}}</span>
+			</button>
+		</ng-template>
+	</li>
+</ul>
+
+<ng-content></ng-content>

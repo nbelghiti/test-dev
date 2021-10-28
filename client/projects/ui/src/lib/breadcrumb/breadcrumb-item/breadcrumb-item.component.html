@@ -1,0 +1,83 @@
+<div uiFlyout *ngIf="items && items.length > 1; else asLink">
+	<button
+		uiFlyoutToggle
+		class="c-breadcrumb-item"
+		[ngClass]="{
+			'c-breadcrumb-item--first': first
+		}"
+		[title]="value"
+	>
+		<span class="c-breadcrumb-item__label">
+			{{label}}
+		</span>
+
+		<div class="c-breadcrumb-item__item">
+			<span
+				*ngIf="conflict"
+				class="c-breadcrumb-item__icon"
+			>
+				<ui-icon
+					[name]="IconName.exclamationCircle"
+					[size]="IconSize.tiny"
+					[type]="IconType.error"
+				>
+				</ui-icon>
+			</span>
+
+			<span class="c-breadcrumb-item__value">
+				{{value}}
+			</span>
+
+			<span class="c-breadcrumb-item__arrow">
+				<ui-icon
+					[name]="IconName.caretDown"
+					[size]="IconSize.small"
+				>
+				</ui-icon>
+			</span>
+		</div>
+	</button>
+
+	<ui-filter-menu
+		uiFlyoutContent
+		class="c-flyout__content--left"
+		label="value"
+		[items]="items"
+		[formControl]="activeBreadcrumb"
+	>
+	</ui-filter-menu>
+</div>
+
+<ng-template #asLink>
+	<a
+		class="c-breadcrumb-item"
+		[ngClass]="{
+			'c-breadcrumb-item--first': first
+		}"
+		[routerLink]="link"
+		[queryParams]="queryParams"
+		[title]="value"
+	>
+		<span class="c-breadcrumb-item__label">
+			{{label}}
+		</span>
+
+		<div class="c-breadcrumb-item__item">
+			<span
+				*ngIf="conflict"
+				class="c-breadcrumb-item__icon"
+			>
+				<ui-icon
+					[name]="IconName.exclamationCircle"
+					[size]="IconSize.tiny"
+					[type]="IconType.error"
+				>
+				</ui-icon>
+			</span>
+
+			<span class="c-breadcrumb-item__value">
+				{{value}}
+			</span>
+		</div>
+	</a>
+</ng-template>

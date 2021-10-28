@@ -1,0 +1,89 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Upload Dropzone
+// =============================================================================
+// .c-upload-dropzone {}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-upload-dropzone__input {
+	position: absolute;
+	z-index: 9;
+
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	opacity: 0;
+
+	cursor: pointer;
+}
+
+.c-upload-dropzone__content {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	min-height: 14rem;
+
+	text-align: center;
+
+	border: 0.1rem dashed $border-color-grey-76;
+	background-color: $background-color-grey-96;
+	color: $text-color-grey-46;
+
+	outline-offset: 0.2rem;
+
+	&.is-disabled input {
+		cursor: wait;
+	}
+
+	&:not(.is-disabled) {
+
+		&:focus,
+		&:hover {
+			outline: $border-width-base solid $primary-color;
+		}
+	}
+}
+
+.c-upload-dropzone__label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c-upload-dropzone__label-text {
+	margin-left: 1rem;
+
+	text-decoration: underline;
+}
+
+.c-upload-dropzone__success-message {
+	margin-left: 1rem;
+}
+
+.c-upload-dropzone__list {
+	margin-top: 1.6rem;
+}
+
+.c-upload-dropzone__list-item {
+	margin: 0.8rem 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

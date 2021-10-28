@@ -1,0 +1,112 @@
+// =============================================================================
+// :: Colors
+// =============================================================================
+/**
+ * Every color is defined as a HSL (HUE-STATURATION_LIGHTNESS) notation. Based
+ * on the HUE and the LIGHTNESS we give the color a meaningfull and unique name.
+ * These colors are not to be used outside of this file.
+ *
+ * The global colors are used within the different components and should
+ * get a more reusable logical name.
+ *
+ * IMPORTANT TO NOTE: KEEP THIS FILE MANAGEABLE, CLEAN AND CONSISTENT!
+ */
+
+// =============================================================================
+// :: Internal colors
+// =============================================================================
+// Black - white variants
+$black: hsla(0, 0%, 18%, 1); //#2e2e2e;
+$black-70: hsla(0, 0%, 0%, 0.7);
+$black-50: hsla(0, 0%, 0%, 0.5);
+$white: hsla(255, 100%, 100%, 1);
+
+// Grey variants
+$grey-36: hsla(180, 2%, 36%, 1); //#5a5e5e;
+$grey-46: hsla(240, 5%, 46%, 1); //#6f6f7b;
+$grey-56: hsla(240, 5%, 56%, 1); //#898994;
+$grey-76: hsla(240, 5%, 76%, 1); //#bfbfc5;
+$grey-86: hsla(240, 5%, 86%, 1); //#dadadd;
+$grey-96: hsla(240, 5%, 96%, 1); //#f4f4f5;
+$grey-98: hsla(0, 0%, 98%, 1); //#fafafa;
+
+// Orange variants
+$orange-44: hsla(20, 71%, 44%, 1); //#c05621;
+$orange-48: hsla(18, 83%, 48%, 1); //#e25415
+$orange-54: hsla(28, 93%, 54%, 1); //#f7821e;
+$orange-78: hsla(18, 83%, 78%, 1); //#f5b498;
+$orange-94: hsla(17, 81%, 94%, 1); //#fceae3;
+
+// Green variants
+$green-35: hsla(150, 48%, 35%, 1); //#2e8459;
+$green-75: hsla(141, 60%, 75%, 1); //#99e6b4;
+$green-95: hsla(139, 73%, 95%, 1); //#e9fcef;
+
+// Red variants
+$red-48: hsla(0, 61%, 48%, 1); //#c53030;
+$red-85: hsla(0, 97%, 85%, 1); //#feb4b4;
+$red-97: hsla(0, 100%, 97%, 1); //#fff0f0;
+
+// Blue variants
+$blue-43: hsla(211, 61%, 43%, 1); //#2b6bb1;
+$blue-76: hsla(203, 82%, 76%, 1); //#90cef4;
+$blue-95: hsla(203, 84%, 95%, 1); //#e8f5fd;
+
+// Yellow variants
+$yellow-77: hsla(38, 93%, 77%, 1); //#fbd38e;
+$yellow-95: hsla(38, 100%, 95%, 1); //#fff6e5;
+
+// =============================================================================
+// :: Global Colors
+// =============================================================================
+// Primary colors
+$primary-color: $orange-48;
+
+// Text colors
+$text-color-base: $black;
+$text-color-white: $white;
+$text-color-grey-46: $grey-46;
+$text-color-orange-44: $orange-44;
+$text-color-orange-48: $orange-48;
+$text-color-grey-56: $grey-56;
+$text-color-grey-76: $grey-76;
+$text-color-grey-36: $grey-36;
+
+// Background colors
+$background-color-base: $white;
+$background-color-black: $black;
+$background-color-grey-46: $grey-46;
+$background-color-grey-56: $grey-56;
+$background-color-grey-76: $grey-76;
+$background-color-grey-86: $grey-86;
+$background-color-grey-96: $grey-96;
+$background-color-grey-98: $grey-98;
+$background-color-orange-48: $orange-48;
+$background-color-orange-54: $orange-54;
+$background-color-orange-78: $orange-78;
+$background-color-orange-94: $orange-94;
+
+// Border colors
+$border-color-black: $black;
+$border-color-base: $grey-86;
+$border-color-grey-56: $grey-56;
+$border-color-grey-76: $grey-76;
+$border-color-grey-86: $grey-86;
+$border-color-grey-96: $grey-96;
+
+// Box shadow colors
+$box-shadow-color-base: $black;
+
+// UI colors
+$ui-color-success-dark: $green-35;
+$ui-color-success: $green-75;
+$ui-color-success-light: $green-95;
+$ui-color-error-dark: $red-48;
+$ui-color-error: $red-85;
+$ui-color-error-light: $red-97;
+$ui-color-warning-dark: $orange-44;
+$ui-color-warning: $yellow-77;
+$ui-color-warning-light: $yellow-95;
+$ui-color-info-dark: $blue-43;
+$ui-color-info: $blue-76;
+$ui-color-info-light: $blue-95;

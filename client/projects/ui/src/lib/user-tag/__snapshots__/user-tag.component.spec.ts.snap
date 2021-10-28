@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserTagComponent Should render correctly 1`] = `
+<ui-user-tag
+  IconName={[Function Object]}
+  IconSize={[Function Object]}
+  clicked={[Function EventEmitter]}
+  fluid="false"
+  isClickedUsed="false"
+  user={[Function Object]}
+>
+  <div
+    class="c-user-tag"
+    title="John"
+  >
+    <div
+      class="c-user-tag__content"
+    >
+      <ui-user
+        ng-reflect-user="[object Object]"
+      >
+        
+        
+        <button
+          class="c-user"
+          ng-reflect-klass="c-user"
+          ng-reflect-ng-class="[object Object]"
+          title="John"
+        >
+          
+          <ui-avatar
+            ng-reflect-compact="true"
+            ng-reflect-name="John"
+          >
+            <span
+              class="c-avatar is-compact"
+              ng-reflect-klass="c-avatar"
+              ng-reflect-ng-class="[object Object]"
+            >
+              <abbr
+                title="undefined"
+              >
+                J
+              </abbr>
+            </span>
+          </ui-avatar>
+          <div
+            class="c-user__content"
+          >
+            <span
+              class="c-user__name"
+            >
+               John
+              
+            </span>
+            <span
+              class="c-user__role"
+            >
+               TEAM_MEMBER_ROLE__engineer 
+            </span>
+          </div>
+        </button>
+        
+        
+      </ui-user>
+    </div>
+    
+    
+  </div>
+</ui-user-tag>
+`;

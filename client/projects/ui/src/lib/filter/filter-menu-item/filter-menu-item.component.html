@@ -1,0 +1,34 @@
+<a
+	[routerLink]="link"
+	*ngIf="link; else buttonTpl"
+	class="c-filter-menu-item"
+	[ngClass]="{
+		'c-filter-menu-item--active': active
+	}"
+	[title]="label"
+	[queryParams]="queryParams"
+>
+	<span class="c-filter-menu-item__value">{{ label }}</span>
+
+	<div class="c-filter-menu-item__icon">
+		<ui-icon name="check"></ui-icon>
+	</div>
+</a>
+
+
+<ng-template #buttonTpl>
+	<button
+		(click)="clickHandler()"
+		class="c-filter-menu-item"
+		[ngClass]="{
+			'c-filter-menu-item--active': active
+		}"
+		[title]="label"
+	>
+		<span class="c-filter-menu-item__value">{{ label }}</span>
+
+		<div class="c-filter-menu-item__icon">
+			<ui-icon name="check"></ui-icon>
+		</div>
+	</button>
+</ng-template>

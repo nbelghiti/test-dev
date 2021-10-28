@@ -1,0 +1,41 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// This is added because angular adds a shadow dom element (ui-search-group)
+// we can't select siblings of .c-search-group because they have the shadow
+// element as parent.
+:host {
+	display: block;
+	margin-top: 2rem;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+// =============================================================================
+// :: Search group
+// =============================================================================
+// .c-search-group {}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-search-group__title {
+	display: block;
+	padding: 0 $search-spacing-base;
+
+	font-weight: $font-weight-bold;
+
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+	text-transform: uppercase;
+
+	color: $text-color-grey-76;
+}
+
+.c-search-group__content {
+	padding: 0 $search-spacing-base;
+}

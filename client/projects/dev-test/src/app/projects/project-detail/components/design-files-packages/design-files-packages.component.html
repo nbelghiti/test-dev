@@ -1,0 +1,23 @@
+<div class="l-content__item">
+	<ui-row>
+		<h2>{{ 'OVERVIEW_TITLE__PACKAGES' | translate }}</h2>
+	</ui-row>
+</div>
+
+<div class="l-content__item">
+	<div class="l-grid l-grid--with-spacing l-grid--stretch">
+		<div
+			*ngFor="let package of project?.packages"
+			class="l-grid__col l-grid__col--6@mobile l-grid__col--4@tablet l-grid__col--3@desktop"
+		>
+			<ui-card [align]="CardAlignType.center">
+				<ui-heading
+					[level]="HeadingLevel.heading3"
+					[title]="package?.name"
+				>
+					<ui-link label="Link" iconAfter="caret-right"></ui-link>
+				</ui-heading>
+			</ui-card>
+		</div>
+	</div>
+</div>

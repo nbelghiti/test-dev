@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionComponent Should render correctly 1`] = `
+<ui-accordion
+  currentPanels={[Function Array]}
+  destroyed$={[Function Subject]}
+  panelSubs={[Function Array]}
+  panelsQL={[Function QueryList]}
+>
+  
+</ui-accordion>
+`;

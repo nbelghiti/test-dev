@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsIndicatorComponent Should render correctly 1`] = `
+<ui-settings-indicator
+  IconName={[Function Object]}
+  hasClick="false"
+>
+  <a
+    class="c-settings-indicator"
+    href="/"
+  >
+    <ui-icon
+      class="c-icon"
+      ng-reflect-name="cog"
+    >
+      <i
+        class="c-icon__glyph   fas fa-cog"
+      />
+    </ui-icon>
+  </a>
+</ui-settings-indicator>
+`;

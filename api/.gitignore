@@ -1,0 +1,11 @@
+# Dist folder
+server/dist
+
+# Jest coverage
+server/test/coverage
+
+### Logs ###
+server/logs
+
+### Databases ###
+.docker/db/**

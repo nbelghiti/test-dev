@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyStateComponent Should render correctly 1`] = `
+<ui-empty-state
+  EmptyStateSize={[Function Object]}
+  size={[Function String]}
+  smallIcon="false"
+>
+  <div
+    class="c-empty-state"
+    ng-reflect-klass="c-empty-state"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <span
+      class="c-empty-state__icon"
+      ng-reflect-klass="c-empty-state__icon"
+      ng-reflect-ng-class="[object Object]"
+    >
+      <i
+        class="fas fa-"
+      />
+    </span>
+    <p
+      class="c-empty-state__message"
+    >
+      
+    </p>
+    <div
+      ng-reflect-ng-class="[object Object]"
+    />
+  </div>
+</ui-empty-state>
+`;

@@ -1,0 +1,28 @@
+<a
+	*ngIf="navigate && url; else plainTpl"
+	class="c-search-result"
+	[routerLink]="url"
+>
+	<ng-container [ngTemplateOutlet]="contentTpl"></ng-container>
+</a>
+
+<ng-template #plainTpl>
+	<span class="c-search-result">
+		<ng-container [ngTemplateOutlet]="contentTpl"></ng-container>
+	</span>
+</ng-template>
+
+<ng-template #contentTpl>
+	<span
+		class="c-search-result__title"
+		[innerHTML]="content"
+	>
+	</span>
+
+	<span
+		*ngIf="breadcrumb"
+		class="c-search-result__breadcrumb"
+	>
+		{{breadcrumb}}
+	</span>
+</ng-template>

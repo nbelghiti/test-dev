@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationsComponent Should render correctly 1`] = `
+<ui-notifications>
+  <div
+    class="c-notifications"
+    uiflyout=""
+  >
+    <ui-notification-indicator
+      uiflyouttoggle=""
+    >
+      <button
+        class="c-notification-indicator"
+      >
+        <ui-icon
+          class="c-icon"
+          name="bell"
+          ng-reflect-name="bell"
+        >
+          <i
+            class="c-icon__glyph   fas fa-bell"
+          />
+        </ui-icon>
+        
+      </button>
+    </ui-notification-indicator>
+    <ul
+      class="c-notifications__content c-flyout__content--right"
+      uiflyoutcontent=""
+    >
+      
+      <ui-empty-state
+        icon="bell-slash"
+        message="No notifications"
+        ng-reflect-icon="bell-slash"
+        ng-reflect-message="No notifications"
+        ng-reflect-small-icon="true"
+      >
+        <div
+          class="c-empty-state"
+          ng-reflect-klass="c-empty-state"
+          ng-reflect-ng-class="[object Object]"
+        >
+          <span
+            class="c-empty-state__icon c-empty-state__icon--small"
+            ng-reflect-klass="c-empty-state__icon"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <i
+              class="fas fa-bell-slash"
+            />
+          </span>
+          <p
+            class="c-empty-state__message"
+          >
+            No notifications
+          </p>
+          <div
+            class="c-empty-state__sub-message"
+            ng-reflect-ng-class="[object Object]"
+          >
+             No changes have been made to the data yet. 
+          </div>
+        </div>
+      </ui-empty-state>
+    </ul>
+  </div>
+</ui-notifications>
+`;

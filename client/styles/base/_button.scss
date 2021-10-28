@@ -1,0 +1,28 @@
+// =============================================================================
+// :: Button - (no classes)
+// =============================================================================
+button {
+	outline: none;
+	border: none;
+	background: none;
+
+	/**
+	 * Slicing applied when there is no class applied. For example: rendered in
+	 * a WYSIWYG.
+	 */
+	// &:not([class]) {}
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+button {
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+
+		cursor: pointer;
+	}
+}

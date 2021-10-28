@@ -1,0 +1,37 @@
+<form class="l-form" [formGroup]="selectFilterForm">
+	<div class="l-form__grid">
+		<div class="l-grid l-grid--with-spacing l-grid--stretch">
+			<div class="l-grid__col--3">
+				<ui-filter>
+					<ui-filter-toggle
+						[label]="'MY_PROJECTS__FILTER__PROJECT_PHASE' | translate"
+						background="grey"
+						[currentOption]="statusKeyValue ? statusKeyValue?.label : '- All'"
+					>
+					</ui-filter-toggle>
+
+					<ui-filter-menu
+						[items]="projectStatusOptions"
+						formControlName="status"
+					></ui-filter-menu>
+				</ui-filter>
+			</div>
+
+			<div class="l-grid__col--3">
+				<ui-filter>
+					<ui-filter-toggle
+						[label]="'MY_PROJECTS__FILTER__LOCATION' | translate"
+						background="grey"
+						[currentOption]="locationKeyValue ? locationKeyValue?.label : '- All'"
+					>
+					</ui-filter-toggle>
+
+					<ui-filter-menu
+						[items]="projectLocationOptions"
+						formControlName="location"
+					></ui-filter-menu>
+				</ui-filter>
+			</div>
+		</div>
+	</div>
+</form>

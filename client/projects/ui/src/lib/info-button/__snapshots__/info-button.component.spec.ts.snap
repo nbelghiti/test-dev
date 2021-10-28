@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoButtonComponent Should render correctly 1`] = `
+<ui-info-button>
+  <div
+    class="c-info-button"
+  >
+    <span
+      class="c-info-button__icon"
+    >
+      <ui-icon
+        class="c-icon"
+        ng-reflect-size="large"
+        size="large"
+      >
+        <i
+          class="c-icon__glyph c-icon__glyph--large  fas fa-"
+        />
+      </ui-icon>
+    </span>
+    <ui-heading
+      class="c-info-button__title"
+      level="3"
+      ng-reflect-level="3"
+    >
+      <div
+        class="c-heading"
+        ng-reflect-klass="c-heading "
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        
+        
+        
+        <h3>
+          
+        </h3>
+        <div
+          class="c-heading__meta"
+        >
+          
+          
+          
+        </div>
+      </div>
+    </ui-heading>
+  </div>
+</ui-info-button>
+`;

@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewMemberDialogComponent Should render correctly 1`] = `
+<ui-new-member-dialog
+  ButtonType={[Function Object]}
+  HeadingLevel={[Function Object]}
+  destroyed$={[Function Subject]}
+  dialogClassName={[Function Boolean]}
+  dialogOpened={[Function EventEmitter]}
+  formBuilder={[Function FormBuilder]}
+  newMemberForm={[Function FormGroup]}
+  role={[Function String]}
+>
+  <div
+    class="c-dialog__content"
+  >
+    <ui-heading
+      classes="c-dialog__title"
+      ng-reflect-classes="c-dialog__title"
+      ng-reflect-level="2"
+      ng-reflect-title="Add a new member."
+      title="Add a new member."
+    >
+      <div
+        class="c-heading c-dialog__title"
+        ng-reflect-klass="c-heading c-dialog__title"
+        ng-reflect-ng-class="[object Object]"
+      >
+        
+        
+        
+        <h2>
+          Add a new member.
+        </h2>
+        
+        <div
+          class="c-heading__meta"
+        >
+          
+          
+          
+        </div>
+      </div>
+    </ui-heading>
+    
+    <form
+      class="l-form__grid l-grid--with-spacing ng-untouched ng-pristine ng-invalid"
+      ng-reflect-form="[object Object]"
+      novalidate=""
+    >
+      <div
+        class="l-grid__col--12"
+      >
+        <ui-select
+          class="ng-untouched ng-pristine ng-invalid"
+          name="role"
+          ng-reflect-error="false"
+          ng-reflect-label="NEW_MEMBER__TITLE_LABEL"
+          ng-reflect-name="role"
+        >
+          <div
+            class="c-select-field"
+            ng-reflect-klass="c-select-field"
+            ng-reflect-ng-class="[object Object]"
+          >
+            <select
+              class="c-select-field__field ng-untouched ng-pristine ng-invalid"
+              id="role"
+              ng-reflect-name="role"
+              ng-reflect-required=""
+              required=""
+            >
+              <option
+                disabled=""
+                hidden=""
+                ng-reflect-value=""
+                selected=""
+                value=""
+              />
+              
+            </select>
+            <label
+              class="c-select-field__label"
+              for="role"
+            >
+               NEW_MEMBER__TITLE_LABEL 
+            </label>
+            <div
+              class="c-select-field__icon"
+            >
+              <ui-icon
+                class="c-icon"
+                ng-reflect-name="caret-down"
+                ng-reflect-size="small"
+              >
+                <i
+                  class="c-icon__glyph c-icon__glyph--small  fas fa-caret-down"
+                />
+              </ui-icon>
+            </div>
+            
+          </div>
+        </ui-select>
+      </div>
+    </form>
+  </div><div
+    class="c-dialog__actions"
+  >
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button
+        ng-reflect-type="c-button--secondary"
+      >
+        
+        <button
+          class="c-button c-button--secondary"
+          ng-reflect-klass="c-button c-button--secondary "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+            Cancel
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+    <div
+      class="c-dialog__action-item"
+    >
+      <ui-button>
+        
+        <button
+          class="c-button"
+          ng-reflect-klass="c-button  "
+          ng-reflect-ng-class="[object Object]"
+          title=""
+        >
+          
+          
+          <span
+            class="c-button__text"
+          >
+            Add team member
+          </span>
+          <i
+            class="c-button__loader fas fa-spinner fa-spin"
+          />
+          
+          
+        </button>
+        
+        
+      </ui-button>
+    </div>
+  </div>
+</ui-new-member-dialog>
+`;

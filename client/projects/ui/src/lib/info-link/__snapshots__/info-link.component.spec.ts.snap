@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoLinkComponent Should render correctly 1`] = `
+<ui-info-link
+  arrow={[Function Boolean]}
+  grey="false"
+  red="false"
+>
+  <a
+    class="c-info-link"
+    href="/"
+    ng-reflect-klass="c-info-link"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <div
+      class="c-info-link__content"
+    >
+      <span
+        class="c-info-link__icon"
+      >
+        <ui-icon
+          class="c-icon"
+          ng-reflect-size="large"
+          size="large"
+        >
+          <i
+            class="c-icon__glyph c-icon__glyph--large  fas fa-"
+          />
+        </ui-icon>
+      </span>
+      <ui-heading
+        class="c-info-link__title"
+        level="3"
+        ng-reflect-level="3"
+      >
+        <div
+          class="c-heading"
+          ng-reflect-klass="c-heading "
+          ng-reflect-ng-class="[object Object]"
+        >
+          
+          
+          
+          
+          <h3>
+            
+          </h3>
+          <div
+            class="c-heading__meta"
+          >
+            
+            
+            
+          </div>
+        </div>
+      </ui-heading>
+    </div>
+    
+    <span
+      class="c-info-link__arrow"
+    >
+      <ui-icon
+        class="c-icon"
+        name="arrow-right"
+        ng-reflect-name="arrow-right"
+      >
+        <i
+          class="c-icon__glyph   fas fa-arrow-right"
+        />
+      </ui-icon>
+    </span>
+  </a>
+</ui-info-link>
+`;

@@ -1,0 +1,124 @@
+{
+  "name": "dev-test",
+  "version": "1.11.2",
+  "scripts": {
+    "start": "yarn serve",
+    "preserve": "yarn build:env",
+    "serve": "ng serve ",
+    "serve:storybook": "start-storybook -p 4302",
+    "prebuild": "yarn build:env",
+    "build": "node ./scripts/build.js",
+    "build:env": "node \"./scripts/env.js\"",
+    "build:libs": "node \"./scripts/build.js\" --libsOnly",
+    "build:storybook": "yarn build:libs && build-storybook -c .storybook -o dist/storybook",
+    "test": "node \"./scripts/test.js\"",
+    "lint": "node \"./scripts/lint.js\"",
+    "lint:styles": "stylelint \"styles/**/*.scss\" && stylelint \"projects/ui/src/lib/**/*.scss\"",
+    "extract-i18n": "ngx-translate-extract --input ./projects --output ./projects/dev-test/src/assets/i18n/en.json --clean --sort --format namespaced-json"
+  },
+  "private": true,
+  "dependencies": {
+    "@spg-drycooling/field-services": "3.2.0",
+    "@angular/animations": "8.2.14",
+    "@angular/cdk": "8.2.3",
+    "@angular/common": "8.2.14",
+    "@angular/compiler": "8.2.14",
+    "@angular/core": "8.2.14",
+    "@angular/forms": "8.2.14",
+    "@angular/platform-browser": "8.2.14",
+    "@angular/platform-browser-dynamic": "8.2.14",
+    "@angular/router": "8.2.14",
+    "@auth0/auth0-spa-js": "1.5.0",
+    "@biesbjerg/ngx-translate-extract-marker": "1.0.0",
+    "@fortawesome/fontawesome-free": "5.11.2",
+    "@ngrx/effects": "8.5.1",
+    "@ngrx/entity": "8.5.1",
+    "@ngrx/router-store": "8.5.1",
+    "@ngrx/store": "8.5.1",
+    "@ngrx/store-devtools": "8.5.1",
+    "@ngx-translate/core": "11.0.1",
+    "@ngx-translate/http-loader": "4.0.0",
+    "@studiohyperdrive/ng-redux-router": "4.0.0",
+    "dotenv": "8.2.0",
+    "lodash": "4.17.15",
+    "ngx-markdown": "8.2.1",
+    "ngx-toastr": "11.2.1",
+    "ramda": "0.26.1",
+    "rxjs": "6.4.0",
+    "semver": "7.3.2",
+    "socket.io-client": "2.3.0",
+    "tslib": "1.10.0",
+    "zone.js": "0.9.1"
+  },
+  "devDependencies": {
+    "@angular-builders/jest": "8.2.0",
+    "@angular-devkit/build-angular": "0.803.25",
+    "@angular-devkit/build-ng-packagr": "0.803.25",
+    "@angular/cli": "8.3.25",
+    "@angular/compiler-cli": "8.2.14",
+    "@angular/language-service": "8.2.14",
+    "@babel/core": "7.6.4",
+    "@biesbjerg/ngx-translate-extract": "7.0.2",
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "@storybook/addon-actions": "5.2.5",
+    "@storybook/addon-knobs": "5.2.6",
+    "@storybook/addon-links": "5.2.5",
+    "@storybook/addon-notes": "5.2.8",
+    "@storybook/addon-storysource": "5.2.8",
+    "@storybook/addons": "5.2.5",
+    "@storybook/angular": "5.2.5",
+    "@tom-odb/angular-builders": "1.0.3",
+    "@types/jest": "24.0.21",
+    "@types/node": "8.9.4",
+    "@types/socket.io-client": "1.4.32",
+    "babel-loader": "8.0.6",
+    "codelyzer": "5.2.0",
+    "decimal.js": "10.2.0",
+    "execa": "4.0.2",
+    "husky": "3.0.8",
+    "jest": "24.9.0",
+    "ng-mocks": "8.1.0",
+    "ng-packagr": "5.4.0",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "12.0.0",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-order": "3.1.1",
+    "ts-node": "7.0.0",
+    "tsickle": "0.37.0",
+    "tslint": "5.15.0",
+    "typescript": "3.5.3",
+    "yargs": "15.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:styles",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "scope-case": [
+        2,
+        "always",
+        [
+          "lower-case",
+          "camel-case",
+          "kebab-case",
+          "pascal-case"
+        ]
+      ],
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  }
+}

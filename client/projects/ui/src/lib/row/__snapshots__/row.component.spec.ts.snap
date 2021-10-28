@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RowComponent Should render correctly 1`] = `
+<ui-row>
+  <div
+    class="c-row"
+    ng-reflect-klass="c-row"
+    ng-reflect-ng-class="[object Object]"
+  >
+    
+    <div
+      class="c-row__content"
+    />
+    
+  </div>
+</ui-row>
+`;

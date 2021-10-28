@@ -1,0 +1,39 @@
+<div
+	class="c-team-select"
+	[class.c-team-select--first]="first"
+>
+	<ui-heading
+		[level]="3"
+		[title]="title"
+	>
+	</ui-heading>
+
+	<div>
+		<ul class="c-team-select__members" *ngIf="members.length > 0; else emptyState">
+			<li
+				*ngFor="let member of members;"
+				class="c-team-select__member"
+			>
+				<ng-container *ngTemplateOutlet="member.itemTemplate"></ng-container>
+			</li>
+		</ul>
+
+		<ui-link
+			*ngIf="action"
+			label="New team member"
+			iconBefore="plus"
+			(clicked)="newMember.emit()"
+		>
+		</ui-link>
+	</div>
+
+	<ng-template #emptyState>
+		<ui-empty-state
+			[icon]="IconName.users"
+			[smallIcon]="true"
+		>
+			{{'TEAM__PACKAGE__FALLBACK' | translate}}
+		</ui-empty-state>
+	</ng-template>
+</div>
+

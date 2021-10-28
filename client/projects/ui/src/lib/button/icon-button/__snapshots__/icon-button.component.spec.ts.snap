@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButtonComponent Should render correctly 1`] = `
+<ui-icon-button
+  ButtonType={[Function Object]}
+  border={[Function Boolean]}
+  buttonTitle=""
+  clicked={[Function EventEmitter]}
+  fluid="false"
+  type=""
+>
+  <button
+    class="c-icon-button c-icon-button--border"
+    ng-reflect-klass="c-icon-button"
+    ng-reflect-ng-class="[object Object]"
+    title=""
+  >
+    
+    
+  </button>
+</ui-icon-button>
+`;

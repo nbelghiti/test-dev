@@ -1,0 +1,140 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Filter Select
+// =============================================================================
+// .c-filter-select {}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-filter-select__trigger {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	background: none;
+}
+
+.c-filter-select__label {
+	position: absolute;
+	top: 0.3rem;
+	left: 2rem;
+
+	order: -1;
+
+	font-size: $font-size-1x-small;
+	line-height: $line-height-base;
+
+	color: $text-color-grey-56;
+
+	transform-origin: left center;
+	transform: scale(1.15) translateY(1rem);
+
+	transition: transform $animation-base;
+}
+
+.c-filter-select__field {
+	display: inline-block;
+	padding: 2.4rem 2rem 0.2rem;
+
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	border: $border-width-base solid $border-color-grey-76;
+	color: $text-color-base;
+	background: none;
+
+	transition: border $animation-base;
+
+	&:focus {
+		border: $border-width-base solid $text-color-base;
+	}
+
+	&::placeholder {
+		color: $text-color-grey-56;
+
+		opacity: 0;
+
+		transition: all $animation-base;
+
+		visibility: hidden;
+	}
+
+	&:focus,
+	&:not(:placeholder-shown) {
+
+		+ .c-filter-select__label {
+			transform: scale(1) translateY(0);
+		}
+	}
+}
+
+.c-filter-select__arrow {
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+
+	display: flex;
+
+	color: $text-color-grey-46;
+
+	transform: translateY(-50%);
+
+	transition: transform $animation-base;
+
+	pointer-events: none;
+}
+
+.c-filter-select__content {
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.c-filter-select__content-item {
+	padding: 0.6rem 2rem;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: $background-color-grey-96;
+	}
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-filter-select--disabled {
+	cursor: not-allowed;
+
+	.c-filter-select__field {
+		background-color: $background-color-grey-96;
+		color: $text-color-grey-46;
+
+		pointer-events: none;
+	}
+
+	.c-filter-select__label {
+		cursor: not-allowed;
+	}
+}
+
+// =============================================================================
+// :: States
+// =============================================================================
+.c-filter-select__input {
+
+	&.is-open {
+
+		.c-filter-select__arrow {
+			transform:
+				translateY(-50%)
+				rotate(180deg);
+		}
+	}
+}

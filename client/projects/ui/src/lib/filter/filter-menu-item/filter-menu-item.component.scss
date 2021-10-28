@@ -1,0 +1,65 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: List item
+// =============================================================================
+.c-filter-menu-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0.4rem 1.5rem;
+
+	text-decoration: none;
+
+	background: none;
+	border: none;
+
+	transition: $animation-base;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: $ui-color-success-light;
+	}
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-filter-menu-item__value {
+	overflow: hidden;
+	margin-right: 1.6rem;
+
+	font-family: $font-family-secondary;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	color: $text-color-base;
+}
+
+.c-filter-menu-item__icon {
+	color: $ui-color-success-dark;
+	opacity: 0;
+
+	transition: opacity 0.2s ease-in-out;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-filter-menu-item--active {
+	font-weight: $font-weight-ultrabold;
+
+	background-color: $ui-color-success-light;
+
+	.c-filter-menu-item__icon {
+		opacity: 1;
+	}
+}

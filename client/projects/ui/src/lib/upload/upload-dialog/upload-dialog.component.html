@@ -1,0 +1,69 @@
+<div class="c-dialog__content">
+	<ui-heading
+		[level]="HeadingLevel.heading2"
+		[title]="'UPLOAD__SUBTITLE' | translate"
+		classes="c-dialog__title"
+	>
+	</ui-heading>
+
+	<ui-upload-dropzone
+		[data]="data"
+		[files]="files"
+		[uploading]="data?.uploading$ | async"
+		[uploaded]="uploaded"
+	></ui-upload-dropzone>
+
+	<div *ngIf="response?.errors" class="u-margin-top-3x">
+		<div class="u-margin-bottom-1x">
+			<ui-heading
+				[level]="HeadingLevel.heading3"
+				[title]="response?.message"
+			>
+			</ui-heading>
+		</div>
+
+		<ui-list class="c-dialog__list">
+			<ng-container *ngFor="let error of response?.errors">
+				<ui-info-item
+					*uiListItem
+						[text]="error"
+						[icon]="IconName.exclamationCircle"
+					>
+					</ui-info-item>
+			</ng-container>
+		</ui-list>
+	</div>
+</div>
+
+<div *ngIf="!uploaded; else closeButton" class="c-dialog__actions">
+	<div class="c-dialog__action-item">
+		<ui-button
+			(click)="onCancel()"
+			[type]="ButtonType.secondary"
+			[disabled]="data?.uploading$ | async"
+		>
+			{{ 'GENERAL__CANCEL' | translate }}
+		</ui-button>
+	</div>
+
+	<div class="c-dialog__action-item">
+		<ui-button
+			(click)="onUpload()"
+			[disabled]="!files.size || (data?.uploading$ | async)"
+		>
+			{{ 'UPLOAD__TITLE' | translate }}
+		</ui-button>
+	</div>
+</div>
+
+<ng-template #closeButton>
+	<div class="c-dialog__actions">
+		<div class="c-dialog__action-item">
+			<ui-button
+				(click)="onCancel()"
+			>
+				{{ 'UPLOAD__VIEW_CHANGES' | translate }}
+			</ui-button>
+		</div>
+	</div>
+</ng-template>

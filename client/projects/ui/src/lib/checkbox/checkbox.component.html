@@ -1,0 +1,22 @@
+<label
+	class="c-checkbox"
+	[ngClass]="{
+		'is-indeterminate': indeterminate
+	}"
+>
+	<input
+		[id]="name"
+		[name]="name"
+		class="c-checkbox__input"
+		type="checkbox"
+		[formControl]="isChecked"
+	/>
+
+	<span class="c-checkbox__box">
+		<span class="c-checkbox__check">
+			<ui-icon [name]="indeterminate ? IconName.minus : IconName.check" [size]="IconSize.tiny"></ui-icon>
+		</span>
+	</span>
+
+	<span *ngIf="label" class="c-checkbox__label">{{ label }}</span>
+</label>

@@ -1,0 +1,78 @@
+// =============================================================================
+// :: Imports
+// =============================================================================
+@import "global";
+
+// =============================================================================
+// :: Row
+// =============================================================================
+.c-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+// =============================================================================
+// :: Elements
+// =============================================================================
+.c-row__content {
+	flex: 1;
+}
+
+.c-row__before {
+	flex-shrink: 0;
+	margin-right: 1.5rem;
+}
+
+.c-row__after {
+	flex-shrink: 0;
+	padding-left: 1.5rem;
+}
+
+// =============================================================================
+// :: Modifiers
+// =============================================================================
+.c-row--top {
+	align-items: flex-start;
+}
+
+.c-row--middle {
+	align-items: center;
+}
+
+.c-row--bottom {
+	align-items: flex-end;
+}
+
+.c-row--inline {
+	display: flex;
+	align-items: center;
+
+	.c-row__content {
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-self: initial;
+	}
+
+	.c-row__before,
+	.c-row__after {
+		display: inline-flex;
+		align-self: initial;
+		flex-shrink: 0;
+	}
+
+	.c-row__before {
+		padding-left: 1rem;
+	}
+
+	.c-row__after {
+		padding-right: 1rem;
+	}
+}
+
+.c-row--space-between {
+
+	.c-row__content {
+		display: flex;
+		justify-content: space-between;
+	}
+}

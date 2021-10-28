@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonComponent Should render correctly 1`] = `
+<ui-button
+  buttonTitle=""
+  clicked={[Function EventEmitter]}
+  disabled="false"
+  fluid="false"
+  loading="false"
+>
+  <button
+    class="c-button"
+    ng-reflect-klass="c-button  "
+    ng-reflect-ng-class="[object Object]"
+    title=""
+  >
+    
+    
+    <span
+      class="c-button__text"
+    />
+    <i
+      class="c-button__loader fas fa-spinner fa-spin"
+    />
+    
+    
+  </button>
+</ui-button>
+`;

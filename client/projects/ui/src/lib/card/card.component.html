@@ -1,0 +1,55 @@
+<a
+	*ngIf="link; else defaultCard"
+	class="c-card c-card--link"
+	[routerLink]="link"
+	[queryParams]="queryParams"
+	[ngClass]="{
+		'c-card--align-end': align === CardAlignType.end,
+		'c-card--align-center': align === CardAlignType.center,
+		'c-card--noborder': !border,
+		'c-card--loading': loading,
+		'c-card--with-actions': hasActions,
+		'c-card--column': column,
+		'c-card--min-height': !withImage
+	}"
+>
+	<ng-container *ngTemplateOutlet="cardContent"></ng-container>
+</a>
+
+<ng-template #defaultCard>
+	<div
+		class="c-card"
+		[ngClass]="{
+			'c-card--align-end': align === CardAlignType.end,
+			'c-card--align-center': align === CardAlignType.center,
+			'c-card--noborder': !border,
+			'c-card--loading': loading,
+			'c-card--with-actions': hasActions,
+			'c-card--column': column,
+			'c-card--min-height': !withImage
+		}"
+	>
+		<ng-container *ngTemplateOutlet="cardContent"></ng-container>
+	</div>
+</ng-template>
+
+<ng-template #cardContent>
+	<div class="c-card__container">
+		<div *ngIf="withImage" class="c-card__thumbnail">
+			<ui-image [source]="imageSrc"></ui-image>
+		</div>
+
+		<div class="c-card__content">
+			<div>
+				<ng-content></ng-content>
+			</div>
+
+			<div
+				*ngIf="hasActions"
+				class="c-card__actions"
+			>
+				<ng-content select=[uiCardAction]></ng-content>
+			</div>
+		</div>
+	</div>
+</ng-template>

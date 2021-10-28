@@ -1,0 +1,29 @@
+<form class="c-search-field"
+	[formGroup]="searchForm"
+	(ngSubmit)="onSubmit()"
+>
+	<span
+		*ngIf="searchForm?.value?.tagged"
+		class="c-search-field__tag"
+	>
+		IN: {{ tag }}
+	</span>
+
+	<input
+		type="text"
+		class="c-search-field__input"
+		[placeholder]="placeholder"
+		formControlName="query"
+		(keydown)="handleKeyDown($event)"
+		#input
+	/>
+
+	<div class="c-search-field__focus"></div>
+
+	<button
+		type="submit"
+		class="c-search-field__submit"
+	>
+		<ui-icon name="search"></ui-icon>
+	</button>
+</form>

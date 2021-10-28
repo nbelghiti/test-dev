@@ -1,0 +1,145 @@
+// =============================================================================
+// :: Settings
+// =============================================================================
+$spacing-base: 4rem;
+
+// =============================================================================
+// :: Split
+// =============================================================================
+.l-split-changes {
+	height: 100%;
+}
+
+// ============================================================================
+// :: Elements
+// ============================================================================
+.l-split-changes__left {
+	height: 100%;
+	overflow-y: auto;
+
+	border: 0.1rem solid $grey-76;
+}
+
+.l-split-changes__right {
+	height: 100%;
+	overflow-y: auto;
+
+	padding: 2.5rem 4rem;
+
+	border: 0.1rem solid $grey-76;
+}
+
+.l-split-changes__left-header {
+	position: relative;
+
+	padding: 2rem;
+
+	background-color: $grey-96;
+}
+
+.l-split-changes__left-body {
+	position: relative;
+
+	padding: 1.5rem;
+}
+
+$amount: 120;
+
+@for $i from 1 through $amount {
+
+	.l-split-changes__line-#{$i}x {
+		position: absolute;
+		top: 0;
+		left: 1.5rem;
+
+		display: block;
+		width: 0.2rem;
+		height:
+			calc(
+				(1.5rem * #{$i}) +
+				(#{$i - 1} * 10.4rem) +
+				(10.4rem / 2)
+			);
+
+		background-color: $grey-76;
+
+		transition: 0.2s ease-in-out;
+
+		@include respond-at(get-breakpoint("screen-large")) {
+			height:
+				calc(
+					(1.5rem * #{$i}) +
+					(#{$i - 1} * 8rem) +
+					(8rem / 2)
+				);
+		}
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 0;
+			left: 0.1rem;
+
+			display: block;
+			width: 1.2rem;
+			height: 1.2rem;
+
+			background-color: $white;
+
+			border: 0.2rem solid $grey-76;
+			border-radius: 50%;
+
+			transform: translate(-50%, -50%);
+
+			transition: 0.2s ease-in-out;
+		}
+
+		&.is-active {
+
+			background-color: $grey-76;
+
+			&::before {
+				border-color: $black;
+			}
+		}
+	}
+}
+
+.c-split-changes__merged-link {
+	display: inline-block;
+	margin-bottom: 2rem;
+}
+
+.merged-branches {
+	display: none;
+}
+
+.c-split-changes__empty {
+	text-transform: uppercase;
+	font-weight: bold;
+
+	color: $grey-56;
+}
+
+// =============================================================================
+// states
+// =============================================================================
+.merged-branches {
+
+	&.is-open {
+		display: block;
+	}
+}
+
+.l-split-changes__line {
+
+	&.is-active {
+
+		background-color: $black;
+
+		&::before {
+			border-color: $black;
+		}
+	}
+}

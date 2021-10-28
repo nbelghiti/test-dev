@@ -1,0 +1,63 @@
+<div
+	uiFlyout
+	class="c-user-select"
+>
+	<div class="c-user-select__trigger">
+		<ui-user
+			*ngIf="selectedUser; else emptyState"
+			[user]="selectedUser"
+			uiFlyoutToggle
+			class="c-user-select__trigger-user"
+		>
+		</ui-user>
+
+		<ui-icon-button
+			*ngIf="selectedUser?.name"
+			[type]="ButtonType.tertiary"
+			(clicked)="removeSelectedUser(selectedUser)"
+			class="u-margin-left-1x u-margin-right-1x"
+		>
+			<ui-icon [name]="IconName.times"></ui-icon>
+		</ui-icon-button>
+
+		<ng-template #emptyState>
+			<div class="c-user-select__trigger-avatar"></div>
+
+			<input
+				uiFlyoutFocus
+				class="c-user-select__trigger-input"
+				placeholder="Select {{ label | translate }}"
+				[formControl]="searchQuery"
+			>
+		</ng-template>
+	</div>
+
+	<div
+		uiFlyoutContent
+		class="c-flyout__content--left"
+	>
+		<ul
+			uiFlyoutToggle
+			*ngIf="users && users.length > 0; else noUsers"
+		>
+			<li
+				*ngFor="let user of users;"
+				class="c-user-select__content-item"
+				(click)="clickUser(user)"
+			>
+				<ui-user
+					[user]="user"
+				></ui-user>
+			</li>
+		</ul>
+
+		<ng-template #noUsers>
+			<ui-empty-state
+				icon="users"
+				size="small"
+				[message]="'NO_USERS' | translate"
+			>
+			</ui-empty-state>
+		</ng-template>
+	</div>
+</div>

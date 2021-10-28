@@ -1,0 +1,170 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"rootDir": ".",
+		"target": "es6",
+		"watch": false,
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": false,
+		"lib": [
+			"dom",
+			"es2015"
+		],
+		"types": [
+			"jest",
+			"node"
+		],
+		"typeRoots": [
+			"../node_modules/@types",
+			"node_modules/@types",
+			"node_modules"
+		],
+		"paths": {
+			"@migrations": [
+				"migrations"
+			],
+			"@migrations/*": [
+				"migrations/*"
+			],
+			"@app": [
+				"src/app"
+			],
+			"@branches": [
+				"src/branches"
+			],
+			"@branches/*": [
+				"src/branches/*"
+			],
+			"@components": [
+				"src/components"
+			],
+			"@components/*": [
+				"src/components/*"
+			],
+			"@config": [
+				"src/config"
+			],
+			"@config/*": [
+				"src/config/*"
+			],
+			"@core": [
+				"src/core"
+			],
+			"@core/*": [
+				"src/core/*"
+			],
+			"@datalists": [
+				"src/datalists"
+			],
+			"@datalists/*": [
+				"src/datalists/*"
+			],
+			"@export": [
+				"src/export"
+			],
+			"@export/*": [
+				"src/export/*"
+			],
+			"@fields": [
+				"src/fields"
+			],
+			"@fields/*": [
+				"src/fields/*"
+			],
+			"@files": [
+				"src/files"
+			],
+			"@files/*": [
+				"src/files/*"
+			],
+			"@mocks": [
+				"test/mocks"
+			],
+			"@mocks/*": [
+				"test/mocks/*"
+			],
+			"@notifications": [
+				"src/notifications"
+			],
+			"@notifications/*": [
+				"src/notifications/*"
+			],
+			"@permissions": [
+				"src/permissions"
+			],
+			"@permissions/*": [
+				"src/permissions/*"
+			],
+			"@pkg": [
+				"package.json"
+			],
+			"@projects": [
+				"src/projects"
+			],
+			"@projects/*": [
+				"src/projects/*"
+			],
+			"@articles": [
+			  "src/articles"
+			],
+			"@articles/*": [
+			  "src/articles/*"
+			],
+			"@revisions": [
+				"src/revisions"
+			],
+			"@revisions/*": [
+				"src/revisions/*"
+			],
+			"@search": [
+				"src/search"
+			],
+			"@search/*": [
+				"src/search/*"
+			],
+			"@shared": [
+				"src/shared"
+			],
+			"@shared/*": [
+				"src/shared/*"
+			],
+			"@teams": [
+				"src/teams"
+			],
+			"@teams/*": [
+				"src/teams/*"
+			],
+			"@templates": [
+				"src/templates"
+			],
+			"@templates/*": [
+				"src/templates/*"
+			],
+			"@test": [
+				"test"
+			],
+			"@test/*": [
+				"test/*"
+			]
+		}
+	},
+	"include": [
+		"**/*.ts"
+	],
+	"exclude": [
+		"**/coverage/**",
+		"**/dist/**",
+		"**/node_modules/**"
+	]
+}
